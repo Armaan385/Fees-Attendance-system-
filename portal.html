@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Academy | Unified Digital Campus Portal (Parent & Faculty)</title>
+  <meta name="description" content="Secure role-based campus portal for students, parents, and faculty members with biometric attendance, fee receipts, test scorecards, and DPP assignments.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .portal-auth-card {
+      max-width: 520px;
+      margin: 3rem auto;
+      background: var(--bg-card-solid);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-elevated);
+    }
+    .auth-tab-switch {
+      display: flex;
+      background: var(--bg-surface-elevated);
+      padding: 0.35rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.5rem;
+      border: 1px solid var(--border-subtle);
+    }
+    .auth-tab-btn {
+      flex: 1;
+      padding: 0.65rem 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      border-radius: var(--radius-xs);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-align: center;
+    }
+    .auth-tab-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px var(--primary-glow);
+    }
+    .quick-demo-pill {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xs);
+      padding: 0.6rem 0.85rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 0.82rem;
+      transition: all var(--transition-fast);
+    }
+    .quick-demo-pill:hover {
+      border-color: var(--primary);
+      background: var(--primary-subtle);
+      transform: translateX(2px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Institutional Utility Strip -->
+  <aside class="inst-utility-bar no-print">
+    <div class="inst-utility-left">
+      <span class="utility-ticker-badge" style="background: rgba(16, 185, 129, 0.15); color: #34D399; border-color: rgba(16, 185, 129, 0.35);">
+        SECURE ROLE-BASED ACCESS GATEWAY
+      </span>
+      <span>Apex Academy Kota Knowledge Park • ISO 9001:2015</span>
+    </div>
+    <div class="inst-utility-right">
+      <div id="auth-status-topbar" style="display: flex; align-items: center; gap: 0.75rem;">
+        <!-- Populated dynamically based on login state -->
+      </div>
+      <button class="sound-fx-toggle-btn sound-active" onclick="toggleSoundFx()" title="Tactile Sound FX (Click to Mute/Unmute)">
+        🔊 Sound FX
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Navbar -->
+  <header class="inst-navbar-wrap">
+    <a href="index.html" class="inst-brand-block">
+      <div class="inst-emblem-box">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="inst-brand-text">
+        <span class="inst-brand-title">APEX ACADEMY</span>
+        <span class="inst-brand-sub">Premier Institute for IIT-JEE & NEET • Est. 2008</span>
+      </div>
+    </a>
+
+    <nav class="inst-nav-menu">
+      <a href="index.html" class="inst-nav-link">Home</a>
+      <a href="about.html" class="inst-nav-link">About & Faculty</a>
+      <a href="courses.html" class="inst-nav-link">Courses & Fees</a>
+      <a href="results.html" class="inst-nav-link">Results 2026</a>
+      <a href="admissions.html" class="inst-nav-link">Admissions</a>
+      <a href="portal.html" class="inst-nav-link active">Campus Portal</a>
+      <a href="contact.html" class="inst-nav-link">Contact</a>
+    </nav>
+
+    <div class="inst-nav-actions">
+      <a href="admin.html" class="btn btn-outline btn-sm">Director Suite 🔒</a>
+      <button type="button" class="inst-mobile-toggle" onclick="toggleMobileDrawer()" aria-label="Toggle Mobile Navigation">☰</button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="inst-mobile-drawer" id="inst-mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <div class="inst-mobile-drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <div class="inst-emblem-box" style="width: 38px; height: 38px; background: linear-gradient(135deg, #013284, #0e2974); border: 1.5px solid #cbb88f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 1.2rem;">🏛️</span>
+        </div>
+        <div>
+          <span style="font-family: 'Outfit', sans-serif; font-weight: 800; color: #FFFFFF; font-size: 1.05rem; display: block; line-height: 1.2;">APEX ACADEMY</span>
+          <span style="font-size: 0.68rem; color: #94A3B8;">Unified Digital Campus Portal</span>
+        </div>
+      </div>
+      <button type="button" class="inst-mobile-drawer-close" onclick="toggleMobileDrawer()" aria-label="Close Mobile Navigation">
+        ✕
+      </button>
+    </div>
+
+    <nav class="inst-mobile-links">
+      <a href="index.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>🏠 Home</span>
+        <span>→</span>
+      </a>
+      <a href="about.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>👨‍🏫 About &amp; Kota Faculty</span>
+        <span>→</span>
+      </a>
+      <a href="courses.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>📚 Courses, Batches &amp; Fees</span>
+        <span>→</span>
+      </a>
+      <a href="results.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>🏆 Results 2026 Wall of Fame</span>
+        <span>→</span>
+      </a>
+      <a href="admissions.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>📝 Admissions 2026–27 Open</span>
+        <span>→</span>
+      </a>
+      <a href="portal.html" class="inst-mobile-link active" onclick="toggleMobileDrawer()">
+        <span>🎓 Student &amp; Parent Hub</span>
+        <span>→</span>
+      </a>
+      <a href="contact.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>📍 Contact &amp; Campus Map</span>
+        <span>→</span>
+      </a>
+    </nav>
+
+    <div class="inst-mobile-actions">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-bottom: 0.75rem;">
+        <a href="parent-portal.html" class="btn btn-outline btn-sm" style="color: #93C5FD; border-color: rgba(147, 197, 253, 0.4); text-align: center; border-radius: 10px; font-weight: 700;">
+          👤 Guardian View
+        </a>
+        <a href="teacher-portal.html" class="btn btn-outline btn-sm" style="color: #E2E8F0; border-color: rgba(255, 255, 255, 0.2); text-align: center; border-radius: 10px; font-weight: 700;">
+          ✍️ Faculty View
+        </a>
+      </div>
+      <a href="tel:+919810012345" class="btn btn-outline btn-sm" style="color: #34D399; border-color: rgba(52, 211, 153, 0.4); display: flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 10px; font-weight: 700;">
+        📞 Call Campus: +91 98100 12345
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Portal Target Container (Dynamically rendered based on session) -->
+  <div id="portal-root"></div>
+
+  <!-- Receipt Invoice & Action Modal Target -->
+  <div id="receipt-modal-container"></div>
+  <div id="toast-container"></div>
+
+  <!-- Scripts in strict dependency order -->
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/modules/timetable.js"></script>
+  <script src="js/modules/certificates.js"></script>
+  <script src="js/modules/ai_analytics.js"></script>
+  <script src="js/modules/attendance.js"></script>
+  <script src="js/modules/idcards.js"></script>
+  <script src="js/modules/teacher.js"></script>
+  <script src="js/modules/fees.js"></script>
+  <script src="js/modules/whatsapp_automation.js"></script>
+  <script src="js/modules/chatbot.js"></script>
+  <script src="js/sound_fx.js"></script>
+  <script src="js/scroll_animations.js"></script>
+  <script src="js/vendor/jspdf.umd.min.js"></script>
+  <script src="js/modules/dpp_pdf_generator.js"></script>
+  <script src="js/modules/star-border.js"></script>
+  <script src="js/modules/animated-list.js"></script>
+  <script src="js/modules/mobile_dock.js"></script>
+
+  <script>
+    // Global Application Bridge to ensure seamless inter-module compatibility
+    window.kaviroxApp = {
+      currentView: 'teacher',
+      switchView(view) {
+        if (UnifiedPortal.currentUser?.role === 'teacher') {
+          UnifiedPortal.teacherSubView = view;
+          UnifiedPortal.render();
+        }
+      },
+      showToast(msg, type) {
+        UnifiedPortal.showToast(msg, type);
+      },
+      render() {
+        UnifiedPortal.render();
+      }
+    };
+    window.KaviroxApp = window.kaviroxApp;
+
+    // Universal Unified Portal Controller with Authentication & Role Guards
+    window.UnifiedPortal = {
+      currentUser: null, // { role: 'parent' | 'teacher', ... }
+      loginTab: 'parent', // 'parent' | 'teacher'
+      parentActiveTab: 'att', // att, fee, marks, dpp, doubt, badge
+      teacherSubView: 'dashboard', // 'dashboard' | 'attendance'
+
+      init() {
+        const params = new URLSearchParams(window.location.search);
+        const requestedRole = params.get('role');
+        if (requestedRole === 'teacher') {
+          this.loginTab = 'teacher';
+        }
+
+        // Restore saved session from sessionStorage
+        const savedSession = sessionStorage.getItem('apex_portal_session');
+        if (savedSession) {
+          try {
+            this.currentUser = JSON.parse(savedSession);
+          } catch(e) {
+            sessionStorage.removeItem('apex_portal_session');
+          }
+        }
+
+        this.render();
+      },
+
+      setLoginTab(tab) {
+        this.loginTab = tab;
+        this.render();
+      },
+
+      loginAsParent(studentId) {
+        const store = window.kaviroxStore;
+        const batch = store.data.batches.find(b => b.id === student.batchId);
+        const batchName = batch ? batch.name : (student.standard || 'Class 11 (PCM)');
+        this.currentUser = {
+          role: 'parent',
+          studentId: student.id,
+          studentName: student.name,
+          rollNo: student.rollNo,
+          batchId: student.batchId,
+          batchName: batchName,
+          standard: student.standard,
+          parentName: student.parentName,
+          parentPhone: student.parentPhone,
+          pendingDues: student.pendingDues || 0
+        };
+        sessionStorage.setItem('apex_portal_session', JSON.stringify(this.currentUser));
+        this.showToast(`Logged in successfully as Parent of ${student.name} (${student.rollNo})`, 'success');
+        this.render();
+      },
+
+      loginAsTeacher(teacherId) {
+        const store = window.kaviroxStore;
+        const teacher = store.data.users.find(u => u.id === teacherId) || store.data.users[2] || {
+          name: "Pooja Chawla",
+          title: "Head of Physics Department",
+          id: "USR-003",
+          assignedBatches: ["BAT-001", "BAT-003"]
+        };
+        store.activeTeacherId = teacher.id;
+        this.currentUser = {
+          role: 'teacher',
+          teacherId: teacher.id,
+          name: teacher.name,
+          title: teacher.title,
+          assignedBatches: teacher.assignedBatches || ["BAT-001", "BAT-003"]
+        };
+        this.teacherSubView = 'dashboard';
+        sessionStorage.setItem('apex_portal_session', JSON.stringify(this.currentUser));
+        this.showToast(`Logged in successfully as Faculty: ${teacher.name}`, 'success');
+        this.render();
+      },
+
+      logout() {
+        this.currentUser = null;
+        sessionStorage.removeItem('apex_portal_session');
+        this.showToast('You have been signed out from the campus portal.', 'info');
+        this.render();
+      },
+
+      showToast(msg, type = 'info') {
+        const c = document.getElementById('toast-container');
+        if (!c) return;
+        const t = document.createElement('div');
+        t.className = `toast-item toast-${type} animate-slide-in`;
+        t.innerHTML = `<span class="toast-msg">${msg}</span>`;
+        c.appendChild(t);
+        setTimeout(() => t.remove(), 3500);
+      },
+
+      render() {
+        this.updateTopBar();
+        const root = document.getElementById('portal-root');
+        if (!root) return;
+
+        if (!this.currentUser) {
+          root.innerHTML = this.renderLoginGateway();
+        } else if (this.currentUser.role === 'teacher') {
+          root.innerHTML = this.renderTeacherView();
+        } else if (this.currentUser.role === 'parent') {
+          root.innerHTML = this.renderParentView();
+        }
+
+        if (window.AnimatedList) setTimeout(() => window.AnimatedList.init(), 60);
+        if (window.StarBorder) setTimeout(() => window.StarBorder.init(), 60);
+      },
+
+      updateTopBar() {
+        const topEl = document.getElementById('auth-status-topbar');
+        if (!topEl) return;
+        if (this.currentUser) {
+          topEl.innerHTML = `
+            <span style="font-size: 0.8rem; font-weight: 700; color: #60A5FA;">
+              ● ${this.currentUser.role === 'teacher' ? 'Faculty:' : 'Parent of:'} ${this.currentUser.name || this.currentUser.studentName}
+            </span>
+            <button class="btn btn-outline btn-xs" onclick="UnifiedPortal.logout()" style="color: #FB7185; border-color: rgba(244, 63, 94, 0.4);">
+              Sign Out
+            </button>
+          `;
+        } else {
+          topEl.innerHTML = `
+            <a href="admin.html" class="utility-link" style="font-size: 0.8rem;">Director Console ↗</a>
+          `;
+        }
+      },
+
+      /* -----------------------------------------------------------------
+         1. UNIFIED LOGIN GATEWAY (Role Selection + Quick 1-Tap Testing)
+         ----------------------------------------------------------------- */
+      renderLoginGateway() {
+        const isParent = this.loginTab === 'parent';
+
+        return `
+          <div class="inst-main-container">
+            <div class="portal-auth-card animate-slide-in">
+              <!-- Campus Emblem & Header -->
+              <div style="text-align: center; margin-bottom: 1.75rem;">
+                <div style="width: 58px; height: 58px; border-radius: 14px; background: linear-gradient(135deg, #1E40AF, #3B82F6); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                </div>
+                <h2 style="font-size: 1.45rem; font-weight: 800; color: var(--text-primary); margin: 0 0 0.35rem;">Apex Academy Digital Portal</h2>
+                <p class="text-secondary" style="font-size: 0.85rem; margin: 0;">Sign in to access student academic transcripts or faculty management workstation.</p>
+              </div>
+
+              <!-- Segmented Role Tab Switcher -->
+              <div class="auth-tab-switch">
+                <button class="auth-tab-btn ${isParent ? 'active' : ''}" onclick="UnifiedPortal.setLoginTab('parent')">
+                  👨‍👩‍👦 Parent & Student Login
+                </button>
+                <button class="auth-tab-btn ${!isParent ? 'active' : ''}" onclick="UnifiedPortal.setLoginTab('teacher')">
+                  👨‍🏫 Faculty / Teacher Login
+                </button>
+              </div>
+
+              ${isParent ? this.renderParentLoginForm() : this.renderTeacherLoginForm()}
+
+              <!-- Director Console Link -->
+              <div style="text-align: center; margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle); font-size: 0.8rem; color: var(--text-secondary);">
+                Institute Owner or Administrator? <a href="admin.html" style="color: #60A5FA; font-weight: 700;">Director Console Access 🔒</a>
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      renderParentLoginForm() {
+        return `
+          <form onsubmit="event.preventDefault(); UnifiedPortal.loginAsParent('STU-001');">
+            <div class="form-group mb-3">
+              <label class="form-label" style="font-size: 0.82rem; font-weight: 700;">Student Roll No or Parent Mobile *</label>
+              <input type="text" id="parent-input-roll" class="form-control" value="APX-101" placeholder="e.g. APX-101 or 98100 12345" required />
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label" style="font-size: 0.82rem; font-weight: 700;">Security PIN / DOB *</label>
+              <input type="password" class="form-control" value="1234" placeholder="Enter 4-digit PIN" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block mb-3" style="padding: 0.75rem;">
+              Sign In to Parent Desk →
+            </button>
+          </form>
+
+          <!-- 1-Tap Demo Credentials for Client Evaluation -->
+          <div style="margin-top: 1.25rem; background: var(--bg-surface-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 700; margin-bottom: 0.65rem;">
+              ⚡ Quick 1-Tap Demo Access (Select Student):
+            </div>
+
+            <div class="quick-demo-pill" onclick="UnifiedPortal.loginAsParent('STU-001')">
+              <div>
+                <strong>Aarav Sharma</strong> • <span class="font-mono text-primary">APX-101</span>
+                <div style="font-size: 0.75rem; color: #34D399;">Class 11 IIT-JEE Target • 96% Attendance</div>
+              </div>
+              <span class="badge badge-outline">Login →</span>
+            </div>
+
+            <div class="quick-demo-pill" onclick="UnifiedPortal.loginAsParent('STU-002')">
+              <div>
+                <strong>Ananya Verma</strong> • <span class="font-mono text-primary">APX-102</span>
+                <div style="font-size: 0.75rem; color: #FB7185;">Class 11 JEE • Outstanding Dues: ₹4,500 (Test Pay)</div>
+              </div>
+              <span class="badge badge-outline">Login →</span>
+            </div>
+
+            <div class="quick-demo-pill" onclick="UnifiedPortal.loginAsParent('STU-004')">
+              <div>
+                <strong>Sneha Patel</strong> • <span class="font-mono text-primary">APX-104</span>
+                <div style="font-size: 0.75rem; color: #60A5FA;">Class 12 NEET Champions • All-India Rank #1</div>
+              </div>
+              <span class="badge badge-outline">Login →</span>
+            </div>
+          </div>
+        `;
+      },
+
+      renderTeacherLoginForm() {
+        return `
+          <form onsubmit="event.preventDefault(); UnifiedPortal.loginAsTeacher('USR-003');">
+            <div class="form-group mb-3">
+              <label class="form-label" style="font-size: 0.82rem; font-weight: 700;">Faculty ID or Registered Email *</label>
+              <input type="text" class="form-control" value="vikram@apexacademy.edu.in" placeholder="e.g. FAC-101 or email" required />
+            </div>
+            <div class="form-group mb-3">
+              <label class="form-label" style="font-size: 0.82rem; font-weight: 700;">Password *</label>
+              <input type="password" class="form-control" value="facultyPass123" placeholder="Enter password" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block mb-3" style="padding: 0.75rem;">
+              Sign In to Faculty Terminal →
+            </button>
+          </form>
+
+          <!-- 1-Tap Demo Credentials for Faculty -->
+          <div style="margin-top: 1.25rem; background: var(--bg-surface-elevated); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <div style="font-size: 0.72rem; color: var(--text-secondary); text-transform: uppercase; font-weight: 700; margin-bottom: 0.65rem;">
+              ⚡ Quick 1-Tap Faculty Access:
+            </div>
+
+            <div class="quick-demo-pill" onclick="UnifiedPortal.loginAsTeacher('USR-003')">
+              <div>
+                <strong>Pooja Chawla (Head of Physics)</strong>
+                <div style="font-size: 0.75rem; color: #60A5FA;">Target JEE Alpha & Dropper Intensive Batches</div>
+              </div>
+              <span class="badge badge-outline">Login →</span>
+            </div>
+
+            <div class="quick-demo-pill" onclick="UnifiedPortal.loginAsTeacher('USR-002')">
+              <div>
+                <strong>Dr. Shalini Verma (HOD Biology)</strong>
+                <div style="font-size: 0.75rem; color: #34D399;">NEET Med-Champions Batch</div>
+              </div>
+              <span class="badge badge-outline">Login →</span>
+            </div>
+          </div>
+        `;
+      },
+
+      /* -----------------------------------------------------------------
+         2. EXCLUSIVE TEACHER WORKSTATION (Strict Role Separation)
+         ----------------------------------------------------------------- */
+      renderTeacherView() {
+        if (this.teacherSubView === 'attendance') {
+          return `
+            <div class="inst-main-container">
+              <div class="glass-card mb-3 p-3 d-flex justify-between items-center" style="background: var(--bg-surface-elevated); border: 1px solid var(--border-medium); border-radius: var(--radius-md);">
+                <button class="btn btn-outline btn-sm" onclick="UnifiedPortal.teacherSubView = 'dashboard'; UnifiedPortal.render();">
+                  ← Back to Today's Lecture Schedule
+                </button>
+                <div class="d-flex items-center gap-2">
+                  <span class="badge badge-accent">⚡ Rapid 30-Sec Roll Call Desk</span>
+                  <button class="btn btn-outline btn-sm" onclick="UnifiedPortal.logout()">Sign Out</button>
+                </div>
+              </div>
+              <div id="integrated-attendance-container">
+                ${window.KaviroxAttendance ? window.KaviroxAttendance.render() : '<p>Loading Attendance Module...</p>'}
+              </div>
+            </div>
+          `;
+        }
+
+        return `
+          <div class="inst-main-container">
+            <!-- Faculty Terminal Data Entry Banner -->
+            <div class="faculty-terminal-banner">
+              <div class="faculty-terminal-icon">✍️</div>
+              <div>
+                <div class="security-trust-title">
+                  <span>Authorized Faculty Terminal — Lecture Attendance & Marks Entry</span>
+                  <span class="badge badge-accent" style="font-size: 0.68rem;">Data Entry Enabled</span>
+                </div>
+                <p class="security-trust-sub">
+                  You are authenticated with full teaching and recording permissions. As a verified faculty member, you can conduct <strong>30-second rapid roll calls</strong>, upload daily DPP homework, log test scores, and trigger instant WhatsApp absent notifications to parents. Parents have <strong>strict read-only visibility</strong> into records created here.
+                </p>
+              </div>
+            </div>
+
+            <!-- Faculty Top Bar -->
+            <div class="glass-card mb-4 p-4" style="background: var(--bg-surface-elevated); border: 1px solid var(--border-medium); border-radius: var(--radius-md);">
+              <div class="d-flex justify-between items-center flex-wrap gap-3">
+                <div class="d-flex items-center gap-3">
+                  <div style="width: 52px; height: 52px; border-radius: 12px; background: linear-gradient(135deg, #4F46E5, #7C3AED); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: #FFF; font-weight: 800;">
+                    ${this.currentUser.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                  <div>
+                    <div class="d-flex items-center gap-2">
+                      <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--text-primary); margin: 0;">${this.currentUser.name}</h3>
+                      <span class="badge badge-success">● Faculty Terminal Active</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.2rem 0 0;">
+                      ${this.currentUser.title} • Kota Main Campus (Assigned Batches: ${this.currentUser.assignedBatches.length})
+                    </p>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary btn-sm" onclick="UnifiedPortal.teacherSubView = 'attendance'; UnifiedPortal.render();">
+                    ⚡ 30-Sec Rapid Roll Call
+                  </button>
+                  <button class="btn btn-outline btn-sm" onclick="UnifiedPortal.logout()">
+                    🚪 Sign Out
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Integrated Teacher Modules from teacher.js -->
+            <div id="integrated-teacher-container">
+              ${window.KaviroxTeacher ? window.KaviroxTeacher.render() : '<p>Teacher module loading...</p>'}
+            </div>
+          </div>
+        `;
+      },
+
+      /* -----------------------------------------------------------------
+         3. OFFICIAL GUARDIAN TRANSCRIPT & STUDENT DOSSIER
+         ----------------------------------------------------------------- */
+      renderParentView() {
+        const store = window.kaviroxStore;
+        const student = store.getStudents().find(s => s.id === this.currentUser.studentId) || store.getStudents()[0];
+        const batch = store.data.batches.find(b => b.id === student.batchId);
+        const batchName = batch ? batch.name : (student.standard || 'Class 11 (PCM)');
+        const hasDues = (student.pendingDues || 0) > 0;
+        const exam = (store.getExams && store.getExams()[0]) || {};
+        const examResult = (exam.results || []).find(r => r.studentId === student.id) || { marks: 114, rank: 1, percentile: 99.4, remarks: "Outstanding conceptual performance" };
+        const dpps = store.getAssignments ? store.getAssignments() : [];
+        const doubts = store.getDoubts ? store.getDoubts().filter(d => d.studentId === student.id) : [];
+
+        return `
+          <div class="inst-main-container">
+            <!-- Parent Read-Only Security Trust Banner -->
+            <div class="security-trust-banner">
+              <div class="security-trust-icon">🔒</div>
+              <div>
+                <div class="security-trust-title">
+                  <span>Official Student Academic Dossier & Guardian Records</span>
+                  <span class="badge badge-success" style="font-size: 0.68rem;">Verified Read-Only Mode</span>
+                </div>
+                <p class="security-trust-sub">
+                  Official academic attendance logs and fee ledger entries are managed exclusively by authorized faculty & accounts administration. Records are cryptographically protected; parents and students have transparent read-only access with zero editing permissions to ensure complete regulatory compliance.
+                </p>
+              </div>
+            </div>
+
+            <!-- Active Student Header Bar -->
+            <div class="glass-card p-4 mb-4" style="background: var(--bg-surface-elevated); border: 1px solid var(--border-medium); border-radius: var(--radius-md);">
+              <div class="d-flex justify-between items-center flex-wrap gap-3">
+                <div class="d-flex items-center gap-3">
+                  <div class="user-avatar-initials" style="width: 52px; height: 52px; font-size: 1.25rem; border-radius: 12px; background: linear-gradient(135deg, #1E40AF, #3B82F6); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 800;">
+                    ${student.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                  <div>
+                    <div class="d-flex items-center gap-2">
+                      <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin: 0;">${student.name}</h3>
+                      <span class="badge badge-accent font-mono">${student.rollNo}</span>
+                      <span class="badge badge-outline">${batchName}</span>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-tertiary); margin-top: 0.25rem;">
+                      Parent: ${student.parentName} • Mobile: ${student.parentPhone} • Kota Main Campus
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex items-center gap-3" style="flex-wrap: wrap;">
+                  <div style="background: rgba(5, 150, 105, 0.08); border: 1px solid rgba(5, 150, 105, 0.25); padding: 0.5rem 1.15rem; border-radius: 10px; text-align: center;">
+                    <span style="font-size: 0.68rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; display: block;">ATTENDANCE</span>
+                    <span style="font-size: 1.35rem; font-weight: 900; color: #059669; font-family: 'Outfit';">96.0%</span>
+                  </div>
+                  <div style="background: ${hasDues ? 'rgba(225, 29, 72, 0.08)' : 'rgba(37, 99, 235, 0.08)'}; border: 1px solid ${hasDues ? 'rgba(225, 29, 72, 0.25)' : 'rgba(37, 99, 235, 0.25)'}; padding: 0.5rem 1.15rem; border-radius: 10px; text-align: center;">
+                    <span style="font-size: 0.68rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; display: block;">PENDING DUES</span>
+                    <span style="font-size: 1.35rem; font-weight: 900; color: ${hasDues ? '#E11D48' : '#1E40AF'}; font-family: 'Outfit';">
+                      ${hasDues ? `₹${student.pendingDues.toLocaleString('en-IN')}` : '₹0 (Clear)'}
+                    </span>
+                  </div>
+                  <button class="btn btn-sm btn-outline" style="border-color: rgba(217, 119, 6, 0.4); color: #F59E0B; font-weight: 700;" onclick="KaviroxCertificates.openCertificateModal('${student.id}', 'bonafide')">
+                    📜 Bonafide Cert
+                  </button>
+                  <button class="btn btn-outline btn-sm" onclick="UnifiedPortal.logout()">
+                    🚪 Sign Out
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Parent Navigation Tabs -->
+            <div class="d-flex justify-center gap-2 mb-4 flex-wrap">
+              <button class="btn ${this.parentActiveTab === 'att' ? 'btn-primary' : 'btn-outline'}" onclick="UnifiedPortal.switchParentTab('att')">
+                📅 Biometric Attendance Ledger
+              </button>
+              <button class="btn ${this.parentActiveTab === 'timetable' ? 'btn-primary' : 'btn-outline'}" onclick="UnifiedPortal.switchParentTab('timetable')">
+                🗓️ Class Timetable
+              </button>
+              <button class="btn ${this.parentActiveTab === 'fee' ? 'btn-primary' : 'btn-outline'}" onclick="UnifiedPortal.switchParentTab('fee')">
+                💳 Fees & GST Receipts ${hasDues ? '<span class="badge badge-danger" style="margin-left: 4px; font-size: 0.65rem;">DUE</span>' : ''}
+              </button>
+              <button class="btn ${this.parentActiveTab === 'marks' ? 'btn-primary' : 'btn-outline'}" onclick="UnifiedPortal.switchParentTab('marks')">
+                📝 Test Marks & Report Card
+              </button>
+              <button class="btn ${this.parentActiveTab === 'dpp' ? 'btn-primary' : 'btn-outline'}" onclick="UnifiedPortal.switchParentTab('dpp')">
+                📚 Daily Homework (DPP)
+              </button>
+              <button class="btn ${this.parentActiveTab === 'doubt' ? 'btn-primary' : 'btn-outline'}" onclick="UnifiedPortal.switchParentTab('doubt')">
+                💬 Academic Doubts
+              </button>
+              <button class="btn ${this.parentActiveTab === 'badge' ? 'btn-primary' : 'btn-outline'}" onclick="UnifiedPortal.switchParentTab('badge')">
+                🏷️ Laminated ID Badge
+              </button>
+            </div>
+
+            <!-- Tab Content Body -->
+            <div class="parent-tab-body">
+              ${this.renderParentTabContent(student, exam, examResult, dpps, doubts)}
+            </div>
+          </div>
+        `;
+      },
+
+      switchParentTab(tab) {
+        this.parentActiveTab = tab;
+        this.render();
+        if (window.AnimatedList) setTimeout(() => window.AnimatedList.init(), 50);
+        if (window.StarBorder) setTimeout(() => window.StarBorder.init(), 50);
+      },
+
+      renderParentTabContent(student, exam, examResult, dpps, doubts) {
+        if (this.parentActiveTab === 'att') {
+          return this.renderAttendanceCalendar(student);
+        } else if (this.parentActiveTab === 'timetable') {
+          return window.KaviroxTimetable ? window.KaviroxTimetable.renderForStudent(student) : '';
+        } else if (this.parentActiveTab === 'fee') {
+          return this.renderFeeReceiptsLedger(student);
+        } else if (this.parentActiveTab === 'marks') {
+          return this.renderScorecardTab(student, exam, examResult);
+        } else if (this.parentActiveTab === 'dpp') {
+          return this.renderParentDppTab(dpps);
+        } else if (this.parentActiveTab === 'doubt') {
+          return this.renderParentDoubtTab(doubts, student);
+        } else if (this.parentActiveTab === 'badge') {
+          setTimeout(() => {
+            const target = document.getElementById('student-id-card-render-target');
+            if (target && window.KaviroxIdCards && student?.id) {
+              target.innerHTML = window.KaviroxIdCards.renderSingleBadge(student.id, 'vertical');
+            }
+          }, 40);
+          return this.renderIdBadgeTab(student);
+        }
+      },
+
+      renderAttendanceCalendar(student) {
+        const days = Array.from({ length: 31 }, (_, i) => i + 1);
+
+        return `
+          <div class="glass-card p-5" style="border-radius: var(--radius-lg); background: var(--bg-surface-elevated); border: 1px solid var(--border-medium);">
+            <div class="d-flex justify-between items-center mb-4 flex-wrap gap-2">
+              <div>
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">October 2026 Biometric Attendance Register</h3>
+                <p class="text-secondary" style="font-size: 0.88rem;">Biometric RFID turnstile records for ${student.name} (${student.rollNo})</p>
+              </div>
+              <div class="cal-legend-row" style="gap: 1.25rem;">
+                <span class="leg-item"><span class="dot" style="background: #10B981;"></span> Present (23)</span>
+                <span class="leg-item"><span class="dot" style="background: #F43F5E;"></span> Absent (0)</span>
+                <span class="leg-item"><span class="dot" style="background: #F59E0B;"></span> Late (1)</span>
+                <span class="leg-item"><span class="dot" style="background: #6366F1;"></span> Holiday</span>
+              </div>
+            </div>
+
+            <div class="month-calendar-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.6rem;">
+              ${days.map(d => {
+                let status = 'P';
+                let color = '#10B981';
+                let text = 'Present';
+
+                if (d === 31) { status = 'H'; color = '#6366F1'; text = 'Holiday'; }
+                else if (d % 7 === 0) { status = 'Sun'; color = '#475569'; text = 'Weekend'; }
+                else if (d === 21) { status = 'L'; color = '#F59E0B'; text = 'Late 15m'; }
+
+                return `
+                  <div style="background: var(--bg-card-solid); border: 1px solid var(--border-subtle); padding: 0.85rem 0.5rem; border-radius: var(--radius-xs); text-align: center;">
+                    <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-tertiary);">${d} Oct</div>
+                    <div style="margin: 0.35rem 0; font-weight: 800; font-size: 1.1rem; color: ${color};">${status}</div>
+                    <small style="font-size: 0.68rem; color: var(--text-secondary);">${text}</small>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            <!-- Biometric Turnstile Telemetry Log -->
+            <div class="mt-4 p-3 glass-card" style="border-radius: var(--radius-sm); border: 1px solid var(--border-medium); background: var(--bg-card); display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.85rem;">
+              <div class="d-flex justify-between items-center pb-2" style="border-bottom: 1px solid var(--border-subtle);">
+                <div class="d-flex items-center gap-2">
+                  <span style="font-size: 1.1rem;">📟</span>
+                  <strong>Physical Turnstile Biometric Telemetry (Today, 25 Oct 2026)</strong>
+                </div>
+                <span class="badge badge-success">✓ Gate In-Punch Verified</span>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; font-size: 0.8rem;">
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">GATE ENTRY PUNCH:</span>
+                  <strong style="color: #059669; font-family: 'JetBrains Mono';">08:04:12 AM</strong> (Turnstile #3 • Gate 01)
+                </div>
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">HARDWARE RFID TAG:</span>
+                  <span class="font-mono text-primary">#APX-RF-1010</span> (ZKTeco InBio-Pro)
+                </div>
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">PARENT WHATSAPP ALERT:</span>
+                  <span style="color: #059669;">Delivered 08:04:28 AM (+91 ${student.parentPhone})</span>
+                </div>
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">CAMPUS STATUS:</span>
+                  <span>Inside Ramanujan Lecture Amphitheatre</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      renderFeeReceiptsLedger(student) {
+        const store = window.kaviroxStore;
+        const allReceipts = store.getReceipts ? store.getReceipts() : [];
+        const studentReceipts = allReceipts.filter(r => r.studentId === student.id || r.rollNo === student.rollNo);
+        const hasDues = (student.pendingDues || 0) > 0;
+
+        return `
+          <div class="glass-card p-5" style="border-radius: var(--radius-lg); background: var(--bg-surface-elevated); border: 1px solid var(--border-medium);">
+            <div class="d-flex justify-between items-center mb-4 flex-wrap gap-2">
+              <div>
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">Official Fee Payment History & GST Receipts</h3>
+                <p class="text-secondary" style="font-size: 0.88rem;">Itemized tuition installments with institute tax seal and serial numbering.</p>
+              </div>
+              <button class="btn btn-outline btn-sm" onclick="alert('Downloading annual fee certificate for income tax declaration (80C)...')">
+                📥 Tax Exemption Certificate (PDF)
+              </button>
+            </div>
+
+            ${hasDues ? `
+              <!-- Eye-Catching Pending Dues & Instant Pay Banner -->
+              <div class="mb-4 p-4 glass-card animate-slide-in" style="background: linear-gradient(135deg, rgba(244, 63, 94, 0.15), rgba(239, 68, 68, 0.05)); border: 1px solid rgba(244, 63, 94, 0.35); border-radius: var(--radius-md);">
+                <div class="d-flex justify-between items-center flex-wrap gap-3">
+                  <div>
+                    <div class="d-flex items-center gap-2">
+                      <span class="badge badge-danger">⚠️ OUTSTANDING TUITION DUE</span>
+                      <span style="font-size: 0.8rem; color: #FB7185;">Overdue since 20 Oct 2026</span>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 900; color: #FB7185; margin: 0.3rem 0; font-family: 'Outfit';">
+                      ₹${student.pendingDues.toLocaleString('en-IN')}
+                    </h3>
+                    <p style="font-size: 0.84rem; color: var(--text-secondary); margin: 0;">
+                      Pending tuition installment for ${student.name} (${student.rollNo}) • Settle now via UPI / NetBanking to avoid late fine.
+                    </p>
+                  </div>
+                  <button class="btn btn-primary btn-md" onclick="UnifiedPortal.openFeePaymentModal('${student.id}', ${student.pendingDues})" style="background: linear-gradient(135deg, #10B981, #059669); border-color: #10B981; font-weight: 800; font-size: 0.95rem; padding: 0.75rem 1.5rem; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);">
+                    💳 Pay Online Now (₹${student.pendingDues.toLocaleString('en-IN')}) →
+                  </button>
+                </div>
+              </div>
+            ` : `
+              <div class="mb-4 p-3 glass-card" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: space-between;">
+                <div class="d-flex items-center gap-2">
+                  <span style="color: #10B981; font-size: 1.2rem;">✓</span>
+                  <span style="font-size: 0.88rem; font-weight: 600; color: #E2E8F0;">All academic dues are fully cleared up to date. No pending payments.</span>
+                </div>
+                <span class="badge badge-success">Zero Outstanding Balance</span>
+              </div>
+            `}
+
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Receipt No</th>
+                    <th>Date</th>
+                    <th>Particulars</th>
+                    <th>Payment Mode</th>
+                    <th>Amount Paid</th>
+                    <th>Status</th>
+                    <th>Official Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${(studentReceipts.length > 0 ? studentReceipts : [
+                    { receiptNo: 'APX-2026-0891', date: '2026-10-05', forPeriod: 'October 2026 Tuition Installment', paymentMode: 'UPI', totalAmount: 8000, status: 'valid' },
+                    { receiptNo: 'APX-2026-0518', date: '2026-08-05', forPeriod: 'August 2026 Tuition Installment', paymentMode: 'UPI', totalAmount: 8000, status: 'valid' }
+                  ]).map(r => `
+                    <tr>
+                      <td><strong class="font-mono text-primary">${r.receiptNo}</strong></td>
+                      <td>${r.date}</td>
+                      <td>${r.forPeriod || 'Tuition Fee Installment'}</td>
+                      <td><span class="badge badge-outline">${r.paymentMode}</span></td>
+                      <td><strong class="font-mono text-emerald">₹${r.totalAmount.toLocaleString('en-IN')}</strong></td>
+                      <td><span class="badge badge-success">✓ Cleared</span></td>
+                      <td>
+                        <button class="btn btn-primary btn-xs" onclick="UnifiedPortal.showReceiptModal('${r.receiptNo}', '${r.totalAmount.toLocaleString('en-IN')}', '${r.date}')">
+                          View Tax Receipt →
+                        </button>
+                      </td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Official Institutional Bank Account Details (NEFT / RTGS / Cheque) -->
+            <div class="mt-4 p-4 glass-card" style="border-radius: var(--radius-sm); border: 1px solid var(--border-medium); background: var(--bg-card);">
+              <div class="d-flex justify-between items-center mb-2 pb-2" style="border-bottom: 1px solid var(--border-subtle);">
+                <div class="d-flex items-center gap-2">
+                  <span style="font-size: 1.15rem;">🏛️</span>
+                  <h4 style="font-size: 0.95rem; font-weight: 800; margin: 0; color: var(--text-primary);">Official Institutional Bank Account Details (Direct RTGS / NEFT / Wire)</h4>
+                </div>
+                <span class="badge badge-outline" style="font-size: 0.7rem; color: #1E3A8A; border-color: #BFDBFE;">RBI / HDFC VERIFIED</span>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; font-size: 0.82rem; margin-top: 0.75rem;">
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">BENEFICIARY NAME:</span>
+                  <strong style="color: var(--text-primary);">Apex Academy Educational Society</strong>
+                </div>
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">BANK & BRANCH:</span>
+                  <strong style="color: var(--text-primary);">HDFC Bank Ltd., Knowledge Park Branch, Kota</strong>
+                </div>
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">CURRENT ACCOUNT NUMBER:</span>
+                  <strong class="font-mono" style="color: #1E3A8A; font-size: 0.95rem;">50200084920194</strong>
+                </div>
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">IFSC CODE (NEFT/RTGS):</span>
+                  <strong class="font-mono" style="color: #059669; font-size: 0.95rem;">HDFC0001842</strong>
+                </div>
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">INSTITUTE GSTIN:</span>
+                  <span class="font-mono">08AAATA8821F1ZX</span>
+                </div>
+                <div>
+                  <span style="color: var(--text-tertiary); display: block; font-size: 0.72rem;">TAX EXEMPTION STATUS:</span>
+                  <span style="color: #059669; font-weight: 700;">Approved under Section 12A / 80G</span>
+                </div>
+              </div>
+              <p style="font-size: 0.75rem; color: var(--text-tertiary); margin: 0.85rem 0 0; line-height: 1.45;">
+                <em>* Note for Parents: After initiating NEFT or RTGS transfer, please WhatsApp or SMS your 16-digit UTR confirmation number to the Accounts Desk at +91 98100 12345. An official computerized GST tax receipt will be dispatched within 45 minutes.</em>
+              </p>
+            </div>
+          </div>
+        `;
+      },
+
+      openFeePaymentModal(studentId, amount) {
+        const store = window.kaviroxStore;
+        const student = store.getStudents().find(s => s.id === studentId) || this.currentUser;
+        const c = document.getElementById('receipt-modal-container');
+        if (!c) return;
+
+        c.innerHTML = `
+          <div class="modal-backdrop open" style="display: flex;">
+            <div class="presenter-hub-card animate-slide-in" style="max-width: 500px; background: #0F172A; color: #F8FAFC; border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 16px;">
+              <div class="d-flex justify-between items-center pb-3 border-bottom mb-3">
+                <div class="d-flex items-center gap-2">
+                  <span style="font-size: 1.5rem;">💳</span>
+                  <div>
+                    <h3 style="margin: 0; font-size: 1.2rem; color: #FFF;">Apex Instant Fee Checkout</h3>
+                    <span style="font-size: 0.75rem; color: #10B981;">● HDFC / ICICI Payment Gateway Secured</span>
+                  </div>
+                </div>
+                <button onclick="document.getElementById('receipt-modal-container').innerHTML = ''" style="font-size: 1.4rem; cursor: pointer; background: none; border: none; color: #94A3B8;">✕</button>
+              </div>
+
+              <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); padding: 1rem; border-radius: 10px; margin-bottom: 1.25rem;">
+                <div class="d-flex justify-between items-center mb-1">
+                  <span style="font-size: 0.82rem; color: #94A3B8;">Student:</span>
+                  <strong>${student.name || student.studentName} (${student.rollNo})</strong>
+                </div>
+                <div class="d-flex justify-between items-center mb-1">
+                  <span style="font-size: 0.82rem; color: #94A3B8;">Payee (Parent):</span>
+                  <span>${student.parentName || 'Parent'} (${student.parentPhone || ''})</span>
+                </div>
+                <div class="d-flex justify-between items-center pt-2 mt-2" style="border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                  <span style="font-size: 0.9rem; font-weight: 700; color: #FFF;">Total Amount Payable:</span>
+                  <strong class="font-mono" style="font-size: 1.4rem; color: #34D399;">₹${amount.toLocaleString('en-IN')}</strong>
+                </div>
+              </div>
+
+              <!-- Payment Method Selection Tabs -->
+              <div class="mb-3">
+                <label style="font-size: 0.78rem; color: #94A3B8; font-weight: 700; display: block; margin-bottom: 0.5rem;">SELECT PAYMENT CHANNEL:</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                  <div style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.75rem; border-radius: 8px; text-align: center; cursor: pointer;">
+                    <div style="font-size: 1.2rem;">📱</div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #34D399;">Instant UPI QR / App</span>
+                    <small style="display: block; font-size: 0.68rem; color: #94A3B8;">GPay, PhonePe, Paytm</small>
+                  </div>
+                  <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.75rem; border-radius: 8px; text-align: center; cursor: pointer;">
+                    <div style="font-size: 1.2rem;">💳</div>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #E2E8F0;">NetBanking / Card</span>
+                    <small style="display: block; font-size: 0.68rem; color: #94A3B8;">All Major Banks</small>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Simulated UPI QR Box -->
+              <div style="text-align: center; background: #FFF; padding: 1rem; border-radius: 10px; margin-bottom: 1.25rem;">
+                <svg width="120" height="120" viewBox="0 0 200 200" style="display: inline-block;">
+                  <rect width="200" height="200" fill="#FFFFFF"/>
+                  <rect x="20" y="20" width="40" height="40" fill="#0F172A"/>
+                  <rect x="26" y="26" width="28" height="28" fill="#FFFFFF"/>
+                  <rect x="32" y="32" width="16" height="16" fill="#0F172A"/>
+                  <rect x="140" y="20" width="40" height="40" fill="#0F172A"/>
+                  <rect x="146" y="26" width="28" height="28" fill="#FFFFFF"/>
+                  <rect x="152" y="32" width="16" height="16" fill="#0F172A"/>
+                  <rect x="20" y="140" width="40" height="40" fill="#0F172A"/>
+                  <rect x="26" y="146" width="28" height="28" fill="#FFFFFF"/>
+                  <rect x="32" y="152" width="16" height="16" fill="#0F172A"/>
+                  <rect x="70" y="20" width="10" height="10" fill="#0F172A"/>
+                  <rect x="90" y="30" width="20" height="10" fill="#0F172A"/>
+                  <rect x="120" y="20" width="10" height="10" fill="#0F172A"/>
+                  <rect x="80" y="80" width="40" height="40" fill="#2563EB"/>
+                  <rect x="130" y="70" width="50" height="20" fill="#0F172A"/>
+                  <rect x="20" y="100" width="20" height="30" fill="#0F172A"/>
+                  <rect x="100" y="140" width="40" height="20" fill="#0F172A"/>
+                </svg>
+                <div style="color: #0F172A; font-size: 0.75rem; font-weight: 700; font-family: 'JetBrains Mono';">UPI ID: apexacademy@hdfcbank</div>
+                <div style="color: #059669; font-size: 0.72rem; font-weight: 600;">Scan with any UPI App or click Confirm below</div>
+              </div>
+
+              <div class="d-flex justify-between items-center gap-2">
+                <button class="btn btn-outline btn-sm" onclick="document.getElementById('receipt-modal-container').innerHTML = ''">
+                  Cancel
+                </button>
+                <button class="btn btn-primary btn-md flex-1" onclick="UnifiedPortal.processOnlinePayment('${student.id || studentId}', ${amount})" style="background: linear-gradient(135deg, #10B981, #059669); border-color: #10B981; font-weight: 800;">
+                  ✓ Confirm & Pay ₹${amount.toLocaleString('en-IN')} Now
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      processOnlinePayment(studentId, amount) {
+        const store = window.kaviroxStore;
+        const student = store.getStudents().find(s => s.id === studentId);
+        if (student) {
+          student.pendingDues = 0;
+          student.overdueDays = 0;
+        }
+
+        // Add official receipt
+        const receiptNo = `APX-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+        const newReceipt = {
+          id: 'RCP-' + Date.now(),
+          receiptNo: receiptNo,
+          date: new Date().toISOString().split('T')[0],
+          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          studentId: student ? student.id : studentId,
+          studentName: student ? student.name : this.currentUser.studentName,
+          rollNo: student ? student.rollNo : this.currentUser.rollNo,
+          forPeriod: "October 2026 Clearance",
+          totalAmount: amount,
+          paymentMode: "UPI Online",
+          status: "valid"
+        };
+        store.data.receipts.unshift(newReceipt);
+        store.save();
+
+        if (this.currentUser) {
+          this.currentUser.pendingDues = 0;
+          sessionStorage.setItem('apex_portal_session', JSON.stringify(this.currentUser));
+        }
+
+        document.getElementById('receipt-modal-container').innerHTML = '';
+        this.showToast(`🎉 Payment of ₹${amount.toLocaleString('en-IN')} confirmed! Receipt #${receiptNo} issued.`, 'success');
+        this.render();
+      },
+
+      renderScorecardTab(student, exam, examResult) {
+        return `
+          <div class="glass-card p-5" style="border-radius: var(--radius-lg); background: var(--bg-surface-elevated); border: 1px solid var(--border-medium);">
+            ${window.KaviroxAnalytics ? window.KaviroxAnalytics.renderParentGrowthCard(student) : ''}
+            <div class="d-flex justify-between items-center mb-4 flex-wrap gap-2">
+              <div>
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">Test Performance & Exam Scorecard</h3>
+                <p class="text-secondary" style="font-size: 0.88rem;">Latest Minor & Major All-India Rank test score reports.</p>
+              </div>
+              <button class="btn btn-outline btn-sm" onclick="window.print()">
+                🖨️ Print Scorecard PDF
+              </button>
+            </div>
+
+            <!-- Scorecard Hero -->
+            <div style="background: var(--bg-card-solid); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.5rem;">
+              <div class="d-flex justify-between items-start flex-wrap gap-3">
+                <div>
+                  <span class="badge badge-accent">EXAM REPORT: ${exam.id || 'EXM-001'}</span>
+                  <h4 style="font-size: 1.25rem; font-weight: 800; margin: 0.4rem 0 0.2rem; color: var(--text-primary);">${exam.title || 'JEE Advanced Minor Test 04'}</h4>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">Conducted by: ${exam.conductedBy || 'Vikram Aditya (HOD Physics)'} • Date: ${exam.date || '22 Oct 2026'}</p>
+                </div>
+                <div class="d-flex gap-2">
+                  <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.5rem 1rem; border-radius: 8px; text-align: center;">
+                    <span style="font-size: 0.68rem; color: var(--text-secondary); text-transform: uppercase;">All-India Rank</span>
+                    <div style="font-size: 1.35rem; font-weight: 900; color: #10B981; font-family: 'Outfit';">#${examResult.rank || 1}</div>
+                  </div>
+                  <div style="background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.3); padding: 0.5rem 1rem; border-radius: 8px; text-align: center;">
+                    <span style="font-size: 0.68rem; color: var(--text-secondary); text-transform: uppercase;">Percentile</span>
+                    <div style="font-size: 1.35rem; font-weight: 900; color: #818CF8; font-family: 'Outfit';">${examResult.percentile || 99.4}%</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Marks Table -->
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle);">
+                <div style="background: var(--bg-surface-elevated); padding: 0.75rem 1rem; border-radius: var(--radius-xs);">
+                  <span style="font-size: 0.72rem; color: var(--text-secondary);">Score Obtained</span>
+                  <div style="font-size: 1.3rem; font-weight: 800; color: #34D399; font-family: 'Outfit';">${examResult.marks} / ${exam.maxMarks || 120}</div>
+                </div>
+                <div style="background: var(--bg-surface-elevated); padding: 0.75rem 1rem; border-radius: var(--radius-xs);">
+                  <span style="font-size: 0.72rem; color: var(--text-secondary);">Accuracy Rate</span>
+                  <div style="font-size: 1.3rem; font-weight: 800; color: #60A5FA; font-family: 'Outfit';">95.0%</div>
+                </div>
+                <div style="background: var(--bg-surface-elevated); padding: 0.75rem 1rem; border-radius: var(--radius-xs);">
+                  <span style="font-size: 0.72rem; color: var(--text-secondary);">Faculty Assessment</span>
+                  <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-top: 0.2rem;">${examResult.remarks || 'Outstanding conceptual grasp'}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      },
+
+      renderParentDppTab(dpps) {
+        return `
+          <div class="glass-card p-5" style="border-radius: var(--radius-lg); background: var(--bg-surface-elevated); border: 1px solid var(--border-medium);">
+            <div class="d-flex justify-between items-center mb-4 flex-wrap gap-2">
+              <div>
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">Daily Practice Problems (DPP) & Homework</h3>
+                <p class="text-secondary" style="font-size: 0.88rem;">Assignments and problem sheets dispatched by Kota senior faculty.</p>
+              </div>
+            </div>
+
+            <div 
+              class="animated-list animated-list--framed"
+              data-animation="pop"
+              data-theme="dark"
+              data-width="100%"
+              data-max-height="450"
+              data-radius="14"
+              data-gap="10"
+              data-show-gradients="true"
+              data-fade-size="48"
+              data-select-on-hover="true"
+              data-enable-arrow-navigation="true"
+            >
+              <div class="animated-list__viewport" role="listbox" tabindex="0">
+                <div class="animated-list__track">
+                  ${dpps.map(d => `
+                    <div class="animated-list__item" role="option">
+                      <span class="animated-list__lead">📚</span>
+                      <span class="animated-list__text">
+                        <span class="animated-list__title">${d.title}</span>
+                        <span class="animated-list__description">${d.totalQuestions} Questions • Assigned by: ${d.assignedBy || 'Faculty Mentor'} • Due: ${d.dueDate}</span>
+                      </span>
+                      <span class="animated-list__meta" style="display: flex; gap: 0.5rem; align-items: center;">
+                        <button class="btn btn-outline btn-xs" style="font-size: 0.72rem; padding: 2px 8px;" onclick="event.stopPropagation(); ApexPdfGenerator.download('${d.title || d.id}')" title="Download official Kota DPP PDF">📥 PDF</button>
+                        <button class="btn btn-primary btn-xs" style="font-size: 0.72rem; padding: 2px 8px;" onclick="UnifiedPortal.openDppSubmitModal('${d.id}', '${d.title}')">✍️ Submit</button>
+                      </span>
+                      <span class="animated-list__rim" aria-hidden="true"></span>
+                    </div>
+                  `).join('')}
+                  <span class="animated-list__indicator" aria-hidden="true">
+                    <span class="animated-list__ring"></span>
+                  </span>
+                </div>
+              </div>
+              <span class="animated-list__frame-rim" aria-hidden="true"></span>
+            </div>
+          </div>
+        `;
+      },
+
+      openDppSubmitModal(dppId, title) {
+        const c = document.getElementById('receipt-modal-container');
+        if (!c) return;
+        c.innerHTML = `
+          <div class="modal-backdrop open" style="display: flex;">
+            <div class="presenter-hub-card animate-slide-in" style="max-width: 500px; background: #0F172A; color: #F8FAFC; border: 1px solid rgba(59, 130, 246, 0.4); border-radius: 16px;">
+              <div class="d-flex justify-between items-center pb-3 border-bottom mb-3">
+                <h3 style="margin: 0; font-size: 1.15rem; color: #FFF;">Submit Solution: ${dppId}</h3>
+                <button onclick="document.getElementById('receipt-modal-container').innerHTML = ''" style="font-size: 1.4rem; cursor: pointer; background: none; border: none; color: #94A3B8;">✕</button>
+              </div>
+
+              <p style="font-size: 0.85rem; color: #94A3B8; margin-bottom: 1rem;">${title}</p>
+
+              <form onsubmit="event.preventDefault(); document.getElementById('receipt-modal-container').innerHTML = ''; UnifiedPortal.showToast('Homework solutions submitted successfully to faculty mentor!', 'success');">
+                <div class="form-group mb-3">
+                  <label class="form-label" style="font-size: 0.8rem;">Attach Solution Scan / Photo</label>
+                  <input type="file" class="form-control" style="font-size: 0.8rem;" />
+                </div>
+                <div class="form-group mb-3">
+                  <label class="form-label" style="font-size: 0.8rem;">Student Working Remarks / Notes</label>
+                  <textarea class="form-control" rows="3" placeholder="Enter any doubts or question numbers solved..." style="font-size: 0.85rem;"></textarea>
+                </div>
+                <div class="d-flex justify-end gap-2">
+                  <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('receipt-modal-container').innerHTML = ''">Cancel</button>
+                  <button type="submit" class="btn btn-primary btn-sm">🚀 Submit Homework</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        `;
+      },
+
+      renderParentDoubtTab(doubts, student) {
+        return `
+          <div class="glass-card p-5" style="border-radius: var(--radius-lg); background: var(--bg-surface-elevated); border: 1px solid var(--border-medium);">
+            <div class="d-flex justify-between items-center mb-4 flex-wrap gap-2">
+              <div>
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">Academic Doubts & Questions Desk</h3>
+                <p class="text-secondary" style="font-size: 0.88rem;">Direct Q&A with Kota senior faculty for lecture & study material doubts.</p>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="document.getElementById('ask-doubt-box').classList.toggle('d-none')">
+                + Ask New Academic Doubt
+              </button>
+            </div>
+
+            <!-- Ask Doubt Form -->
+            <div id="ask-doubt-box" class="glass-card p-4 mb-4 d-none" style="background: var(--bg-card-solid); border: 1px solid var(--border-medium); border-radius: var(--radius-sm);">
+              <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.75rem;">Submit Doubt Question to Faculty</h4>
+              <form onsubmit="UnifiedPortal.handleAskDoubt(event)">
+                <div class="form-group mb-2">
+                  <label class="form-label" style="font-size: 0.8rem;">Subject & Topic *</label>
+                  <input type="text" name="topic" class="form-control" placeholder="e.g. Physics • Rotational Dynamics / Moment of Inertia" required />
+                </div>
+                <div class="form-group mb-3">
+                  <label class="form-label" style="font-size: 0.8rem;">Your Question / Problem Reference *</label>
+                  <textarea name="question" class="form-control" rows="3" placeholder="Explain your doubt or provide book/sheet question number..." required></textarea>
+                </div>
+                <div class="d-flex justify-end gap-2">
+                  <button type="button" class="btn btn-outline btn-sm" onclick="document.getElementById('ask-doubt-box').classList.add('d-none')">Cancel</button>
+                  <button type="submit" class="btn btn-primary btn-sm">🚀 Submit to Teacher</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Doubts History -->
+            <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+              ${doubts.map(d => `
+                <div style="background: var(--bg-card-solid); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.25rem;">
+                  <div class="d-flex justify-between items-center flex-wrap gap-2 mb-2">
+                    <span class="badge ${d.status === 'resolved' ? 'badge-success' : 'badge-warning'}">
+                      ${d.status === 'resolved' ? '✓ Resolved by Faculty' : '⏳ Pending Response'}
+                    </span>
+                    <span class="text-secondary" style="font-size: 0.8rem;">📅 ${d.date}</span>
+                  </div>
+                  <h4 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin: 0.3rem 0;">"${d.question}"</h4>
+                  ${d.resolution ? `
+                    <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10B981; padding: 0.75rem; border-radius: 4px; margin-top: 0.75rem;">
+                      <span style="font-size: 0.75rem; font-weight: 700; color: #10B981;">Faculty Explanation (${d.resolvedBy}):</span>
+                      <p style="font-size: 0.85rem; margin: 0.2rem 0 0; color: var(--text-primary);">${d.resolution}</p>
+                    </div>
+                  ` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      },
+
+      handleAskDoubt(e) {
+        e.preventDefault();
+        const form = e.target;
+        const topic = form.topic.value;
+        const question = form.question.value;
+
+        if (window.kaviroxStore.data && window.kaviroxStore.data.doubts) {
+          window.kaviroxStore.data.doubts.unshift({
+            id: "DBT-" + Math.floor(10 + Math.random() * 90),
+            studentId: this.currentUser.studentId,
+            studentName: this.currentUser.studentName,
+            rollNo: this.currentUser.rollNo,
+            batchName: this.currentUser.batchName,
+            subject: topic.split('•')[0].trim() || 'Physics',
+            topic: topic,
+            question: question,
+            status: "pending",
+            resolution: "",
+            date: new Date().toISOString().split('T')[0]
+          });
+          window.kaviroxStore.save();
+        }
+
+        this.showToast('Your academic doubt has been forwarded to faculty mentor!', 'success');
+        this.render();
+      },
+
+      renderIdBadgeTab(student) {
+        return `
+          <div class="glass-card p-5" style="border-radius: var(--radius-lg); background: var(--bg-surface-elevated); border: 1px solid var(--border-medium);">
+            <div class="d-flex justify-between items-center mb-4 flex-wrap gap-2">
+              <div>
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary);">Student Official Laminated Campus ID Badge</h3>
+                <p class="text-secondary" style="font-size: 0.88rem;">Contains high-resolution barcode for turnstile check-in and QR security seal.</p>
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="window.print()">
+                🖨️ Print Laminated Badge
+              </button>
+            </div>
+
+            <div class="d-flex justify-center mt-3">
+              <div id="student-id-card-render-target"></div>
+            </div>
+          </div>
+        `;
+      },
+
+      showReceiptModal(rcpNo, amount, date) {
+        const c = document.getElementById('receipt-modal-container');
+        if (!c) return;
+        c.innerHTML = `
+          <div class="modal-backdrop open" style="display: flex;">
+            <div class="presenter-hub-card modal-receipt animate-slide-in" style="max-width: 680px; background: #FFF !important; color: #0F172A !important;">
+              <div class="d-flex justify-between items-center pb-3 border-bottom mb-3">
+                <div>
+                  <span class="badge badge-success">OFFICIAL GST TAX INVOICE</span>
+                  <h3 style="margin-top: 0.35rem; color: #0F172A;">RECEIPT #${rcpNo}</h3>
+                </div>
+                <button onclick="document.getElementById('receipt-modal-container').innerHTML = ''" style="font-size: 1.4rem; cursor: pointer; background: none; border: none; color: #0F172A;">✕</button>
+              </div>
+
+              <div class="printable-receipt-card" style="padding: 1.5rem 0;">
+                <div class="d-flex justify-between items-start mb-3">
+                  <div>
+                    <h4 style="font-size: 1.25rem; font-weight: 800; color: #1E3A8A; margin: 0;">APEX ACADEMY</h4>
+                    <div style="font-size: 0.78rem; color: #475569;">Plot 42, Knowledge Park III, Kota • GSTIN: 08AAACA4191Q1Z8</div>
+                  </div>
+                  <div style="text-align: right; font-size: 0.8rem; color: #475569;">
+                    Date: <strong>${date}</strong><br>Time: 11:28 AM
+                  </div>
+                </div>
+
+                <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 1rem; border-radius: 8px; margin-bottom: 1.25rem; font-size: 0.85rem; color: #0F172A;">
+                  <div>Student: <strong>${this.currentUser.studentName || 'Aarav Sharma'}</strong> (Roll: ${this.currentUser.rollNo || 'APX-101'})</div>
+                  <div>Course: <strong>IIT-JEE 2-Year Target (Class 11)</strong></div>
+                  <div>Parent Mobile: <strong>${this.currentUser.parentPhone || '+91 98100 12345'}</strong></div>
+                </div>
+
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-bottom: 1.5rem; color: #0F172A;">
+                  <thead>
+                    <tr style="border-bottom: 2px solid #E2E8F0; text-align: left;">
+                      <th style="padding: 0.5rem 0;">Description</th>
+                      <th style="text-align: right; padding: 0.5rem 0;">Amount (INR)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom: 1px solid #F1F5F9;">
+                      <td style="padding: 0.5rem 0;">Tuition & Classroom Coaching Fee</td>
+                      <td style="text-align: right; font-weight: 700;">₹7,200</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #F1F5F9;">
+                      <td style="padding: 0.5rem 0;">Lab, Study Modules & All-India Test Series</td>
+                      <td style="text-align: right; font-weight: 700;">₹800</td>
+                    </tr>
+                    <tr style="border-top: 2px solid #E2E8F0; font-weight: 800; font-size: 1rem;">
+                      <td style="padding: 0.75rem 0; color: #1E3A8A;">Total Paid (Inclusive of 18% GST)</td>
+                      <td style="text-align: right; color: #10B981;">₹${amount}</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="d-flex justify-between items-center" style="font-size: 0.8rem; color: #64748B;">
+                  <div>Payment Mode: <strong>UPI / NetBanking</strong></div>
+                  <button class="btn btn-primary btn-sm" onclick="window.print()">🖨️ Print Tax Invoice</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+    };
+
+    // Initialize unified portal
+    document.addEventListener('DOMContentLoaded', () => {
+      UnifiedPortal.init();
+    });
+
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('inst-mobile-drawer');
+      if (!drawer) return;
+      drawer.classList.toggle('active');
+      if (drawer.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+    window.toggleMobileDrawer = toggleMobileDrawer;
+  </script>
+</body>
+</html>

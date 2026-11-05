@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses & Transparent Fee Structure | Apex IIT-JEE & NEET Academy</title>
+  <meta name="description" content="View transparent course fee plans, monthly installment options, scholarship discounts, and calculate your exact fees with our interactive fee estimator.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=4.7">
+</head>
+<body>
+  <!-- Top Utility Strip -->
+  <aside class="inst-utility-bar no-print">
+    <div class="inst-utility-left">
+      <span class="utility-ticker-badge">TRANSPARENT FEES • ZERO HIDDEN CHARGES</span>
+      <a href="tel:+919810012345" class="utility-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Fee Accounts Desk: +91 98100 12345</span>
+      </a>
+    </div>
+    <div class="inst-utility-right">
+      <a href="parent-portal.html" class="utility-link">Guardian Portal</a>
+      <a href="teacher-portal.html" class="utility-link">Faculty Terminal</a>
+      <a href="admin.html" class="utility-link">Staff Login</a>
+      <button class="sound-fx-toggle-btn sound-active" onclick="toggleSoundFx()" title="Tactile Sound FX (Click to Mute/Unmute)">
+        🔊 Sound FX
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Navbar -->
+  <header class="inst-navbar-wrap">
+    <a href="index.html" class="inst-brand-block">
+      <div class="inst-emblem-box">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="inst-brand-text">
+        <span class="inst-brand-title">APEX ACADEMY</span>
+        <span class="inst-brand-sub">Premier Institute for IIT-JEE & NEET • Est. 2008</span>
+      </div>
+    </a>
+
+    <nav class="inst-nav-menu">
+      <a href="index.html" class="inst-nav-link">Home</a>
+      <a href="about.html" class="inst-nav-link">About & Faculty</a>
+      <a href="courses.html" class="inst-nav-link active">Courses & Fees</a>
+      <a href="results.html" class="inst-nav-link">Results 2026</a>
+      <a href="admissions.html" class="inst-nav-link">Admissions</a>
+      <a href="portal.html" class="inst-nav-link">Student Hub</a>
+      <a href="contact.html" class="inst-nav-link">Contact</a>
+    </nav>
+
+    <div class="inst-nav-actions">
+      <a href="admissions.html" class="btn btn-primary btn-sm">Apply Online 2026 →</a>
+      <button type="button" class="inst-mobile-toggle" onclick="toggleMobileDrawer()" aria-label="Toggle Mobile Navigation">☰</button>
+    </div>
+  </header>
+  <!-- Mobile Navigation Drawer -->
+  <div class="inst-mobile-drawer" id="inst-mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <div class="inst-mobile-drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <div class="inst-emblem-box" style="width: 38px; height: 38px; background: linear-gradient(135deg, #013284, #0e2974); border: 1.5px solid #cbb88f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 1.2rem;">🏛️</span>
+        </div>
+        <div>
+          <span style="font-family: 'Outfit', sans-serif; font-weight: 800; color: #FFFFFF; font-size: 1.05rem; display: block; line-height: 1.2;">APEX ACADEMY</span>
+          <span style="font-size: 0.68rem; color: #94A3B8;">Premier IIT-JEE &amp; NEET Institute</span>
+        </div>
+      </div>
+      <button type="button" class="inst-mobile-drawer-close" onclick="toggleMobileDrawer()" aria-label="Close Mobile Navigation">
+        ✕
+      </button>
+    </div>
+
+    <nav class="inst-mobile-links">
+      <a href="index.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>🏠 Home</span>
+        <span>→</span>
+      </a>
+      <a href="about.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>👨‍🏫 About &amp; Kota Faculty</span>
+        <span>→</span>
+      </a>
+      <a href="courses.html" class="inst-mobile-link active" onclick="toggleMobileDrawer()">
+        <span>📚 Courses, Batches &amp; Fees</span>
+        <span>→</span>
+      </a>
+      <a href="results.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>🏆 Results 2026 Wall of Fame</span>
+        <span>→</span>
+      </a>
+      <a href="admissions.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>📝 Admissions 2026–27 Open</span>
+        <span>→</span>
+      </a>
+      <a href="portal.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>🎓 Student &amp; Parent Hub</span>
+        <span>→</span>
+      </a>
+      <a href="contact.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>📍 Contact &amp; Campus Map</span>
+        <span>→</span>
+      </a>
+    </nav>
+
+    <div class="inst-mobile-actions">
+      <a href="admissions.html" class="btn btn-primary btn-block" style="background: #CBB88F; color: #013284; border-color: #CBB88F; font-weight: 900; padding: 0.85rem; border-radius: 12px; font-size: 0.95rem; text-align: center; text-decoration: none;">
+        📝 Apply for Admissions 2026-27 →
+      </a>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem;">
+        <a href="parent-portal.html" class="btn btn-outline btn-sm" style="color: #93C5FD; border-color: rgba(147, 197, 253, 0.4); text-align: center; border-radius: 10px; font-weight: 700;">
+          👤 Guardian Portal
+        </a>
+        <a href="teacher-portal.html" class="btn btn-outline btn-sm" style="color: #E2E8F0; border-color: rgba(255, 255, 255, 0.2); text-align: center; border-radius: 10px; font-weight: 700;">
+          ✍️ Faculty Terminal
+        </a>
+      </div>
+      <a href="tel:+919810012345" class="btn btn-outline btn-sm" style="color: #34D399; border-color: rgba(52, 211, 153, 0.4); display: flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 10px; font-weight: 700;">
+        📞 Call Campus: +91 98100 12345
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Page Banner -->
+  <section class="page-hero-banner">
+    <div class="page-hero-eyebrow">SESSION 2026–27 FEE STRUCTURE</div>
+    <h1 class="page-hero-title">Transparent Academic Programs & Fees</h1>
+    <p class="page-hero-desc">
+      Every rupee accounted for with itemized GST tax invoices, flexible monthly installment schedules, and up to 90% merit scholarship waivers.
+    </p>
+  </section>
+
+  <!-- Interactive Fee Calculator (Luxury Tier) -->
+  <section class="apex-luxury-calc-wrap" id="interactive-fee-calculator">
+    <div class="calc-container-inner">
+      <div class="calc-header-block">
+        <span class="calc-badge-gold">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          INSTITUTIONAL ESTIMATOR • SESSION 2026–27
+        </span>
+        <h2 class="calc-header-title">Calculate Your Exact Course Fee &amp; Scholarships</h2>
+        <p class="calc-header-desc">
+          Select your target entrance examination, study campus, and eligible scholarship tier to view verified GST invoices and custom monthly installment schedules.
+        </p>
+        <div>
+          <button type="button" class="btn-athe-quiz-trigger" onclick="openAtheQuizModal()">
+            <span class="pulse-sparkle">✨</span>
+            <span>Take 60-Sec Scholarship Quiz &amp; Win Up to 90% Waiver</span>
+            <span class="btn-pill-arrow">→</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="calc-console-grid">
+        <!-- Left: Interactive Control Console -->
+        <div class="calc-control-panel">
+          <div class="calc-preset-bar">
+            <span class="calc-preset-label">Quick Presets:</span>
+            <button type="button" class="calc-chip active" onclick="applyPreset('jee2', 0, 'monthly', this)">JEE 2-Yr</button>
+            <button type="button" class="calc-chip" onclick="applyPreset('neet', 40, 'monthly', this)">NEET (40% Off)</button>
+            <button type="button" class="calc-chip" onclick="applyPreset('dropper', 60, 'annual', this)">Repeater (Annual)</button>
+            <button type="button" class="calc-chip" onclick="applyPreset('found', 90, 'monthly', this)">Super-30 (90% Off)</button>
+          </div>
+
+          <div class="calc-field-group">
+            <label for="calc-course" class="calc-field-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+              Select Target Academic Program
+            </label>
+            <div class="calc-select-wrap">
+              <select id="calc-course" class="calc-custom-select" onchange="calculateFees()">
+                <option value="jee2" data-fee="8000" data-annual="96000" selected>IIT-JEE 2-Year Target (Class 11 &amp; 12) • ₹8,000/mo</option>
+                <option value="neet" data-fee="7500" data-annual="90000">NEET Med-Champions Batch • ₹7,500/mo</option>
+                <option value="dropper" data-fee="7000" data-annual="84000">Class 12 Rank Booster / Repeater • ₹7,000/mo</option>
+                <option value="found" data-fee="5000" data-annual="60000">Class 8–10 Olympiad Pre-Foundation • ₹5,000/mo</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-field-group">
+            <label for="calc-campus" class="calc-field-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Preferred Study Campus
+            </label>
+            <div class="calc-select-wrap">
+              <select id="calc-campus" class="calc-custom-select">
+                <option value="kota">Kota Main Campus (Knowledge Park III)</option>
+                <option value="noida">Greater Noida Sector Alpha-1 Campus</option>
+                <option value="hybrid">Apex Live Hybrid Interactive Classroom</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-field-group">
+            <label for="calc-scholarship" class="calc-field-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              Apex Talent Hunt Exam (ATHE) Scholarship Tier
+            </label>
+            <div class="calc-select-wrap">
+              <select id="calc-scholarship" class="calc-custom-select" onchange="calculateFees()">
+                <option value="0" selected>Direct Admission (No Scholarship Applied)</option>
+                <option value="20">ATHE Tier III (20% Tuition Waiver)</option>
+                <option value="40">ATHE Tier II (40% Tuition Waiver)</option>
+                <option value="60">ATHE Tier I (60% Tuition Waiver)</option>
+                <option value="90">Super-30 Scholar (90% Full Tuition Waiver)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-field-group">
+            <label for="calc-mode" class="calc-field-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+              Payment Mode Preference
+            </label>
+            <div class="calc-select-wrap">
+              <select id="calc-mode" class="calc-custom-select" onchange="calculateFees()">
+                <option value="monthly" selected>Monthly Easy Installments (12 months)</option>
+                <option value="quarterly">Quarterly Installments (4 installments)</option>
+                <option value="annual">One-Time Annual Payment (10% Cash Concession)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-trust-strip">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Guaranteed Zero Admission Surcharge • Computerized GST Bills</span>
+          </div>
+        </div>
+
+        <!-- Right: Digital Tax-Compliant Fee Ledger & Verified Invoice Card -->
+        <div class="calc-invoice-card">
+          <div class="calc-invoice-header">
+            <span class="calc-live-pill"><span class="live-dot"></span> LIVE FEE BREAKDOWN</span>
+            <span class="calc-gst-pill">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              GST INVOICE VERIFIED (SAC 9992)
+            </span>
+          </div>
+
+          <h3 id="res-course-name" class="calc-invoice-title">IIT-JEE 2-Year Target (Class 11 &amp; 12)</h3>
+          <div class="calc-invoice-meta">Kota Benchmark Pedagogy • 840 Hrs Classroom + MTS CBT</div>
+
+          <div class="calc-ledger-box">
+            <div class="calc-ledger-row">
+              <span class="ledger-label">Standard Annual Tuition:</span>
+              <span id="res-gross" class="ledger-val">₹96,000</span>
+            </div>
+            <div class="calc-ledger-row">
+              <span class="ledger-label">ATHE Merit Scholarship:</span>
+              <span id="res-discount" class="ledger-val text-emerald">- ₹0 (0%)</span>
+            </div>
+            <div class="calc-ledger-row">
+              <span class="ledger-label">Payment Mode Concession:</span>
+              <span id="res-mode-discount" class="ledger-val text-emerald">- ₹0</span>
+            </div>
+            <div class="calc-ledger-row ledger-highlight-row">
+              <span class="ledger-label-strong">Net Total Payable (Annual):</span>
+              <span id="res-net-total" class="ledger-val-total">₹96,000</span>
+            </div>
+          </div>
+
+          <div class="calc-installment-banner">
+            <div class="installment-header-line">
+              <span class="installment-caption">CALCULATED PAYABLE INSTALLMENT</span>
+              <span id="res-savings-badge" class="calc-savings-badge" style="display: none;">Save ₹0</span>
+            </div>
+            <div class="installment-amount-row">
+              <div id="res-installment" class="installment-big-num">
+                ₹8,000 <small>/ month (12 inst.)</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-action-group">
+            <a href="admissions.html" class="btn-calc-primary">
+              Lock This Fee &amp; Apply Online →
+            </a>
+            <button type="button" class="btn-calc-secondary" onclick="window.print()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect width="12" height="8" x="6" y="14"></rect></svg>
+              Print Quote
+            </button>
+          </div>
+
+          <div class="calc-guarantee-text">
+            🛡️ 14-Day Fee Lock: Transparent schedule honored with zero subsequent escalation.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Detailed Program Cards -->
+  <section class="inst-main-container" id="academic-programs-grid">
+    <div class="section-intro-block">
+      <span class="section-badge-pill">COMPREHENSIVE CURRICULUM</span>
+      <h2 class="section-heading-lg">Flagship Academic Programs (2026–27)</h2>
+      <p class="section-subtitle">Structured syllabus progression, rigorous daily problem sheets, and national All-India test series.</p>
+    </div>
+
+    <div class="courses-showcase-grid">
+      <!-- Course 1 -->
+      <div class="course-card-detailed">
+        <span class="course-stream-badge" style="background: rgba(37, 99, 235, 0.15); color: #60A5FA;">IIT-JEE (MAIN + ADVANCED)</span>
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">JEE 2-Year Target Batch</h3>
+        <p class="text-secondary" style="font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">For students entering Class 11. Complete mastery of Class 11 & 12 syllabus with advanced problem-solving techniques.</p>
+        
+        <div class="course-fee-amount-box">
+          <div>
+            <span style="font-size: 0.72rem; color: var(--text-tertiary); text-transform: uppercase;">Tuition & Materials:</span>
+            <div class="fee-amount-num">₹8,000 <small style="font-size: 0.75rem; color: var(--text-secondary);">/month</small></div>
+          </div>
+          <span class="badge badge-outline">Batch Limit: 35</span>
+        </div>
+
+        <ul class="course-feature-list">
+          <li><span class="text-emerald">✓</span> 840 hours of live classroom lectures by Kota HODs</li>
+          <li><span class="text-emerald">✓</span> 32-Module Comprehensive Study Material Kit with PYQs</li>
+          <li><span class="text-emerald">✓</span> Bi-weekly All India CBT Test Series with percentile rank</li>
+          <li><span class="text-emerald">✓</span> Biometric daily attendance tracking with parent WhatsApp alerts</li>
+          <li><span class="text-emerald">✓</span> Daily 1-on-1 doubt resolution desk access</li>
+        </ul>
+
+        <a href="admissions.html" class="btn btn-primary btn-block">Enrol in JEE Target Batch →</a>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-card-detailed">
+        <span class="course-stream-badge" style="background: rgba(16, 185, 129, 0.15); color: #34D399;">NEET-UG (MEDICAL)</span>
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">NEET Med-Champions Batch</h3>
+        <p class="text-secondary" style="font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">For medical aspirants aiming for top government medical colleges (AIIMS, MAMC, KGMU). NCERT line-by-line focus.</p>
+        
+        <div class="course-fee-amount-box">
+          <div>
+            <span style="font-size: 0.72rem; color: var(--text-tertiary); text-transform: uppercase;">Tuition & Materials:</span>
+            <div class="fee-amount-num">₹7,500 <small style="font-size: 0.75rem; color: var(--text-secondary);">/month</small></div>
+          </div>
+          <span class="badge badge-outline">Batch Limit: 30</span>
+        </div>
+
+        <ul class="course-feature-list">
+          <li><span class="text-emerald">✓</span> 780 hours of intensive classroom training by AIIMS/Doctor faculty</li>
+          <li><span class="text-emerald">✓</span> 10,000+ Question NCERT High-Yield Biology Question Bank</li>
+          <li><span class="text-emerald">✓</span> High-speed physics calculation tricks for 45 questions in 40 mins</li>
+          <li><span class="text-emerald">✓</span> Weekly 200-question full-length NEET mock simulations</li>
+          <li><span class="text-emerald">✓</span> Instant attendance SMS & computerized tax receipts</li>
+        </ul>
+
+        <a href="admissions.html" class="btn btn-primary btn-block">Enrol in NEET Champions →</a>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="course-card-detailed">
+        <span class="course-stream-badge" style="background: rgba(245, 158, 11, 0.15); color: #FBBF24;">DROPPER / REPEATER</span>
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">Class 12 Rank Booster Intensive</h3>
+        <p class="text-secondary" style="font-size: 0.88rem; line-height: 1.6; margin-bottom: 1rem;">A 1-year fast-paced syllabus mastery program for dedicated droppers aiming to improve percentile by 20–30%.</p>
+        
+        <div class="course-fee-amount-box">
+          <div>
+            <span style="font-size: 0.72rem; color: var(--text-tertiary); text-transform: uppercase;">Tuition & Materials:</span>
+            <div class="fee-amount-num">₹7,000 <small style="font-size: 0.75rem; color: var(--text-secondary);">/month</small></div>
+          </div>
+          <span class="badge badge-outline">Batch Limit: 35</span>
+        </div>
+
+        <ul class="course-feature-list">
+          <li><span class="text-emerald">✓</span> 6 days a week, 5 hours daily teaching + 3 hours guided self-study</li>
+          <li><span class="text-emerald">✓</span> Rigorous error-analysis after every test paper</li>
+          <li><span class="text-emerald">✓</span> Dedicated personal mentor assigned for academic stress & strategy</li>
+          <li><span class="text-emerald">✓</span> Silent library cabin access with personal locker</li>
+        </ul>
+
+        <a href="admissions.html" class="btn btn-primary btn-block">Enrol in Rank Booster →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Section: Apex AI All-India Rank & College Predictor (Cutoff Simulator)
+       ========================================================================= -->
+  <section class="apex-luxury-calc-wrap" id="rank-predictor" style="background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.18) 0%, rgba(2, 6, 23, 0.98) 75%), #050C1F; border-top: 1px solid rgba(52, 211, 153, 0.35); border-bottom: 1px solid rgba(52, 211, 153, 0.35);">
+    <div class="calc-container-inner">
+      <div class="calc-header-block">
+        <span class="calc-badge-gold" style="border-color: rgba(52, 211, 153, 0.5); color: #6EE7B7; background: rgba(52, 211, 153, 0.12);">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          CUTOFF PREDICTOR ENGINE • BASED ON ALL-INDIA STATS
+        </span>
+        <h2 class="calc-header-title">All-India Rank &amp; Target College Predictor</h2>
+        <p class="calc-header-desc">
+          Test your mock scores in real-time. Calculate your estimated All-India Rank (AIR), percentile band, and discover your admission chances across top IITs, NITs, and AIIMS.
+        </p>
+      </div>
+
+      <!-- Simulator Console -->
+      <div class="rank-sim-grid">
+        <!-- Controls Left -->
+        <div class="rank-control-card">
+          <!-- Stream Toggle -->
+          <div class="rank-stream-tabs">
+            <button type="button" class="rank-stream-btn active" id="tab-stream-jee" onclick="switchPredictorStream('jee')">
+              ⚛️ IIT-JEE (Main &amp; Adv)
+            </button>
+            <button type="button" class="rank-stream-btn" id="tab-stream-neet" onclick="switchPredictorStream('neet')">
+              🩺 NEET-UG (Medical)
+            </button>
+          </div>
+
+          <!-- Score Input Range -->
+          <div class="rank-input-box">
+            <div class="d-flex justify-between items-center mb-2">
+              <label class="calc-field-label mb-0" id="rank-score-label" style="font-size: 0.82rem;">
+                Predicted Mock Score:
+              </label>
+              <div class="rank-score-display">
+                <span id="rank-score-val" class="font-mono">215</span>
+                <span id="rank-score-max" class="text-secondary" style="font-size: 0.85rem;">/ 300</span>
+              </div>
+            </div>
+            <input type="range" id="rank-score-slider" class="rank-slider" min="60" max="300" step="1" value="215" oninput="updateRankPrediction(this.value)">
+            <div class="d-flex justify-between font-mono" style="font-size: 0.72rem; color: #64748B; margin-top: 0.35rem;">
+              <span id="rank-slider-min">60</span>
+              <span>General Cutoff: <strong id="rank-slider-avg" style="color: #cbb88f;">135</strong></span>
+              <span id="rank-slider-max">300</span>
+            </div>
+          </div>
+
+          <!-- Category & Quota Selector -->
+          <div class="calc-field-group">
+            <label class="calc-field-label">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a6.5 6.5 0 0 1 13 0"/></svg>
+              Candidate Reservation Category
+            </label>
+            <div class="calc-select-wrap">
+              <select id="rank-category-select" class="calc-custom-select" onchange="updateRankPrediction()">
+                <option value="GEN">General (Open Category)</option>
+                <option value="OBC">OBC-NCL Category</option>
+                <option value="EWS">GEN-EWS (Economically Weaker)</option>
+                <option value="SC">SC (Scheduled Caste)</option>
+                <option value="ST">ST (Scheduled Tribe)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Quick Score Presets -->
+          <div class="calc-preset-bar" style="margin-top: 0.5rem; margin-bottom: 0; padding-bottom: 0; border: none;">
+            <span class="calc-preset-label">Score Presets:</span>
+            <button type="button" class="calc-chip" onclick="setPredictorScore(275)">275 (AIR Top 500)</button>
+            <button type="button" class="calc-chip" onclick="setPredictorScore(220)">220 (99+ %ile)</button>
+            <button type="button" class="calc-chip" onclick="setPredictorScore(175)">175 (NIT Top Branch)</button>
+            <button type="button" class="calc-chip" onclick="setPredictorScore(125)">125 (Adv Qualifier)</button>
+          </div>
+        </div>
+
+        <!-- Output Right -->
+        <div class="rank-result-card">
+          <!-- AIR & Percentile Highlights -->
+          <div class="rank-meta-row">
+            <div class="rank-stat-box">
+              <span class="rank-stat-label">PROJECTED ALL-INDIA RANK</span>
+              <div id="pred-air-num" class="rank-stat-value text-emerald font-mono">AIR ~3,450</div>
+              <span id="pred-air-band" class="rank-stat-sub">Range: 3,100 – 3,800</span>
+            </div>
+            <div class="rank-stat-box">
+              <span class="rank-stat-label">EXPECTED PERCENTILE</span>
+              <div id="pred-percentile-num" class="rank-stat-value font-mono" style="color: #38BDF8;">99.42 %ile</div>
+              <span class="rank-stat-sub">Top 0.58% across All-India Pool</span>
+            </div>
+          </div>
+
+          <!-- Qualifying Institutions List -->
+          <div>
+            <div class="d-flex justify-between items-center mb-2">
+              <span class="rank-subhead">Predicted Institution Allotments:</span>
+              <span class="badge badge-accent" style="font-size: 0.65rem;">Updated JoSAA/MCC 2025</span>
+            </div>
+            <div id="pred-college-list" class="pred-college-list">
+              <!-- Dynamically populated by JS -->
+            </div>
+          </div>
+
+          <!-- Recommended Target Batch -->
+          <div class="rank-recommend-banner">
+            <div>
+              <span style="font-size: 0.68rem; color: #cbb88f; font-weight: 800; text-transform: uppercase;">RECOMMENDED APEX TARGET BATCH:</span>
+              <h4 id="pred-batch-title" style="color: #FFFFFF; margin: 0.2rem 0; font-size: 1.05rem;">IIT-JEE 2-Year Target Batch (Class 11 &amp; 12)</h4>
+              <p style="font-size: 0.78rem; color: #94A3B8; margin: 0;">Target score progression drills with daily Kota DPPs to boost rank into Top 1,000.</p>
+            </div>
+            <a href="#interactive-fee-calculator" class="btn-calc-primary" style="padding: 0.65rem 1rem; font-size: 0.82rem; white-space: nowrap;">
+              Calculate Batch Fee →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Section: Live Academic Material & Syllabus Dispatches (Powered by AnimatedList)
+       ========================================================================= -->
+  <section class="inst-main-container" id="academic-dispatches" style="padding-top: 3rem; padding-bottom: 3rem;">
+    <div class="section-intro-block">
+      <span class="section-badge-pill">STUDY MODULES &amp; DPP REPOSITORY</span>
+      <h2 class="section-heading-lg">Live Academic Dispatches &amp; DPP Downloads</h2>
+      <p class="section-subtitle">Real-time classroom problem sets, All-India test keys, and chapter-wise error analysis sheets.</p>
+    </div>
+
+    <div style="max-width: 860px; margin: 0 auto;">
+      <div 
+        class="animated-list animated-list--framed"
+        data-animation="pop"
+        data-theme="dark"
+        data-width="100%"
+        data-max-height="450"
+        data-radius="16"
+        data-gap="10"
+        data-show-gradients="true"
+        data-fade-size="52"
+        data-select-on-hover="true"
+        data-enable-arrow-navigation="true"
+      >
+        <div class="animated-list__viewport" role="listbox" tabindex="0">
+          <div class="animated-list__track">
+            
+            <div class="animated-list__item" role="option" onclick="ApexPdfGenerator.download('physics_dpp_18')" title="Click to download authentic PDF & view detailed solutions">
+              <span class="animated-list__lead">⚡</span>
+              <span class="animated-list__text">
+                <span class="animated-list__title">Physics DPP-18: Gauss Law &amp; Dielectric Capacitance</span>
+                <span class="animated-list__description">Advanced Level 2 Problems • Solved by Vikram Aditya (HOD Physics)</span>
+              </span>
+              <span class="animated-list__meta" style="display:flex; align-items:center; gap:6px;">
+                <span style="font-size:0.75rem; background:rgba(59,130,246,0.2); color:#60A5FA; padding:2px 6px; border-radius:4px; font-weight:700;">PDF</span>
+                2.4 MB
+              </span>
+              <span class="animated-list__rim" aria-hidden="true"></span>
+            </div>
+
+            <div class="animated-list__item" role="option" onclick="ApexPdfGenerator.download('chem_dpp_organic')" title="Click to download authentic PDF & view detailed solutions">
+              <span class="animated-list__lead">🧪</span>
+              <span class="animated-list__text">
+                <span class="animated-list__title">Chemistry Mastery: Aldehydes, Ketones &amp; Carboxylic Acids</span>
+                <span class="animated-list__description">Comprehensive NCERT Line-by-Line Mechanism Map with PYQs 2018–2025</span>
+              </span>
+              <span class="animated-list__meta" style="display:flex; align-items:center; gap:6px;">
+                <span style="font-size:0.75rem; background:rgba(16,185,129,0.2); color:#34D399; padding:2px 6px; border-radius:4px; font-weight:700;">PDF</span>
+                3.8 MB
+              </span>
+              <span class="animated-list__rim" aria-hidden="true"></span>
+            </div>
+
+            <div class="animated-list__item" role="option" onclick="ApexPdfGenerator.download('math_dpp_12')" title="Click to download authentic PDF & view detailed solutions">
+              <span class="animated-list__lead">📐</span>
+              <span class="animated-list__text">
+                <span class="animated-list__title">Mathematics DPP-12: Definite Integrals &amp; Area Under Curves</span>
+                <span class="animated-list__description">High-yield Kota trick shortcuts for JEE Advanced multi-correct problems</span>
+              </span>
+              <span class="animated-list__meta" style="display:flex; align-items:center; gap:6px;">
+                <span style="font-size:0.75rem; background:rgba(245,158,11,0.2); color:#FBBF24; padding:2px 6px; border-radius:4px; font-weight:700;">PDF</span>
+                1.9 MB
+              </span>
+              <span class="animated-list__rim" aria-hidden="true"></span>
+            </div>
+
+            <div class="animated-list__item" role="option" onclick="ApexPdfGenerator.download('neet_biology_drill')" title="Click to download authentic PDF & view detailed solutions">
+              <span class="animated-list__lead">🩺</span>
+              <span class="animated-list__text">
+                <span class="animated-list__title">NEET Biology 100-Question Speed Drill: Human Physiology</span>
+                <span class="animated-list__description">Timed 45-minute sprint with 100% verified NTA pattern answer key</span>
+              </span>
+              <span class="animated-list__meta" style="display:flex; align-items:center; gap:6px;">
+                <span style="font-size:0.75rem; background:rgba(236,72,153,0.2); color:#F472B6; padding:2px 6px; border-radius:4px; font-weight:700;">PDF</span>
+                4.1 MB
+              </span>
+              <span class="animated-list__rim" aria-hidden="true"></span>
+            </div>
+
+            <div class="animated-list__item" role="option" onclick="window.location.href='results.html'">
+              <span class="animated-list__lead">🏛️</span>
+              <span class="animated-list__text">
+                <span class="animated-list__title">All-India Minor Test Series (MTS-04) Solutions &amp; Percentile Matrix</span>
+                <span class="animated-list__description">National comparative percentile curve &amp; step-by-step video solutions</span>
+              </span>
+              <span class="animated-list__meta">Live Key</span>
+              <span class="animated-list__rim" aria-hidden="true"></span>
+            </div>
+
+            <!-- Indicator -->
+            <span class="animated-list__indicator" aria-hidden="true">
+              <span class="animated-list__ring"></span>
+            </span>
+
+          </div>
+        </div>
+        <span class="animated-list__frame-rim" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Section: Institutional Transparency Matrix (Apex vs Others)
+       ========================================================================= -->
+  <section class="inst-main-container" id="transparency-matrix" style="padding-top: 4rem; padding-bottom: 5rem;">
+    <div class="section-intro-block">
+      <span class="section-badge-pill">UNCOMPROMISING TRANSPARENCY</span>
+      <h2 class="section-heading-lg">Why Leading Rankers Choose Apex Academy</h2>
+      <p class="section-subtitle">Side-by-side comparison of pedagogy, student monitoring, computerized fee integrity, and mentorship.</p>
+    </div>
+
+    <div class="matrix-table-wrap">
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th style="width: 28%;">Pedagogy &amp; Operations Standard</th>
+            <th class="matrix-th-apex" style="width: 28%;">
+              <div class="matrix-apex-head">
+                <span class="apex-crown-tag">👑 PREMIER BENCHMARK</span>
+                <strong>Apex IIT-JEE &amp; Medical</strong>
+              </div>
+            </th>
+            <th style="width: 22%;">Conventional Coaching</th>
+            <th style="width: 22%;">Generic Online EdTech Apps</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Faculty Excellence</strong>
+              <div class="matrix-desc">Teaching experience &amp; pedigree</div>
+            </td>
+            <td class="matrix-td-apex">
+              <span class="matrix-check">✓</span>
+              <strong>100% Ex-Kota Senior HODs &amp; IITians</strong> (12+ Yrs Avg. Exp)
+            </td>
+            <td>Junior faculty / Frequent teacher turnover</td>
+            <td>Pre-recorded videos / AI animated avatars</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Daily Attendance Tracking</strong>
+              <div class="matrix-desc">Verification &amp; parent alerts</div>
+            </td>
+            <td class="matrix-td-apex">
+              <span class="matrix-check">✓</span>
+              <strong>Biometric AI Face Scanner + Instant Parent WhatsApp SMS</strong>
+            </td>
+            <td>Manual roll call register, rarely verified</td>
+            <td>Self-reported digital app logins</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Doubt Clearance Protocol</strong>
+              <div class="matrix-desc">Individual problem triage</div>
+            </td>
+            <td class="matrix-td-apex">
+              <span class="matrix-check">✓</span>
+              <strong>Daily Physical 1-on-1 Doubt Desks</strong> (Kota HODs on duty)
+            </td>
+            <td>Crowded doubt queues of 60+ students</td>
+            <td>Chatbot automated replies &amp; delayed forum threads</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Fee Integrity &amp; Invoicing</strong>
+              <div class="matrix-desc">Billing transparency &amp; GST</div>
+            </td>
+            <td class="matrix-td-apex">
+              <span class="matrix-check">✓</span>
+              <strong>Computerized GST Tax Invoices (SAC 9992) + 14-Day Lock</strong>
+            </td>
+            <td>Cash transactions, hidden examination fees</td>
+            <td>Auto-debit recurring subscription models</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>National Test Series (CBT)</strong>
+              <div class="matrix-desc">Simulated examination rigor</div>
+            </td>
+            <td class="matrix-td-apex">
+              <span class="matrix-check">✓</span>
+              <strong>60+ All-India CBT Minor &amp; Major Mocks</strong> with AIR Predictor
+            </td>
+            <td>Monthly paper tests without national rank</td>
+            <td>Generic in-app multiple choice quizzes</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Merit Scholarship Proof</strong>
+              <div class="matrix-desc">Transparent talent concessions</div>
+            </td>
+            <td class="matrix-td-apex">
+              <span class="matrix-check">✓</span>
+              <strong>Up to 90% via Computerized ATHE Exam</strong> (Real-time audit)
+            </td>
+            <td>Arbitrary verbal discounts &amp; agent bargaining</td>
+            <td>Fixed promotional discount codes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="inst-footer-rich">
+    <div class="footer-four-col-grid">
+      <div>
+        <div class="inst-brand-block mb-3" style="text-decoration: none;">
+          <div class="inst-emblem-box" style="width: 38px; height: 38px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="inst-brand-text">
+            <span class="inst-brand-title" style="color: #FFFFFF; font-size: 1.15rem;">APEX ACADEMY</span>
+            <span class="inst-brand-sub" style="color: #94A3B8;">Premier Institute for JEE & NEET</span>
+          </div>
+        </div>
+        <p style="line-height: 1.7; margin-bottom: 1rem; color: #94A3B8;">
+          ISO 9001:2015 certified premier entrance training academy. Complete transparent fee billing and daily student monitoring.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Academic Programs</h4>
+        <ul class="footer-links-list">
+          <li><a href="courses.html">IIT-JEE 2-Year Target</a></li>
+          <li><a href="courses.html">NEET Med-Champions Batch</a></li>
+          <li><a href="courses.html">Dropper Intensive Batch</a></li>
+          <li><a href="courses.html">Foundation Class 9-10</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Quick Portals</h4>
+        <ul class="footer-links-list">
+          <li><a href="portal.html">Parent Attendance & Fee Portal</a></li>
+          <li><a href="results.html">Wall of Fame 2026 Scorecards</a></li>
+          <li><a href="admissions.html">Online Admission Form 2026-27</a></li>
+          <li><a href="contact.html">Campuses & Admissions Helpline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Campuses</h4>
+        <p style="line-height: 1.6; margin-bottom: 0.85rem; color: #94A3B8;">
+          <strong>Kota Campus:</strong> Plot 42, Knowledge Park III, Kota.<br>
+          <strong>NCR Campus:</strong> Sector Alpha-1, Greater Noida.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom-strip">
+      <div>© 2026 Apex Academy. All rights reserved. Technology partner: Kavirox Suite.</div>
+      <div><a href="admin.html" class="discreet-staff-login-link">Staff Login</a></div>
+    </div>
+  </footer>
+
+  <script src="js/sound_fx.js"></script>
+  <script src="js/scroll_animations.js"></script>
+  <script src="js/vendor/jspdf.umd.min.js"></script>
+  <script src="js/modules/dpp_pdf_generator.js"></script>
+  <script src="js/modules/star-border.js"></script>
+  <script src="js/modules/animated-list.js"></script>
+  <script src="js/modules/mobile_dock.js"></script>
+  <script>
+
+    // Fee Calculator Logic & Preset Engine
+    function calculateFees() {
+      const courseSel = document.getElementById('calc-course');
+      if (!courseSel) return;
+      const opt = courseSel.options[courseSel.selectedIndex];
+      const annualGross = parseInt(opt.dataset.annual);
+      const monthlyGross = parseInt(opt.dataset.fee);
+      const courseName = opt.text.split('•')[0].trim();
+
+      const scholarshipPct = parseInt(document.getElementById('calc-scholarship').value) || 0;
+      const paymentMode = document.getElementById('calc-mode').value;
+
+      const scholarshipDiscount = Math.round((annualGross * scholarshipPct) / 100);
+      let afterScholarship = annualGross - scholarshipDiscount;
+
+      let modeDiscount = 0;
+      if (paymentMode === 'annual') {
+        modeDiscount = Math.round(afterScholarship * 0.10); // 10% lump sum discount
+      }
+      const netTotal = afterScholarship - modeDiscount;
+      const totalSavings = scholarshipDiscount + modeDiscount;
+
+      let installmentText = "";
+      if (paymentMode === 'monthly') {
+        const inst = Math.round(netTotal / 12);
+        installmentText = `₹${inst.toLocaleString('en-IN')} <small>/ month (12 inst.)</small>`;
+      } else if (paymentMode === 'quarterly') {
+        const inst = Math.round(netTotal / 4);
+        installmentText = `₹${inst.toLocaleString('en-IN')} <small>/ quarter (4 inst.)</small>`;
+      } else {
+        installmentText = `₹${netTotal.toLocaleString('en-IN')} <small>(1-time annual payment)</small>`;
+      }
+
+      const resCourse = document.getElementById('res-course-name');
+      if (resCourse) resCourse.innerText = courseName;
+      
+      const resGross = document.getElementById('res-gross');
+      if (resGross) resGross.innerText = `₹${annualGross.toLocaleString('en-IN')}`;
+      
+      const resDiscount = document.getElementById('res-discount');
+      if (resDiscount) resDiscount.innerText = `- ₹${scholarshipDiscount.toLocaleString('en-IN')} (${scholarshipPct}%)`;
+      
+      const resModeDiscount = document.getElementById('res-mode-discount');
+      if (resModeDiscount) resModeDiscount.innerText = `- ₹${modeDiscount.toLocaleString('en-IN')}`;
+      
+      const resNetTotal = document.getElementById('res-net-total');
+      if (resNetTotal) resNetTotal.innerText = `₹${netTotal.toLocaleString('en-IN')}`;
+      
+      const resInstallment = document.getElementById('res-installment');
+      if (resInstallment) resInstallment.innerHTML = installmentText;
+
+      const resSavings = document.getElementById('res-savings-badge');
+      if (resSavings) {
+        if (totalSavings > 0) {
+          resSavings.style.display = 'inline-block';
+          resSavings.innerText = `Total Saved: ₹${totalSavings.toLocaleString('en-IN')}`;
+        } else {
+          resSavings.style.display = 'none';
+        }
+      }
+    }
+
+    function applyPreset(course, scholarship, mode, btnElement) {
+      const courseSel = document.getElementById('calc-course');
+      const scholarSel = document.getElementById('calc-scholarship');
+      const modeSel = document.getElementById('calc-mode');
+      if (courseSel) courseSel.value = course;
+      if (scholarSel) scholarSel.value = scholarship;
+      if (modeSel) modeSel.value = mode;
+
+      document.querySelectorAll('.calc-chip').forEach(btn => btn.classList.remove('active'));
+      if (btnElement) {
+        btnElement.classList.add('active');
+      }
+      calculateFees();
+    }
+    window.applyPreset = applyPreset;
+    window.calculateFees = calculateFees;
+  <!-- ATHE 60-Second Rapid Scholarship Quiz Modal -->
+  <div id="athe-quiz-modal" class="modal-backdrop-custom no-print" style="display: none;">
+    <div class="athe-quiz-card">
+      <div class="athe-quiz-topbar">
+        <div class="d-flex items-center gap-2">
+          <span class="badge badge-accent">ATHE 2026–27</span>
+          <span style="font-size: 0.85rem; font-weight: 800; color: #FFFFFF;">Rapid Diagnostic Scholarship Quiz</span>
+        </div>
+        <button type="button" class="athe-close-btn" onclick="closeAtheQuizModal()" aria-label="Close Quiz">&times;</button>
+      </div>
+
+      <!-- Live Timer Bar -->
+      <div class="athe-timer-wrap">
+        <div class="d-flex justify-between" style="font-size: 0.72rem; color: #94A3B8; margin-bottom: 0.35rem;">
+          <span id="athe-q-count">Question 1 of 3</span>
+          <span>Time Remaining: <strong id="athe-timer-seconds" style="color: #38BDF8;">60s</strong></span>
+        </div>
+        <div class="athe-progress-track">
+          <div id="athe-timer-bar" class="athe-progress-fill" style="width: 100%;"></div>
+        </div>
+      </div>
+
+      <!-- Quiz Body Question Area -->
+      <div id="athe-question-container">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Result Screen (Initially Hidden) -->
+      <div id="athe-result-container" style="display: none; text-align: center; padding: 1rem 0.5rem;">
+        <div class="athe-badge-cert">🎓</div>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.5rem; color: #FFFFFF; margin-bottom: 0.35rem;">
+          Congratulations! Diagnostic Complete
+        </h3>
+        <p id="athe-score-summary" style="font-size: 0.88rem; color: #CBD5E1; margin-bottom: 1.25rem;">
+          You scored 3/3 (100% Top 2% National Benchmark)
+        </p>
+
+        <div style="background: rgba(2, 6, 23, 0.7); border: 1.5px solid rgba(203, 184, 143, 0.4); border-radius: 14px; padding: 1.15rem; margin-bottom: 1.5rem;">
+          <span style="font-size: 0.7rem; color: #94A3B8; text-transform: uppercase; letter-spacing: 0.05em;">Awarded Scholarship Tier:</span>
+          <div id="athe-awarded-tier" style="font-size: 1.35rem; font-weight: 900; color: #34D399; margin: 0.2rem 0;">
+            Super-30 Scholar (90% Full Tuition Waiver)
+          </div>
+          <div style="font-size: 0.76rem; color: #cbb88f; font-family: 'JetBrains Mono', monospace;">
+            Official Voucher Code: <strong id="athe-voucher-code">ATHE-SUPER90-VERIFIED</strong>
+          </div>
+        </div>
+
+        <button type="button" id="athe-apply-btn" class="btn-calc-primary" style="width: 100%; padding: 0.9rem;" onclick="applyAtheVoucher()">
+          ⚡ Apply Scholarship Directly to Fee Estimator →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/sound_fx.js"></script>
+  <script src="js/scroll_animations.js"></script>
+  <script src="js/vendor/jspdf.umd.min.js"></script>
+  <script src="js/modules/dpp_pdf_generator.js"></script>
+  <script src="js/modules/star-border.js"></script>
+  <script src="js/modules/animated-list.js"></script>
+  <script src="js/modules/mobile_dock.js"></script>
+  <script>
+    // ==========================================
+    // 1. Fee Calculator Logic & Preset Engine
+    // ==========================================
+    function calculateFees() {
+      const courseSel = document.getElementById('calc-course');
+      if (!courseSel) return;
+      const opt = courseSel.options[courseSel.selectedIndex];
+      const annualGross = parseInt(opt.dataset.annual);
+      const monthlyGross = parseInt(opt.dataset.fee);
+      const courseName = opt.text.split('•')[0].trim();
+
+      const scholarshipPct = parseInt(document.getElementById('calc-scholarship').value) || 0;
+      const paymentMode = document.getElementById('calc-mode').value;
+
+      const scholarshipDiscount = Math.round((annualGross * scholarshipPct) / 100);
+      let afterScholarship = annualGross - scholarshipDiscount;
+
+      let modeDiscount = 0;
+      if (paymentMode === 'annual') {
+        modeDiscount = Math.round(afterScholarship * 0.10); // 10% lump sum discount
+      }
+      const netTotal = afterScholarship - modeDiscount;
+      const totalSavings = scholarshipDiscount + modeDiscount;
+
+      let installmentText = "";
+      if (paymentMode === 'monthly') {
+        const inst = Math.round(netTotal / 12);
+        installmentText = `₹${inst.toLocaleString('en-IN')} <small>/ month (12 inst.)</small>`;
+      } else if (paymentMode === 'quarterly') {
+        const inst = Math.round(netTotal / 4);
+        installmentText = `₹${inst.toLocaleString('en-IN')} <small>/ quarter (4 inst.)</small>`;
+      } else {
+        installmentText = `₹${netTotal.toLocaleString('en-IN')} <small>(1-time annual payment)</small>`;
+      }
+
+      const resCourse = document.getElementById('res-course-name');
+      if (resCourse) resCourse.innerText = courseName;
+      
+      const resGross = document.getElementById('res-gross');
+      if (resGross) resGross.innerText = `₹${annualGross.toLocaleString('en-IN')}`;
+      
+      const resDiscount = document.getElementById('res-discount');
+      if (resDiscount) resDiscount.innerText = `- ₹${scholarshipDiscount.toLocaleString('en-IN')} (${scholarshipPct}%)`;
+      
+      const resModeDiscount = document.getElementById('res-mode-discount');
+      if (resModeDiscount) resModeDiscount.innerText = `- ₹${modeDiscount.toLocaleString('en-IN')}`;
+      
+      const resNetTotal = document.getElementById('res-net-total');
+      if (resNetTotal) resNetTotal.innerText = `₹${netTotal.toLocaleString('en-IN')}`;
+      
+      const resInstallment = document.getElementById('res-installment');
+      if (resInstallment) resInstallment.innerHTML = installmentText;
+
+      const resSavings = document.getElementById('res-savings-badge');
+      if (resSavings) {
+        if (totalSavings > 0) {
+          resSavings.style.display = 'inline-block';
+          resSavings.innerText = `Total Saved: ₹${totalSavings.toLocaleString('en-IN')}`;
+        } else {
+          resSavings.style.display = 'none';
+        }
+      }
+    }
+
+    function applyPreset(course, scholarship, mode, btnElement) {
+      const courseSel = document.getElementById('calc-course');
+      const scholarSel = document.getElementById('calc-scholarship');
+      const modeSel = document.getElementById('calc-mode');
+      if (courseSel) courseSel.value = course;
+      if (scholarSel) scholarSel.value = scholarship;
+      if (modeSel) modeSel.value = mode;
+
+      document.querySelectorAll('.calc-chip').forEach(btn => btn.classList.remove('active'));
+      if (btnElement) {
+        btnElement.classList.add('active');
+      }
+      calculateFees();
+    }
+    window.applyPreset = applyPreset;
+    window.calculateFees = calculateFees;
+
+    // ==========================================
+    // 2. All-India Rank & College Predictor Engine
+    // ==========================================
+    let currentStream = 'jee';
+
+    function switchPredictorStream(stream) {
+      currentStream = stream;
+      const btnJee = document.getElementById('tab-stream-jee');
+      const btnNeet = document.getElementById('tab-stream-neet');
+      const slider = document.getElementById('rank-score-slider');
+      const label = document.getElementById('rank-score-label');
+      const maxSpan = document.getElementById('rank-score-max');
+      const minSpan = document.getElementById('rank-slider-min');
+      const avgSpan = document.getElementById('rank-slider-avg');
+      const maxSliderSpan = document.getElementById('rank-slider-max');
+
+      if (stream === 'jee') {
+        btnJee.classList.add('active');
+        btnNeet.classList.remove('active');
+        slider.min = 60;
+        slider.max = 300;
+        slider.value = 215;
+        label.innerText = "Predicted JEE Main Mock Score:";
+        maxSpan.innerText = "/ 300";
+        minSpan.innerText = "60";
+        avgSpan.innerText = "135";
+        maxSliderSpan.innerText = "300";
+      } else {
+        btnNeet.classList.add('active');
+        btnJee.classList.remove('active');
+        slider.min = 250;
+        slider.max = 720;
+        slider.value = 655;
+        label.innerText = "Predicted NEET-UG Mock Score:";
+        maxSpan.innerText = "/ 720";
+        minSpan.innerText = "250";
+        avgSpan.innerText = "520";
+        maxSliderSpan.innerText = "720";
+      }
+      updateRankPrediction(slider.value);
+    }
+
+    function setPredictorScore(val) {
+      const slider = document.getElementById('rank-score-slider');
+      if (slider) {
+        slider.value = val;
+        updateRankPrediction(val);
+      }
+    }
+
+    function updateRankPrediction(val) {
+      const slider = document.getElementById('rank-score-slider');
+      const score = val !== undefined ? parseInt(val) : parseInt(slider.value);
+      document.getElementById('rank-score-val').innerText = score;
+
+      const category = document.getElementById('rank-category-select').value;
+      let percentile = 0;
+      let air = 0;
+      let colleges = [];
+      let batchTitle = "";
+
+      if (currentStream === 'jee') {
+        // JEE Calculation Model
+        const maxScore = 300;
+        const diff = Math.max(0, maxScore - score);
+        percentile = Math.max(60, Math.min(99.99, 100 - (diff * diff) / 1100)).toFixed(2);
+        
+        let rawAir = Math.round((100 - percentile) * 14000);
+        if (category === 'OBC') rawAir = Math.round(rawAir * 0.85);
+        if (category === 'EWS') rawAir = Math.round(rawAir * 0.90);
+        if (category === 'SC') rawAir = Math.round(rawAir * 0.35);
+        if (category === 'ST') rawAir = Math.round(rawAir * 0.20);
+        air = Math.max(12, rawAir);
+
+        if (score >= 240) {
+          colleges = [
+            { name: "IIT Bombay", branch: "Computer Science & Engineering", chance: "Safe", cls: "chance-safe" },
+            { name: "IIT Delhi", branch: "Mathematics & Computing", chance: "Safe", cls: "chance-safe" },
+            { name: "IIT Madras", branch: "Electrical & Electronics", chance: "Safe", cls: "chance-safe" },
+            { name: "NIT Trichy", branch: "CSE (Home / Other State)", chance: "Guaranteed", cls: "chance-safe" }
+          ];
+          batchTitle = "IIT-JEE Advanced AIR Top 50 Special Squad";
+        } else if (score >= 185) {
+          colleges = [
+            { name: "IIT Roorkee / Guwahati", branch: "Data Science & AI", chance: "High Chance", cls: "chance-safe" },
+            { name: "NIT Trichy / Surathkal", branch: "Computer Science", chance: "High Chance", cls: "chance-safe" },
+            { name: "IIIT Hyderabad", branch: "Electronics & Communication", chance: "Probable", cls: "chance-probable" },
+            { name: "IIT Kharagpur", branch: "Mechanical / Aerospace", chance: "Dream Reach", cls: "chance-dream" }
+          ];
+          batchTitle = "IIT-JEE 2-Year Target Batch (Class 11 & 12)";
+        } else if (score >= 135) {
+          colleges = [
+            { name: "NIT Rourkela / Calicut", branch: "Electrical / Mechanical", chance: "Safe", cls: "chance-safe" },
+            { name: "DTU / NSUT Delhi", branch: "Information Technology", chance: "Probable", cls: "chance-probable" },
+            { name: "IIIT Allahabad", branch: "Information Technology", chance: "High Chance", cls: "chance-safe" },
+            { name: "Top NITs", branch: "Core Engineering Branches", chance: "Safe", cls: "chance-safe" }
+          ];
+          batchTitle = "Class 12 Rank Booster Intensive Batch";
+        } else {
+          colleges = [
+            { name: "NIT Agartala / Silchar", branch: "Electronics / Civil", chance: "Probable", cls: "chance-probable" },
+            { name: "State Govt Premier Colleges", branch: "Computer Science & IT", chance: "Safe", cls: "chance-safe" },
+            { name: "JEE Advanced 2026", branch: "Cutoff Clearance Confirmed", chance: "Qualified", cls: "chance-safe" },
+            { name: "Top Deemed Universities", branch: "Merit Scholarship Seat", chance: "Safe", cls: "chance-safe" }
+          ];
+          batchTitle = "Class 12 & Droppers Score Accelerator";
+        }
+      } else {
+        // NEET-UG Calculation Model
+        const maxScore = 720;
+        const diff = Math.max(0, maxScore - score);
+        percentile = Math.max(65, Math.min(99.99, 100 - (diff * diff) / 4800)).toFixed(2);
+        
+        let rawAir = Math.round(Math.pow(diff, 2.05) * 0.42);
+        if (category === 'OBC') rawAir = Math.round(rawAir * 0.88);
+        if (category === 'EWS') rawAir = Math.round(rawAir * 0.92);
+        if (category === 'SC') rawAir = Math.round(rawAir * 0.30);
+        if (category === 'ST') rawAir = Math.round(rawAir * 0.18);
+        air = Math.max(8, rawAir);
+
+        if (score >= 670) {
+          colleges = [
+            { name: "AIIMS New Delhi", branch: "MBBS (All India Quota)", chance: "High Chance", cls: "chance-safe" },
+            { name: "MAMC New Delhi", branch: "MBBS (Maulana Azad Medical)", chance: "Safe", cls: "chance-safe" },
+            { name: "VMMC & Safdarjung Hospital", branch: "MBBS", chance: "Guaranteed", cls: "chance-safe" },
+            { name: "JIPMER Puducherry", branch: "MBBS Premier Seat", chance: "Guaranteed", cls: "chance-safe" }
+          ];
+          batchTitle = "NEET 700+ Top AIIMS Medical Squad";
+        } else if (score >= 620) {
+          colleges = [
+            { name: "AIIMS Rishikesh / Bhopal", branch: "MBBS All-India Quota", chance: "High Chance", cls: "chance-safe" },
+            { name: "KGMU Lucknow", branch: "MBBS (King George's Medical)", chance: "Safe", cls: "chance-safe" },
+            { name: "SMS Medical College Jaipur", branch: "MBBS State Quota", chance: "Safe", cls: "chance-safe" },
+            { name: "Grant Medical College Mumbai", branch: "MBBS Seat", chance: "Probable", cls: "chance-probable" }
+          ];
+          batchTitle = "NEET Med-Champions Batch (Classes 11 & 12)";
+        } else if (score >= 540) {
+          colleges = [
+            { name: "State Govt Medical Colleges", branch: "MBBS State Merit Quota", chance: "Safe", cls: "chance-safe" },
+            { name: "IMS BHU Varanasi", branch: "BDS / Allied Health", chance: "Guaranteed", cls: "chance-safe" },
+            { name: "ESIC Medical Colleges", branch: "MBBS Quota", chance: "Safe", cls: "chance-safe" },
+            { name: "Top Govt Medical Hubs", branch: "All India Round 2", chance: "Probable", cls: "chance-probable" }
+          ];
+          batchTitle = "NEET 1-Year Repeater Rank Accelerator";
+        } else {
+          colleges = [
+            { name: "Govt Dental Colleges (BDS)", branch: "Bachelor of Dental Surgery", chance: "Safe", cls: "chance-safe" },
+            { name: "BVSc & Animal Husbandry", branch: "Govt Veterinary Seat", chance: "Safe", cls: "chance-safe" },
+            { name: "Semi-Govt Medical Colleges", branch: "State Merit Seat", chance: "Probable", cls: "chance-probable" },
+            { name: "Ayush / BAMS Govt Colleges", branch: "Ayurvedic Medical Seat", chance: "Safe", cls: "chance-safe" }
+          ];
+          batchTitle = "NEET Intensive Foundation & Concept Bridge";
+        }
+      }
+
+      document.getElementById('pred-air-num').innerText = `AIR ~${air.toLocaleString('en-IN')}`;
+      const lowAir = Math.round(air * 0.9);
+      const highAir = Math.round(air * 1.12);
+      document.getElementById('pred-air-band').innerText = `Expected Range: ${lowAir.toLocaleString('en-IN')} – ${highAir.toLocaleString('en-IN')}`;
+      document.getElementById('pred-percentile-num').innerText = `${percentile} %ile`;
+      document.getElementById('pred-batch-title').innerText = batchTitle;
+
+      const collegeListEl = document.getElementById('pred-college-list');
+      collegeListEl.innerHTML = colleges.map(c => `
+        <div class="pred-college-item">
+          <div>
+            <div class="college-name">${c.name}</div>
+            <div class="college-branch">${c.branch}</div>
+          </div>
+          <span class="chance-badge ${c.cls}">${c.chance}</span>
+        </div>
+      `).join('');
+    }
+    window.switchPredictorStream = switchPredictorStream;
+    window.setPredictorScore = setPredictorScore;
+    window.updateRankPrediction = updateRankPrediction;
+
+    // ==========================================
+    // 3. ATHE 60-Second Rapid Scholarship Quiz Engine
+    // ==========================================
+    const atheQuestions = [
+      {
+        q: "Physics (Kinematics & Energy)",
+        desc: "A projectile is launched at 45° to the horizontal with initial kinetic energy K. What is its kinetic energy at the highest point of its trajectory?",
+        options: ["Zero", "K / 2", "K / √2", "K / 4"],
+        correct: 1,
+        exp: "At the peak, vertical velocity is 0 and vx = v·cos(45°) = v/√2. Hence KE = 1/2 m (v/√2)² = K/2."
+      },
+      {
+        q: "Chemistry (Chemical Bonding)",
+        desc: "Which of the following planar molecules possesses a net zero dipole moment despite having polar covalent bonds?",
+        options: ["NH₃ (Ammonia)", "H₂O (Water)", "BF₃ (Boron Trifluoride)", "SO₂ (Sulfur Dioxide)"],
+        correct: 2,
+        exp: "BF₃ is trigonal planar (120° angles); the three polar B-F bond dipole vectors symmetrically cancel to net zero."
+      },
+      {
+        q: "Mathematics & Analytical Aptitude",
+        desc: "If f(x) = x³ - 3x + 2, at how many distinct real points does the tangent to the curve have a slope of zero?",
+        options: ["1 point", "2 points", "3 points", "Zero points"],
+        correct: 1,
+        exp: "f'(x) = 3x² - 3 = 0 => x² = 1 => x = +1 and x = -1 (2 distinct stationary points)."
+      }
+    ];
+
+    let currentQIndex = 0;
+    let userCorrectCount = 0;
+    let atheTimerInterval = null;
+    let atheTimeLeft = 60;
+    let awardedScholarshipVal = 90;
+
+    function openAtheQuizModal() {
+      const modal = document.getElementById('athe-quiz-modal');
+      if (!modal) return;
+      modal.style.display = 'flex';
+      currentQIndex = 0;
+      userCorrectCount = 0;
+      atheTimeLeft = 60;
+      document.getElementById('athe-question-container').style.display = 'block';
+      document.getElementById('athe-result-container').style.display = 'none';
+      renderAtheQuestion();
+      startAtheTimer();
+    }
+
+    function closeAtheQuizModal() {
+      const modal = document.getElementById('athe-quiz-modal');
+      if (modal) modal.style.display = 'none';
+      if (atheTimerInterval) clearInterval(atheTimerInterval);
+    }
+
+    function startAtheTimer() {
+      if (atheTimerInterval) clearInterval(atheTimerInterval);
+      const timerText = document.getElementById('athe-timer-seconds');
+      const timerBar = document.getElementById('athe-timer-bar');
+      atheTimerInterval = setInterval(() => {
+        atheTimeLeft--;
+        if (timerText) timerText.innerText = `${atheTimeLeft}s`;
+        if (timerBar) timerBar.style.width = `${(atheTimeLeft / 60) * 100}%`;
+        if (atheTimeLeft <= 0) {
+          clearInterval(atheTimerInterval);
+          finishAtheQuiz();
+        }
+      }, 1000);
+    }
+
+    function renderAtheQuestion() {
+      const q = atheQuestions[currentQIndex];
+      document.getElementById('athe-q-count').innerText = `Question ${currentQIndex + 1} of ${atheQuestions.length}`;
+      const container = document.getElementById('athe-question-container');
+      container.innerHTML = `
+        <div class="athe-q-title">${q.q}</div>
+        <div class="athe-q-desc">${q.desc}</div>
+        <div class="athe-options-grid">
+          ${q.options.map((opt, i) => `
+            <button type="button" class="athe-option-btn" onclick="selectAtheAnswer(${i}, this)">
+              <span style="display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:rgba(255,255,255,0.08); font-size:0.75rem; font-weight:800;">${String.fromCharCode(65 + i)}</span>
+              <span>${opt}</span>
+            </button>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    function selectAtheAnswer(selectedIndex, btnElement) {
+      const q = atheQuestions[currentQIndex];
+      const allBtns = document.querySelectorAll('.athe-option-btn');
+      allBtns.forEach(btn => btn.disabled = true);
+
+      if (selectedIndex === q.correct) {
+        btnElement.classList.add('correct');
+        userCorrectCount++;
+      } else {
+        btnElement.classList.add('wrong');
+        allBtns[q.correct].classList.add('correct');
+      }
+
+      setTimeout(() => {
+        currentQIndex++;
+        if (currentQIndex < atheQuestions.length && atheTimeLeft > 0) {
+          renderAtheQuestion();
+        } else {
+          finishAtheQuiz();
+        }
+      }, 900);
+    }
+
+    function finishAtheQuiz() {
+      if (atheTimerInterval) clearInterval(atheTimerInterval);
+      document.getElementById('athe-question-container').style.display = 'none';
+      const resContainer = document.getElementById('athe-result-container');
+      resContainer.style.display = 'block';
+
+      let tierText = "";
+      let voucher = "";
+
+      if (userCorrectCount === 3) {
+        awardedScholarshipVal = 90;
+        tierText = "Super-30 Scholar (90% Full Tuition Waiver)";
+        voucher = "ATHE-SUPER90-VERIFIED";
+      } else if (userCorrectCount === 2) {
+        awardedScholarshipVal = 60;
+        tierText = "ATHE Tier I Scholar (60% Tuition Waiver)";
+        voucher = "ATHE-GOLD60-VERIFIED";
+      } else if (userCorrectCount === 1) {
+        awardedScholarshipVal = 40;
+        tierText = "ATHE Tier II Scholar (40% Tuition Waiver)";
+        voucher = "ATHE-SILVER40-VERIFIED";
+      } else {
+        awardedScholarshipVal = 20;
+        tierText = "ATHE Tier III Scholar (20% Tuition Waiver)";
+        voucher = "ATHE-TIER20-VERIFIED";
+      }
+
+      document.getElementById('athe-score-summary').innerText = `You scored ${userCorrectCount} of 3 correct (${Math.round((userCorrectCount/3)*100)}% Proficiency)`;
+      document.getElementById('athe-awarded-tier').innerText = tierText;
+      document.getElementById('athe-voucher-code').innerText = voucher;
+    }
+
+    function applyAtheVoucher() {
+      closeAtheQuizModal();
+      const scholarSel = document.getElementById('calc-scholarship');
+      if (scholarSel) {
+        scholarSel.value = awardedScholarshipVal.toString();
+        calculateFees();
+      }
+      const calcSection = document.getElementById('interactive-fee-calculator');
+      if (calcSection) {
+        calcSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    window.openAtheQuizModal = openAtheQuizModal;
+    window.closeAtheQuizModal = closeAtheQuizModal;
+    window.selectAtheAnswer = selectAtheAnswer;
+    window.applyAtheVoucher = applyAtheVoucher;
+
+    // Run Initial State on Load
+    document.addEventListener('DOMContentLoaded', () => {
+      calculateFees();
+      updateRankPrediction(215);
+    });
+  </script>
+  <script src="js/modules/chatbot.js"></script>
+  <script src="js/sound_fx.js"></script>
+  <script src="js/scroll_animations.js"></script>
+  <script src="js/vendor/jspdf.umd.min.js"></script>
+  <script src="js/modules/dpp_pdf_generator.js"></script>
+  <script src="js/modules/star-border.js"></script>
+  <script src="js/modules/animated-list.js"></script>
+  <script src="js/modules/mobile_dock.js"></script>
+
+  <script>
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('inst-mobile-drawer');
+      if (!drawer) return;
+      drawer.classList.toggle('active');
+      if (drawer.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+    window.toggleMobileDrawer = toggleMobileDrawer;
+  </script>
+</body>
+</html>

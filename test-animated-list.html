@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Bits - AnimatedList Component Live Showcase</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="components/AnimatedList.css">
+  <link rel="stylesheet" href="components/StarBorder.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1rem;
+      background: radial-gradient(circle at 50% 15%, #0e172f 0%, #060913 65%, #02040a 100%);
+      color: #F8FAFC;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .showcase-wrapper {
+      max-width: 980px;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-top: 1.5px solid rgba(255, 255, 255, 0.4);
+      border-radius: 28px;
+      padding: 2.5rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(56, 189, 248, 0.15);
+    }
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-top: 2rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .showcase-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .info-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .info-card {
+      background: rgba(30, 41, 59, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 1.25rem;
+    }
+    .selection-toast {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38BDF8;
+      border-radius: 12px;
+      padding: 0.85rem 1.15rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="showcase-wrapper">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <span class="badge badge-primary" style="font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;">
+        React Bits • UI Component Showcase
+      </span>
+      <h1 style="font-size: 2.2rem; font-weight: 900; margin: 0.65rem 0 0.4rem; font-family: 'Outfit', sans-serif;">
+        &lt;AnimatedList /&gt; Interactive Component
+      </h1>
+      <p style="color: #94A3B8; font-size: 0.95rem; max-width: 640px; margin: 0 auto;">
+        Physics-based spring selection indicator, smootherstep edge gradient masks, staggered view entrance, and full keyboard navigation.
+      </p>
+    </div>
+
+    <div class="showcase-grid">
+      <!-- Left: Interactive AnimatedList Component -->
+      <div style="display: flex; flex-direction: column; align-items: center;">
+        <div 
+          class="animated-list animated-list--framed"
+          data-animation="pop"
+          data-theme="dark"
+          data-width="440"
+          data-max-height="450"
+          data-radius="14"
+          data-gap="8"
+          data-show-gradients="true"
+          data-fade-size="56"
+          data-select-on-hover="true"
+          data-enable-arrow-navigation="true"
+          id="demo-animated-list"
+        >
+          <div class="animated-list__viewport" role="listbox" tabindex="0">
+            <div class="animated-list__track">
+              
+              <!-- Item 1 -->
+              <div class="animated-list__item" role="option">
+                <span class="animated-list__lead">📂</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">IIT-JEE Advanced Rankers List 2026</span>
+                  <span class="animated-list__description">Verified Classroom Selections (AIR 41, 78)</span>
+                </span>
+                <span class="animated-list__meta">4.2 MB</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="animated-list__item" role="option">
+                <span class="animated-list__lead">🩺</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">NEET-UG Medical Champions Report</span>
+                  <span class="animated-list__description">688/720 Highest Score Audit (Kota Batch)</span>
+                </span>
+                <span class="animated-list__meta">18m ago</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="animated-list__item" role="option">
+                <span class="animated-list__lead">⚡</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">Biometric Turnstile Attendance Feed</span>
+                  <span class="animated-list__description">99.4% Student Attendance Recorded Today</span>
+                </span>
+                <span class="animated-list__meta">Live</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="animated-list__item" role="option">
+                <span class="animated-list__lead">💳</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">Automated Tuition Fee Collection Daybook</span>
+                  <span class="animated-list__description">₹8.42 Lakhs cleared with instant UPI receipts</span>
+                </span>
+                <span class="animated-list__meta">2h ago</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="animated-list__item" role="option">
+                <span class="animated-list__lead">📑</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">Scholarship Admission Circular 2026–27</span>
+                  <span class="animated-list__description">Direct 90% Fee Waiver for 98%+ in Boards</span>
+                </span>
+                <span class="animated-list__meta">5h ago</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <!-- Item 6 -->
+              <div class="animated-list__item" role="option">
+                <span class="animated-list__lead">🔬</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">Organic Chemistry Daily Practice Paper (DPP-14)</span>
+                  <span class="animated-list__description">Stereoisomerism &amp; Reaction Mechanisms</span>
+                </span>
+                <span class="animated-list__meta">1.8 MB</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <!-- Item 7 -->
+              <div class="animated-list__item" role="option">
+                <span class="animated-list__lead">🏛️</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">Kota Central Campus Library Access Schedule</span>
+                  <span class="animated-list__description">Silent Study Pods &amp; AC Reference Hall</span>
+                </span>
+                <span class="animated-list__meta">1d ago</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <!-- Item 8 -->
+              <div class="animated-list__item" role="option">
+                <span class="animated-list__lead">🎙️</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">Parent Audio Testimony - Mr. Rajesh Agarwal</span>
+                  <span class="animated-list__description">Authentic experience with daily WhatsApp alerts</span>
+                </span>
+                <span class="animated-list__meta">3.2 MB</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <!-- Spring indicator -->
+              <span class="animated-list__indicator" aria-hidden="true">
+                <span class="animated-list__ring"></span>
+              </span>
+
+            </div>
+          </div>
+          <span class="animated-list__frame-rim" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- Right: Controls & Interactive Status -->
+      <div class="info-pane">
+        <div class="info-card">
+          <div style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; text-transform: uppercase; margin-bottom: 0.5rem;">
+            Selection Telemetry
+          </div>
+          <div id="selection-display" class="selection-toast">
+            🎯 Hover or use ↑/↓ arrow keys to select an item
+          </div>
+          <p style="font-size: 0.8rem; color: #94A3B8; margin: 0.75rem 0 0; line-height: 1.5;">
+            The selection ring slides smoothly using an exponential second-order spring physics formula (<code style="color: #38BDF8;">omega = 30, zeta = 0.78</code>) with continuous momentum tracking.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <div style="font-size: 0.8rem; font-weight: 700; color: #94A3B8; text-transform: uppercase; margin-bottom: 0.5rem;">
+            Component Integration Details
+          </div>
+          <ul style="margin: 0; padding-left: 1.2rem; font-size: 0.82rem; color: #CBD5E1; line-height: 1.6;">
+            <li><strong>React Component:</strong> <code>components/AnimatedList.jsx</code></li>
+            <li><strong>Styles:</strong> <code>components/AnimatedList.css</code> &amp; <code>css/styles.css</code></li>
+            <li><strong>Dependencies Installed:</strong> <code>@hugeicons/react</code>, <code>@hugeicons/core-free-icons</code></li>
+            <li><strong>Native Web Component:</strong> <code>js/modules/animated-list.js</code></li>
+            <li><strong>Accessibility:</strong> <code>role="listbox"</code>, <code>role="option"</code>, <code>aria-selected</code></li>
+          </ul>
+        </div>
+
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="test-star-border.html" class="btn btn-outline btn-sm" style="border-color: rgba(255, 255, 255, 0.2); color: #CBD5E1; text-decoration: none;">
+            ← StarBorder Component
+          </a>
+          <a href="index.html" class="btn btn-primary btn-sm star-border" data-color="#38bdf8" data-trail-color="#818cf8" data-sparkle="true" style="text-decoration: none;">
+            Campus Homepage →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/modules/star-border.js"></script>
+  <script src="js/modules/animated-list.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const list = document.getElementById('demo-animated-list');
+      const display = document.getElementById('selection-display');
+      
+      list.addEventListener('itemselect', (e) => {
+        const item = e.detail.element;
+        if (item) {
+          const title = item.querySelector('.animated-list__title')?.textContent || 'Item ' + (e.detail.index + 1);
+          const meta = item.querySelector('.animated-list__meta')?.textContent || '';
+          display.innerHTML = `✅ <strong>Selected [Index ${e.detail.index}]:</strong> ${title} <span style="opacity: 0.75; font-size: 0.75rem;">(${meta})</span>`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

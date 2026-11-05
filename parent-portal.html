@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Apex Academy - Guardian Academic Portal & Student Transcript</title>
+  <meta name="description" content="Verified read-only student academic transcript, biometric attendance ledger, and fee receipts for parents and guardians">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0 0 3rem;
+      background-color: #F8FAFC;
+    }
+    #parent-app-root {
+      width: 100%;
+      max-width: 1100px;
+      padding: 0 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar for Guardian Portal -->
+  <header style="width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center; margin: 1.5rem auto 0.85rem; padding: 0 1.5rem;">
+    <a href="index.html" class="btn btn-outline btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; padding: 0.45rem 0.9rem;">
+      ← Public Home
+    </a>
+    <div style="display: flex; gap: 0.65rem; align-items: center;">
+      <span class="badge badge-accent font-mono" style="font-size: 0.75rem; padding: 0.35rem 0.75rem;">
+        🔒 OFFICIAL AUDIT TRANSCRIPT
+      </span>
+      <a href="portal.html" class="btn btn-outline btn-sm" style="font-size: 0.82rem; padding: 0.45rem 0.9rem;">
+        Unified Campus Portal →
+      </a>
+    </div>
+  </header>
+
+  <!-- Parent Read-Only Security Trust Banner -->
+  <div style="width: 100%; max-width: 1100px; padding: 0 1.5rem; margin: 0 auto 0.5rem;">
+    <div class="security-trust-banner">
+      <div class="security-trust-icon">🔒</div>
+      <div>
+        <div class="security-trust-title">
+          <span>Official Student Academic Dossier & Guardian Records</span>
+          <span class="badge badge-success" style="font-size: 0.68rem;">Verified Registrar Ledger</span>
+        </div>
+        <p class="security-trust-sub">
+          Official academic transcript entries, biometric turnstile audit logs, and tuition fee ledgers are synchronized directly from the institutional student information system. Guardians are granted verified read-only access with zero editing permissions to maintain audit integrity.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authentic Guardian Portal Container -->
+  <div id="parent-app-root"></div>
+
+  <div id="toast-container"></div>
+  <div id="receipt-modal-container"></div>
+
+
+
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/modules/timetable.js"></script>
+  <script src="js/modules/certificates.js"></script>
+  <script src="js/modules/ai_analytics.js"></script>
+  <script src="js/modules/parent.js"></script>
+  <script src="js/modules/fees.js"></script>
+  <script src="js/modules/chatbot.js"></script>
+  <script src="js/sound_fx.js"></script>
+  <script src="js/scroll_animations.js"></script>
+  <script>
+    window.kaviroxApp = {
+      render() {
+        document.getElementById('parent-app-root').innerHTML = window.KaviroxParent.render();
+      },
+      switchRole(role) {
+        window.location.href = 'index.html';
+      },
+      showToast(msg, type) {
+        const c = document.getElementById('toast-container');
+        if (!c) return;
+        const t = document.createElement('div');
+        t.className = `toast-item toast-${type} animate-slide-in`;
+        t.innerHTML = `<span class="toast-msg">${msg}</span>`;
+        c.appendChild(t);
+        setTimeout(() => t.remove(), 3000);
+      }
+    };
+    window.KaviroxApp = window.kaviroxApp;
+    document.addEventListener('DOMContentLoaded', () => {
+      window.kaviroxApp.render();
+    });
+
+    // Global Presenter Shortcut
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
+</body>
+</html>

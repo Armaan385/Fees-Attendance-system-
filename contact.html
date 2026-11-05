@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Campuses | Apex IIT-JEE & Medical Academy</title>
+  <meta name="description" content="Visit our physical study campuses in Kota Knowledge Park and Greater Noida. Admissions helpline numbers, maps, and counseling hours.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Top Utility Strip -->
+  <aside class="inst-utility-bar no-print">
+    <div class="inst-utility-left">
+      <span class="utility-ticker-badge">STUDENT ADMISSIONS DESK</span>
+      <a href="tel:+919810012345" class="utility-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Helpline: +91 98100 12345</span>
+      </a>
+    </div>
+    <div class="inst-utility-right">
+      <a href="parent-portal.html" class="utility-link">Guardian Portal</a>
+      <a href="teacher-portal.html" class="utility-link">Faculty Terminal</a>
+      <a href="admin.html" class="utility-link">Staff Login</a>
+      <button class="sound-fx-toggle-btn sound-active" onclick="toggleSoundFx()" title="Tactile Sound FX (Click to Mute/Unmute)">
+        🔊 Sound FX
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Navbar -->
+  <header class="inst-navbar-wrap">
+    <a href="index.html" class="inst-brand-block">
+      <div class="inst-emblem-box">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="inst-brand-text">
+        <span class="inst-brand-title">APEX ACADEMY</span>
+        <span class="inst-brand-sub">Premier Institute for IIT-JEE & NEET • Est. 2008</span>
+      </div>
+    </a>
+
+    <nav class="inst-nav-menu">
+      <a href="index.html" class="inst-nav-link">Home</a>
+      <a href="about.html" class="inst-nav-link">About & Faculty</a>
+      <a href="courses.html" class="inst-nav-link">Courses & Fees</a>
+      <a href="results.html" class="inst-nav-link">Results 2026</a>
+      <a href="admissions.html" class="inst-nav-link">Admissions</a>
+      <a href="portal.html" class="inst-nav-link">Student Hub</a>
+      <a href="contact.html" class="inst-nav-link active">Contact</a>
+    </nav>
+
+    <div class="inst-nav-actions">
+      <a href="admissions.html" class="btn btn-primary btn-sm">Apply Online 2026 →</a>
+      <button type="button" class="inst-mobile-toggle" onclick="toggleMobileDrawer()" aria-label="Toggle Mobile Navigation">☰</button>
+    </div>
+  </header>
+  <!-- Mobile Navigation Drawer -->
+  <div class="inst-mobile-drawer" id="inst-mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <div class="inst-mobile-drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <div class="inst-emblem-box" style="width: 38px; height: 38px; background: linear-gradient(135deg, #013284, #0e2974); border: 1.5px solid #cbb88f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 1.2rem;">🏛️</span>
+        </div>
+        <div>
+          <span style="font-family: 'Outfit', sans-serif; font-weight: 800; color: #FFFFFF; font-size: 1.05rem; display: block; line-height: 1.2;">APEX ACADEMY</span>
+          <span style="font-size: 0.68rem; color: #94A3B8;">Premier IIT-JEE &amp; NEET Institute</span>
+        </div>
+      </div>
+      <button type="button" class="inst-mobile-drawer-close" onclick="toggleMobileDrawer()" aria-label="Close Mobile Navigation">
+        ✕
+      </button>
+    </div>
+
+    <nav class="inst-mobile-links">
+      <a href="index.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>🏠 Home</span>
+        <span>→</span>
+      </a>
+      <a href="about.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>👨‍🏫 About &amp; Kota Faculty</span>
+        <span>→</span>
+      </a>
+      <a href="courses.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>📚 Courses, Batches &amp; Fees</span>
+        <span>→</span>
+      </a>
+      <a href="results.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>🏆 Results 2026 Wall of Fame</span>
+        <span>→</span>
+      </a>
+      <a href="admissions.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>📝 Admissions 2026–27 Open</span>
+        <span>→</span>
+      </a>
+      <a href="portal.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>🎓 Student &amp; Parent Hub</span>
+        <span>→</span>
+      </a>
+      <a href="contact.html" class="inst-mobile-link active" onclick="toggleMobileDrawer()">
+        <span>📍 Contact &amp; Campus Map</span>
+        <span>→</span>
+      </a>
+    </nav>
+
+    <div class="inst-mobile-actions">
+      <a href="admissions.html" class="btn btn-primary btn-block" style="background: #CBB88F; color: #013284; border-color: #CBB88F; font-weight: 900; padding: 0.85rem; border-radius: 12px; font-size: 0.95rem; text-align: center; text-decoration: none;">
+        📝 Apply for Admissions 2026-27 →
+      </a>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem;">
+        <a href="parent-portal.html" class="btn btn-outline btn-sm" style="color: #93C5FD; border-color: rgba(147, 197, 253, 0.4); text-align: center; border-radius: 10px; font-weight: 700;">
+          👤 Guardian Portal
+        </a>
+        <a href="teacher-portal.html" class="btn btn-outline btn-sm" style="color: #E2E8F0; border-color: rgba(255, 255, 255, 0.2); text-align: center; border-radius: 10px; font-weight: 700;">
+          ✍️ Faculty Terminal
+        </a>
+      </div>
+      <a href="tel:+919810012345" class="btn btn-outline btn-sm" style="color: #34D399; border-color: rgba(52, 211, 153, 0.4); display: flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 10px; font-weight: 700;">
+        📞 Call Campus: +91 98100 12345
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Page Banner -->
+  <section class="page-hero-banner">
+    <div class="page-hero-eyebrow">CAMPUSES & CONTACT</div>
+    <h1 class="page-hero-title">Visit Our Study Campuses in Kota & NCR</h1>
+    <p class="page-hero-desc">
+      Schedule a campus tour, meet our academic directors, explore our air-conditioned study libraries, and take a diagnostic evaluation test.
+    </p>
+  </section>
+
+  <!-- Campuses Grid -->
+  <section class="inst-main-container">
+    <div class="courses-showcase-grid" style="margin-bottom: 4rem;">
+      <!-- Kota Campus -->
+      <div class="course-card-detailed">
+        <span class="course-stream-badge" style="background: rgba(37, 99, 235, 0.15); color: #60A5FA;">MAIN STUDY CAMPUS</span>
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">Kota Main Campus</h3>
+        <p class="text-secondary" style="font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">Our flagship 4-story educational complex housing smart amphitheaters, 200-seat silent library, and faculty doubt clinics.</p>
+
+        <div style="background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.25rem; font-size: 0.85rem; line-height: 1.7; margin-bottom: 1.25rem;">
+          <div>📍 <strong>Address:</strong> Plot 42, Knowledge Park III, Near Road No. 1, Kota, Rajasthan - 324005</div>
+          <div>📞 <strong>Admissions:</strong> +91 98100 12345</div>
+          <div>✉️ <strong>Email:</strong> kota.admissions@apexacademy.edu.in</div>
+          <div>🕒 <strong>Timings:</strong> Monday – Sunday (07:30 AM – 08:30 PM)</div>
+        </div>
+
+        <ul class="course-feature-list">
+          <li><span class="text-emerald">✓</span> 8 Amphitheater Smart Classrooms with 4K interactive boards</li>
+          <li><span class="text-emerald">✓</span> 200-Seat Air-Conditioned Silent Study Library</li>
+          <li><span class="text-emerald">✓</span> Dedicated Boys & Girls Residential Hostels (200m away)</li>
+          <li><span class="text-emerald">✓</span> Biometric Turnstile Security Gates</li>
+        </ul>
+
+        <a href="tel:+919810012345" class="btn btn-primary btn-block">Call Kota Campus Now →</a>
+      </div>
+
+      <!-- Greater Noida Campus -->
+      <div class="course-card-detailed">
+        <span class="course-stream-badge" style="background: rgba(16, 185, 129, 0.15); color: #34D399;">NCR REGIONAL CAMPUS</span>
+        <h3 style="font-size: 1.4rem; font-weight: 800; color: var(--text-primary); margin-bottom: 0.5rem;">Greater Noida Campus</h3>
+        <p class="text-secondary" style="font-size: 0.88rem; line-height: 1.6; margin-bottom: 1.25rem;">Conveniently located in NCR's educational hub with direct metro connectivity and state-of-the-art hybrid laboratories.</p>
+
+        <div style="background: var(--bg-input); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 1.25rem; font-size: 0.85rem; line-height: 1.7; margin-bottom: 1.25rem;">
+          <div>📍 <strong>Address:</strong> Sector Alpha-1, Knowledge Corridor, Near Metro Gate 2, Greater Noida - 201310</div>
+          <div>📞 <strong>Admissions:</strong> +91 98100 54321</div>
+          <div>✉️ <strong>Email:</strong> noida.admissions@apexacademy.edu.in</div>
+          <div>🕒 <strong>Timings:</strong> Monday – Sunday (08:00 AM – 08:00 PM)</div>
+        </div>
+
+        <ul class="course-feature-list">
+          <li><span class="text-emerald">✓</span> Direct 2-minute walk from Alpha-1 Metro Station</li>
+          <li><span class="text-emerald">✓</span> Daily live video link with Kota HOD lecture streams</li>
+          <li><span class="text-emerald">✓</span> Evening doubt counseling desks open till 08:00 PM</li>
+          <li><span class="text-emerald">✓</span> Full computerized fee desk and student ID card issuing</li>
+        </ul>
+
+        <a href="tel:+919810054321" class="btn btn-primary btn-block">Call Noida Campus Now →</a>
+      </div>
+    </div>
+
+    <!-- Quick Inquiry / Callback Form -->
+    <div class="glass-card p-5" style="border-radius: var(--radius-lg); background: var(--bg-surface-elevated); border: 1px solid var(--border-medium); max-width: 800px; margin: 0 auto;">
+      <div class="section-intro-block" style="margin-bottom: 2rem;">
+        <span class="section-badge-pill">REQUEST A CALLBACK</span>
+        <h2 style="font-size: 1.85rem; font-weight: 800; color: var(--text-primary); font-family: 'Outfit', sans-serif;">
+          Speak with a Senior Academic Counselor
+        </h2>
+        <p class="text-secondary" style="font-size: 0.95rem;">Have questions regarding batches, fee structures, or hostel options? Drop your details below.</p>
+      </div>
+
+      <form onsubmit="handleInquirySubmit(event)">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+          <div class="form-group">
+            <label class="form-label">Your Full Name *</label>
+            <input type="text" id="inq-name" class="form-control" placeholder="e.g. Meenakshi Verma" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Mobile Number *</label>
+            <input type="tel" id="inq-phone" class="form-control" placeholder="10-digit mobile" maxlength="10" required />
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+          <div class="form-group">
+            <label class="form-label">Preferred Study Campus</label>
+            <select class="form-control">
+              <option>Kota Main Campus (Rajasthan)</option>
+              <option>Greater Noida Campus (Delhi NCR)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Interested Course</label>
+            <select class="form-control">
+              <option>IIT-JEE (Advanced & Main)</option>
+              <option>NEET-UG Medical</option>
+              <option>Class 9 & 10 Olympiad Foundation</option>
+              <option>Dropper Intensive Batch</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group mb-3">
+          <label class="form-label">Your Message or Query</label>
+          <textarea class="form-control" rows="3" placeholder="Ask about syllabus, hostel booking, or fee payment schedules..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="padding: 0.85rem;">
+          Send Inquiry to Academic Team →
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="inst-footer-rich">
+    <div class="footer-four-col-grid">
+      <div>
+        <div class="inst-brand-block mb-3" style="text-decoration: none;">
+          <div class="inst-emblem-box" style="width: 38px; height: 38px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="inst-brand-text">
+            <span class="inst-brand-title" style="color: #FFFFFF; font-size: 1.15rem;">APEX ACADEMY</span>
+            <span class="inst-brand-sub" style="color: #94A3B8;">Premier Institute for JEE & NEET</span>
+          </div>
+        </div>
+        <p style="line-height: 1.7; margin-bottom: 1rem; color: #94A3B8;">
+          ISO 9001:2015 certified premier entrance training academy. Complete transparent fee billing and daily student monitoring.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Academic Programs</h4>
+        <ul class="footer-links-list">
+          <li><a href="courses.html">IIT-JEE 2-Year Target</a></li>
+          <li><a href="courses.html">NEET Med-Champions Batch</a></li>
+          <li><a href="courses.html">Dropper Intensive Batch</a></li>
+          <li><a href="courses.html">Foundation Class 9-10</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Quick Portals</h4>
+        <ul class="footer-links-list">
+          <li><a href="portal.html">Parent Attendance & Fee Portal</a></li>
+          <li><a href="results.html">Wall of Fame 2026 Scorecards</a></li>
+          <li><a href="admissions.html">Online Admission Form 2026-27</a></li>
+          <li><a href="contact.html">Campuses & Admissions Helpline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Campuses</h4>
+        <p style="line-height: 1.6; margin-bottom: 0.85rem; color: #94A3B8;">
+          <strong>Kota Campus:</strong> Plot 42, Knowledge Park III, Kota.<br>
+          <strong>NCR Campus:</strong> Sector Alpha-1, Greater Noida.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom-strip">
+      <div>© 2026 Apex Academy. All rights reserved. Technology partner: Kavirox Suite.</div>
+      <div><a href="admin.html" class="discreet-staff-login-link">Staff Login</a></div>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <script src="js/sound_fx.js"></script>
+  <script src="js/scroll_animations.js"></script>
+  <script>
+
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('inq-name').value;
+      const toast = document.createElement('div');
+      toast.className = 'toast-item toast-success animate-slide-in';
+      toast.innerHTML = `<span class="toast-msg">Thank you ${name}! A senior counselor from your preferred campus will call you shortly.</span>`;
+      document.getElementById('toast-container').appendChild(toast);
+      setTimeout(() => toast.remove(), 4000);
+      e.target.reset();
+    }
+  </script>
+  <script src="js/modules/chatbot.js"></script>
+
+  <script>
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('inst-mobile-drawer');
+      if (!drawer) return;
+      drawer.classList.toggle('active');
+      if (drawer.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+    window.toggleMobileDrawer = toggleMobileDrawer;
+  </script>
+</body>
+</html>

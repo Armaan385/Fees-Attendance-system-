@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex IIT-JEE & Medical Academy | Premier Coaching in Kota & NCR</title>
+  <meta name="description" content="Apex Academy is North India's premier coaching institute for IIT-JEE Advanced & NEET-UG. Real Kota classroom pedagogy, daily attendance alerts, and verified computerized fee receipts.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=4.7">
+</head>
+<body>
+  <!-- Desktop Interactive Device Switcher (Allows instant Laptop vs Mobile Phone preview demo) -->
+  <aside class="device-view-switcher no-print" id="device-view-switcher">
+    <span class="switcher-caption">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+      Adaptive View:
+    </span>
+    <button type="button" class="view-btn active" id="btn-view-auto" onclick="setDeviceViewMode('auto')" title="Follows actual browser device width automatically">
+      ⚡ Auto Responsive
+    </button>
+    <button type="button" class="view-btn" id="btn-view-desktop" onclick="setDeviceViewMode('desktop')" title="View in Desktop / Laptop Layout">
+      💻 Laptop View
+    </button>
+    <button type="button" class="view-btn" id="btn-view-mobile" onclick="setDeviceViewMode('mobile')" title="View in Smartphone Mobile Layout Simulator">
+      📱 Mobile Phone View
+    </button>
+  </aside>
+
+  <!-- Apex Institutional Floating Quick-Action Side Dock (.icon_fixed) -->
+  <aside class="icon_fixed no-print" aria-label="Campus Quick Access Dock">
+    <a href="tel:+919810012345" class="dock-btn-circle dock-call" title="Call Campus Helpline" aria-label="Call Campus Helpline">
+      <span class="dock-tooltip">Call Campus Helpline</span>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <a href="https://wa.me/919810012345?text=Namaste%20Apex%20Academy!%20I%20would%20like%20to%20enquire%20about%20Admissions%202026-27" target="_blank" class="dock-btn-circle dock-whatsapp" title="WhatsApp Advisory Desk" aria-label="WhatsApp Advisory Desk">
+      <span class="dock-tooltip">WhatsApp Advisory</span>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </a>
+    <button type="button" class="dock-btn-circle dock-envelope" onclick="window.GDSchoolShowcase.openEnquiryModal()" title="Instant Admission Enquiry" aria-label="Quick Admission Enquiry">
+      <span class="dock-tooltip">Quick Admission Enquiry</span>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </button>
+    <a href="https://maps.app.goo.gl/MvUnw8zifXWjeC2e9" target="_blank" class="dock-btn-circle dock-map" title="Campus Location & Route Map" aria-label="Campus Location Map">
+      <span class="dock-tooltip">Campus Location Map</span>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </a>
+    <a href="parent-portal.html" class="dock-btn-circle dock-portal" title="Parent & Student Portal" aria-label="Parent & Student Portal">
+      <span class="dock-tooltip">Parent &amp; Student Portal</span>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </a>
+  </aside>
+
+  <!-- Apex Academy Top Institutional Utility Strip -->
+  <aside class="inst-utility-bar no-print" style="background: #013284; border-bottom: 1px solid #cbb88f;">
+    <div class="inst-utility-left">
+      <span class="utility-ticker-badge" style="background: rgba(203, 184, 143, 0.25); color: #FFF; border-color: #cbb88f;">
+        ⭐ PREMIER IIT-JEE &amp; NEET-UG COACHING • KOTA &amp; NCR • REG NO. KOT-2008-ED-419
+      </span>
+      <a href="tel:+919810012345" class="utility-link" style="color: #F8FAFC;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Helpline: +91 98100 12345 / 7065399111</span>
+      </a>
+      <span class="d-none-sm" style="color: rgba(255,255,255,0.4);">|</span>
+      <span class="d-none-sm" style="color: #E2E8F0;">Real Kota Classroom Pedagogy • Daily Biometric Attendance &amp; Computerized Fee Ledgers</span>
+    </div>
+    <div class="inst-utility-right">
+      <a href="javascript:void(0)" onclick="window.GDSchoolShowcase.openEnquiryModal()" class="utility-link" style="color: #cbb88f; font-weight: 800;">
+        📝 Admissions 2026-27 Open
+      </a>
+      <a href="parent-portal.html" class="utility-link" style="color: #93C5FD; font-weight: 700;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        <span>Parent / Student Login</span>
+      </a>
+      <a href="teacher-portal.html" class="utility-link" title="Faculty Terminal" style="color: #E2E8F0;">
+        <span>Faculty Terminal</span>
+      </a>
+      <a href="admin.html" class="utility-link" title="Director &amp; Staff Console" style="color: #E2E8F0;">
+        <span>Director Console 🔒</span>
+      </a>
+      <button class="sound-fx-toggle-btn sound-active" onclick="toggleSoundFx()" title="Tactile Sound FX (Click to Mute/Unmute)">
+        🔊 Sound FX
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Institutional Navigation Bar with Royal Crest -->
+  <header class="inst-navbar-wrap" style="border-bottom: 2px solid #D6E4FF;">
+    <a href="index.html" class="inst-brand-block">
+      <div class="inst-emblem-box" style="background: linear-gradient(135deg, #013284, #0e2974); border: 2px solid #cbb88f;">
+        <span style="font-size: 1.3rem;">🏛️</span>
+      </div>
+      <div class="inst-brand-text">
+        <span class="inst-brand-title" style="color: #013284; font-family: 'Outfit', sans-serif;">APEX IIT-JEE &amp; MEDICAL ACADEMY</span>
+        <span class="inst-brand-sub" style="color: #64748B;">Premier Coaching for IIT-JEE Advanced &amp; NEET-UG • Kota &amp; NCR Campuses</span>
+      </div>
+    </a>
+
+    <!-- Multi-Page Links -->
+    <nav class="inst-nav-menu">
+      <a href="index.html" class="inst-nav-link active">Home</a>
+      <a href="about.html" class="inst-nav-link">About &amp; Faculty</a>
+      <a href="courses.html" class="inst-nav-link">Courses &amp; Fees</a>
+      <a href="results.html" class="inst-nav-link">Results 2026</a>
+      <a href="admissions.html" class="inst-nav-link">Admissions</a>
+      <a href="portal.html" class="inst-nav-link">Student Hub</a>
+      <a href="contact.html" class="inst-nav-link">Contact</a>
+    </nav>
+
+    <div class="inst-nav-actions">
+      <button type="button" class="btn btn-primary btn-sm star-border" data-color="#38bdf8" data-trail-color="#818cf8" data-sparkle="true" data-glow="0.8" data-radius="999" onclick="window.GDSchoolShowcase.openEnquiryModal()" style="font-weight: 800;">
+        Quick Enquiry ✉️
+      </button>
+      <button type="button" class="inst-mobile-toggle" onclick="toggleMobileDrawer()" aria-label="Toggle Mobile Navigation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile-Only App-Style Story & Category Rail -->
+  <div class="mobile-story-strip no-print" aria-label="Mobile Quick Access Stories">
+    <div class="mobile-story-track">
+      <a href="courses.html#pinnacle-batch" class="mobile-story-item">
+        <div class="story-avatar-ring ring-cyan">
+          <div class="story-emoji-wrap">🎯</div>
+        </div>
+        <span class="story-label">JEE Adv</span>
+      </a>
+      <a href="courses.html#synergy-batch" class="mobile-story-item">
+        <div class="story-avatar-ring ring-emerald">
+          <div class="story-emoji-wrap">🩺</div>
+        </div>
+        <span class="story-label">NEET UG</span>
+      </a>
+      <a href="courses.html#academic-dispatches" class="mobile-story-item">
+        <div class="story-avatar-ring ring-gold">
+          <div class="story-emoji-wrap">⚡</div>
+        </div>
+        <span class="story-label">Kota DPPs</span>
+      </a>
+      <a href="results.html" class="mobile-story-item">
+        <div class="story-avatar-ring ring-purple">
+          <div class="story-emoji-wrap">🏆</div>
+        </div>
+        <span class="story-label">AIR Ranks</span>
+      </a>
+      <a href="courses.html#fee-calculator" class="mobile-story-item">
+        <div class="story-avatar-ring ring-blue">
+          <div class="story-emoji-wrap">💳</div>
+        </div>
+        <span class="story-label">Fee Calc</span>
+      </a>
+      <a href="portal.html" class="mobile-story-item">
+        <div class="story-avatar-ring ring-rose">
+          <div class="story-emoji-wrap">🔐</div>
+        </div>
+        <span class="story-label">Portal</span>
+      </a>
+      <a href="tel:+919810012345" class="mobile-story-item">
+        <div class="story-avatar-ring ring-emerald">
+          <div class="story-emoji-wrap">📞</div>
+        </div>
+        <span class="story-label">Call Now</span>
+      </a>
+    </div>
+  </div>
+  <!-- Mobile Navigation Drawer -->
+  <div class="inst-mobile-drawer" id="inst-mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <div class="inst-mobile-drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <div class="inst-emblem-box" style="width: 38px; height: 38px; background: linear-gradient(135deg, #013284, #0e2974); border: 1.5px solid #cbb88f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 1.2rem;">🏛️</span>
+        </div>
+        <div>
+          <span style="font-family: 'Outfit', sans-serif; font-weight: 800; color: #FFFFFF; font-size: 1.05rem; display: block; line-height: 1.2;">APEX ACADEMY</span>
+          <span style="font-size: 0.68rem; color: #94A3B8;">Premier IIT-JEE &amp; NEET Institute</span>
+        </div>
+      </div>
+      <button type="button" class="inst-mobile-drawer-close" onclick="toggleMobileDrawer()" aria-label="Close Mobile Navigation">
+        ✕
+      </button>
+    </div>
+
+    <nav class="inst-mobile-links">
+      <a href="index.html" class="inst-mobile-link active" onclick="toggleMobileDrawer()">
+        <span>🏠 Home</span>
+        <span>→</span>
+      </a>
+      <a href="about.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>👨‍🏫 About &amp; Kota Faculty</span>
+        <span>→</span>
+      </a>
+      <a href="courses.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>📚 Courses, Batches &amp; Fees</span>
+        <span>→</span>
+      </a>
+      <a href="results.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>🏆 Results 2026 Wall of Fame</span>
+        <span>→</span>
+      </a>
+      <a href="admissions.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>📝 Admissions 2026–27 Open</span>
+        <span>→</span>
+      </a>
+      <a href="portal.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>🎓 Student &amp; Parent Hub</span>
+        <span>→</span>
+      </a>
+      <a href="contact.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>📍 Contact &amp; Campus Map</span>
+        <span>→</span>
+      </a>
+    </nav>
+
+    <div class="inst-mobile-actions">
+      <button type="button" class="btn btn-primary btn-block" onclick="toggleMobileDrawer(); window.GDSchoolShowcase.openEnquiryModal();" style="background: #CBB88F; color: #013284; border-color: #CBB88F; font-weight: 900; padding: 0.85rem; border-radius: 12px; font-size: 0.95rem; cursor: pointer;">
+        📝 Quick Admission Enquiry 2026-27
+      </button>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem;">
+        <a href="parent-portal.html" class="btn btn-outline btn-sm" style="color: #93C5FD; border-color: rgba(147, 197, 253, 0.4); text-align: center; border-radius: 10px; font-weight: 700;">
+          👤 Guardian Portal
+        </a>
+        <a href="teacher-portal.html" class="btn btn-outline btn-sm" style="color: #E2E8F0; border-color: rgba(255, 255, 255, 0.2); text-align: center; border-radius: 10px; font-weight: 700;">
+          ✍️ Faculty Terminal
+        </a>
+      </div>
+      <a href="tel:+919810012345" class="btn btn-outline btn-sm" style="color: #34D399; border-color: rgba(52, 211, 153, 0.4); display: flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 10px; font-weight: 700;">
+        📞 Call Campus: +91 98100 12345
+      </a>
+    </div>
+  </div>
+
+
+  
+<!-- Hero Carousel Slider Section -->
+  <section class="gd-hero-carousel-wrap" id="gd-hero-carousel" aria-label="Institutional Carousel Showcase">
+    <div class="gd-slide-overlay"></div>
+
+    <!-- Slide 1: Welcome & Holistic Excellence -->
+    <div class="gd-carousel-slide active" style="background-image: radial-gradient(circle at 80% 20%, rgba(203, 184, 143, 0.25), transparent 45%);">
+      <div class="gd-slide-content">
+        <div class="gd-slide-badge">
+          <span>🎓 PROVEN KOTA PEDAGOGY • ADMISSIONS OPEN 2026–27</span>
+        </div>
+        <h1 class="gd-slide-title">
+          Apex IIT-JEE &amp; Medical Academy<br>
+          <span class="gold-accent">Engineering &amp; Medical Entrance Excellence</span>
+        </h1>
+        <p class="gd-slide-desc">
+          North India's premier coaching institute for IIT-JEE Advanced &amp; NEET-UG. Real Kota classroom pedagogy, permanent senior faculty bench, daily turnstile biometric alerts, and computerized fee transparency.
+        </p>
+        <div class="gd-slide-cta-row">
+          <button type="button" class="btn-gd-gold star-border" data-color="#cbb88f" data-trail-color="#38bdf8" data-sparkle="true" data-glow="0.8" data-radius="14" onclick="window.GDSchoolShowcase.openEnquiryModal()">
+            <span>📝 Apply for Admission 2026-27</span>
+            <span>→</span>
+          </button>
+          <a href="#academic-wings-section" class="btn-gd-navy-outline">
+            <span>Explore Entrance Batches</span>
+          </a>
+        </div>
+
+        <!-- Slide 1 Glassmorphic Metric Highlights -->
+        <div class="gd-hero-metric-bar">
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">99.85%</span>
+            <span class="gd-metric-label">Top JEE Percentile</span>
+          </div>
+          <div class="gd-metric-sep"></div>
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">420+</span>
+            <span class="gd-metric-label">IIT &amp; AIIMS Ranks</span>
+          </div>
+          <div class="gd-metric-sep"></div>
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">&lt; 30s</span>
+            <span class="gd-metric-label">Biometric SMS Alerts</span>
+          </div>
+          <div class="gd-metric-sep"></div>
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">100%</span>
+            <span class="gd-metric-label">GST Tax Invoices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2: Kota Pedagogy & Top Ranks -->
+    <div class="gd-carousel-slide" style="background-image: radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.25), transparent 45%);">
+      <div class="gd-slide-content">
+        <div class="gd-slide-badge">
+          <span>🎯 ALL-INDIA TOP 50 RANKS (AIR 14, 28, 42 &amp; 89)</span>
+        </div>
+        <h2 class="gd-slide-title">
+          Entrance Curriculum Calibrated for Top Percentiles<br>
+          <span class="gold-accent">Class 11, Class 12 &amp; Droppers Repeater Batches</span>
+        </h2>
+        <p class="gd-slide-desc">
+          Deep conceptual foundations, Minor Test Series (MTS) with All-India ranking, and direct mentoring from seasoned ex-Kota IITian professors. Verified RFID attendance with 100% tamper-evident digital fee accounts.
+        </p>
+        <div class="gd-slide-cta-row">
+          <button type="button" class="btn-gd-gold" onclick="window.GDSchoolShowcase.openEnquiryModal('Senior Secondary (Class 11/12 JEE-NEET)')">
+            <span>Enroll in Target Batch →</span>
+          </button>
+          <a href="#student-desk" class="btn-gd-navy-outline">
+            <span>Verify Fee Ledger Online</span>
+          </a>
+        </div>
+
+        <!-- Slide 2 Glassmorphic Toppers Highlights -->
+        <div class="gd-hero-metric-bar">
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">AIR 14</span>
+            <span class="gd-metric-label">Aarav (JEE Adv)</span>
+          </div>
+          <div class="gd-metric-sep"></div>
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">AIR 28</span>
+            <span class="gd-metric-label">Priya (NEET 705)</span>
+          </div>
+          <div class="gd-metric-sep"></div>
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">AIR 42</span>
+            <span class="gd-metric-label">Rohan (JEE Adv)</span>
+          </div>
+          <div class="gd-metric-sep"></div>
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">AIR 89</span>
+            <span class="gd-metric-label">Sneha (NEET-UG)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: Smart Classrooms & Labs -->
+    <div class="gd-carousel-slide" style="background-image: radial-gradient(circle at 50% 80%, rgba(5, 150, 105, 0.25), transparent 45%);">
+      <div class="gd-slide-content">
+        <div class="gd-slide-badge">
+          <span>🔬 NABL LABS &amp; 14,000+ PYQ REFERENCE CARRELS</span>
+        </div>
+        <h2 class="gd-slide-title">
+          World-Class Academic Infrastructure<br>
+          <span class="gold-accent">Curie Physics, Faraday Chemistry &amp; 24x7 Silent Library</span>
+        </h2>
+        <p class="gd-slide-desc">
+          Equipped with advanced optical benches, spectrometers, Olympiad training arena, dedicated 2-hour daily doubt resolution clinics, and optical RFID biometric turnstiles.
+        </p>
+        <div class="gd-slide-cta-row">
+          <a href="#facilities-tab-section" class="btn-gd-gold">
+            <span>Explore Campus Facilities →</span>
+          </a>
+          <button type="button" class="btn-gd-navy-outline" onclick="window.GDSchoolShowcase.openEnquiryModal()">
+            <span>Book Campus Tour</span>
+          </button>
+        </div>
+
+        <!-- Slide 3 Glassmorphic Infrastructure Highlights -->
+        <div class="gd-hero-metric-bar">
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">14,000+</span>
+            <span class="gd-metric-label">PYQ Archives</span>
+          </div>
+          <div class="gd-metric-sep"></div>
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">80+</span>
+            <span class="gd-metric-label">Silent Study Carrels</span>
+          </div>
+          <div class="gd-metric-sep"></div>
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">2 NABL</span>
+            <span class="gd-metric-label">Experiment Labs</span>
+          </div>
+          <div class="gd-metric-sep"></div>
+          <div class="gd-metric-item">
+            <span class="gd-metric-num">1:18</span>
+            <span class="gd-metric-label">Mentorship Ratio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="gd-carousel-nav-btn gd-carousel-prev" onclick="window.GDSchoolShowcase.prevSlide()" aria-label="Previous Slide">❮</button>
+    <button class="gd-carousel-nav-btn gd-carousel-next" onclick="window.GDSchoolShowcase.nextSlide()" aria-label="Next Slide">❯</button>
+
+    <!-- Indicators / Dots -->
+    <div class="gd-carousel-dots">
+      <div class="gd-carousel-dot active" onclick="window.GDSchoolShowcase.goToSlide(0)"></div>
+      <div class="gd-carousel-dot" onclick="window.GDSchoolShowcase.goToSlide(1)"></div>
+      <div class="gd-carousel-dot" onclick="window.GDSchoolShowcase.goToSlide(2)"></div>
+    </div>
+  </section>
+
+
+  
+<!-- =========================================================================
+       Section: Continuous Accreditations & Recognitions Marquee
+       ========================================================================= -->
+  <section class="gd-logo-slider-wrap" aria-label="Accreditations and Affiliations Marquee">
+    <div class="text-center mb-3">
+      <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 800; color: #013284; margin: 0 0 0.25rem; text-transform: uppercase; letter-spacing: 0.05em;">
+        Recognitions &amp; Institutional Accreditations
+      </h3>
+      <span style="font-size: 0.78rem; color: #64748B; font-weight: 600;">Certified by national educational quality standards, entrance testing benchmarks, and registered trusts</span>
+    </div>
+
+    <div class="gd-logo-slider-track">
+      <!-- Track 1 -->
+      <div class="gd-partner-chip"><span class="icon">🛡️</span><div><strong>ISO 9001:2015</strong><small>Certified Quality Management</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">⚡</span><div><strong>Kota Faculty Council</strong><small>Permanent Academic Bench</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">🥇</span><div><strong>NTSE &amp; KVPY Center</strong><small>Authorized Nodal Hub</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">📑</span><div><strong>Central Trust Act</strong><small>Reg. No. KOT-2008-ED-419</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">🔬</span><div><strong>NABL Certified Labs</strong><small>Precision Safety Instruments</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">🤖</span><div><strong>Atal Tinkering STEM</strong><small>Approved Innovation Lab</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">🎓</span><div><strong>18 Years Pedigree</strong><small>Established in 2008</small></div></div>
+
+      <!-- Duplicate for seamless infinite loop -->
+      <div class="gd-partner-chip"><span class="icon">🛡️</span><div><strong>ISO 9001:2015</strong><small>Certified Quality Management</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">⚡</span><div><strong>Kota Faculty Council</strong><small>Permanent Academic Bench</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">🥇</span><div><strong>NTSE &amp; KVPY Center</strong><small>Authorized Nodal Hub</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">📑</span><div><strong>Central Trust Act</strong><small>Reg. No. KOT-2008-ED-419</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">🔬</span><div><strong>NABL Certified Labs</strong><small>Precision Safety Instruments</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">🤖</span><div><strong>Atal Tinkering STEM</strong><small>Approved Innovation Lab</small></div></div>
+      <div class="gd-partner-chip"><span class="icon">🎓</span><div><strong>18 Years Pedigree</strong><small>Established in 2008</small></div></div>
+    </div>
+  </section>
+
+  
+<!-- Wall of Fame / Topper Showcase -->
+  <section id="toppers-section" style="background: var(--bg-surface-elevated); padding: 5rem 1.5rem; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="inst-main-container" style="padding: 0;">
+      <div class="section-intro-block">
+        <span class="section-badge-pill" style="background: rgba(217, 119, 6, 0.15); color: #F59E0B; border-color: rgba(217, 119, 6, 0.35);">
+          AUTHENTIC SELECTIONS • 2026
+        </span>
+        <h2 class="section-heading-lg">Our Proud All-India Top Rankers</h2>
+        <p class="section-subtitle">Real students. Verified roll numbers. Dedicated mentorship results from our Kota & Greater Noida classrooms.</p>
+      </div>
+
+      <div class="toppers-grid-showcase">
+        <!-- Topper 1: Aarav Sharma (AIR 14 JEE Advanced) -->
+        <div class="topper-card-luxury animate-left">
+          <div class="rank-badge-ribbon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>AIR 14 • JEE ADVANCED</span>
+          </div>
+          <div class="topper-avatar-wrap">
+            <div class="topper-photo-frame">
+              <img src="images/aarav_sharma.jpg" alt="Aarav Sharma - AIR 14 JEE Advanced Topper" class="topper-photo-img" loading="lazy">
+              <div class="topper-medal-pill">🥇 AIR 14</div>
+            </div>
+          </div>
+          <h3 class="topper-name">Aarav Sharma</h3>
+          <span class="topper-exam">🏛️ IIT Bombay • Computer Science</span>
+          <div class="topper-score-strip">
+            <strong style="color: #38BDF8;">Score: 332 / 360 (92.2%)</strong><br>
+            <span style="font-size: 0.75rem; color: #34D399; font-weight: 700;">99.98 Percentile • Roll: APX-101</span><br>
+            <span style="font-size: 0.72rem; color: #CBD5E1;">2-Year Classroom Target Batch</span>
+          </div>
+          <button type="button" class="btn-view-scorecard" onclick="KaviroxScorecard.openScorecardModal('aarav')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>📄 View Verified NTA Scorecard</span>
+          </button>
+        </div>
+
+        <!-- Topper 2: Priya Verma (AIR 28 NEET-UG) -->
+        <div class="topper-card-luxury animate-bottom">
+          <div class="rank-badge-ribbon" style="background: linear-gradient(135deg, #059669 0%, #047857 100%);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>AIR 28 • NEET-UG</span>
+          </div>
+          <div class="topper-avatar-wrap">
+            <div class="topper-photo-frame" style="background: linear-gradient(135deg, #10B981, #059669, #047857);">
+              <img src="images/priya_verma.jpg" alt="Priya Verma - AIR 28 NEET-UG Topper" class="topper-photo-img" loading="lazy">
+              <div class="topper-medal-pill" style="background: linear-gradient(135deg, #059669, #047857);">🩺 705/720</div>
+            </div>
+          </div>
+          <h3 class="topper-name">Priya Verma</h3>
+          <span class="topper-exam" style="color: #34D399;">🩺 AIIMS New Delhi • MBBS</span>
+          <div class="topper-score-strip">
+            <strong style="color: #34D399;">Score: 705 / 720 (97.9%)</strong><br>
+            <span style="font-size: 0.75rem; color: #38BDF8; font-weight: 700;">99.94 Percentile • Roll: APX-102</span><br>
+            <span style="font-size: 0.72rem; color: #CBD5E1;">NEET Med-Champions Batch</span>
+          </div>
+          <button type="button" class="btn-view-scorecard" onclick="KaviroxScorecard.openScorecardModal('priya')" style="background: linear-gradient(135deg, rgba(5, 150, 105, 0.15), rgba(5, 150, 105, 0.25)); color: #34D399; border-color: rgba(5, 150, 105, 0.4);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>📄 View Verified NTA Scorecard</span>
+          </button>
+        </div>
+
+        <!-- Topper 3: Rohan Patel (AIR 42 JEE Advanced) -->
+        <div class="topper-card-luxury animate-bottom">
+          <div class="rank-badge-ribbon" style="background: linear-gradient(135deg, #4338CA 0%, #312E81 100%);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>AIR 42 • JEE ADVANCED</span>
+          </div>
+          <div class="topper-avatar-wrap">
+            <div class="topper-photo-frame" style="background: linear-gradient(135deg, #6366F1, #4338CA, #1E1B4B);">
+              <img src="images/rohan_patel.jpg" alt="Rohan Patel - AIR 42 JEE Advanced Topper" class="topper-photo-img" loading="lazy">
+              <div class="topper-medal-pill" style="background: linear-gradient(135deg, #4338CA, #312E81);">⚡ AIR 42</div>
+            </div>
+          </div>
+          <h3 class="topper-name">Rohan Patel</h3>
+          <span class="topper-exam" style="color: #818CF8;">🏛️ IIT Delhi • Electrical Engg</span>
+          <div class="topper-score-strip">
+            <strong style="color: #818CF8;">Score: 318 / 360 (88.3%)</strong><br>
+            <span style="font-size: 0.75rem; color: #38BDF8; font-weight: 700;">99.82 Percentile • Roll: APX-103</span><br>
+            <span style="font-size: 0.72rem; color: #CBD5E1;">Class 12 Rank Booster Program</span>
+          </div>
+          <button type="button" class="btn-view-scorecard" onclick="KaviroxScorecard.openScorecardModal('rohan')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>📄 View Verified NTA Scorecard</span>
+          </button>
+        </div>
+
+        <!-- Topper 4: Sneha Kulkarni (AIR 89 NEET-UG) -->
+        <div class="topper-card-luxury animate-right">
+          <div class="rank-badge-ribbon" style="background: linear-gradient(135deg, #E11D48 0%, #BE123C 100%);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>AIR 89 • NEET-UG</span>
+          </div>
+          <div class="topper-avatar-wrap">
+            <div class="topper-photo-frame" style="background: linear-gradient(135deg, #F43F5E, #E11D48, #881337);">
+              <img src="images/sneha_kulkarni.jpg" alt="Sneha Kulkarni - AIR 89 NEET-UG Topper" class="topper-photo-img" loading="lazy">
+              <div class="topper-medal-pill" style="background: linear-gradient(135deg, #E11D48, #BE123C);">🌟 AIR 89</div>
+            </div>
+          </div>
+          <h3 class="topper-name">Sneha Kulkarni</h3>
+          <span class="topper-exam" style="color: #FB7185;">🩺 MAMC New Delhi • MBBS</span>
+          <div class="topper-score-strip">
+            <strong style="color: #FB7185;">Score: 695 / 720 (96.5%)</strong><br>
+            <span style="font-size: 0.75rem; color: #38BDF8; font-weight: 700;">99.78 Percentile • Roll: APX-105</span><br>
+            <span style="font-size: 0.72rem; color: #CBD5E1;">Class 11 &amp; 12 Foundation Program</span>
+          </div>
+          <button type="button" class="btn-view-scorecard" onclick="KaviroxScorecard.openScorecardModal('sneha')" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.15), rgba(225, 29, 72, 0.25)); color: #FB7185; border-color: rgba(225, 29, 72, 0.4);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>📄 View Verified NTA Scorecard</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="text-center mt-4" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <button type="button" id="btn-view-all-results-modal" class="btn btn-primary" onclick="KaviroxScorecard.openAllResultsModal('all')" style="background: #013284; font-weight: 800; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(1, 50, 132, 0.25); cursor: pointer;">
+          <span>🏆 View Complete 2026 Results &amp; Verified Scorecards</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <a href="results.html" class="btn btn-outline" style="border-color: #013284; color: #013284; font-weight: 800;">
+          Open Wall of Fame Page ↗
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Container for interactive Scorecard & Wall of Fame Modals -->
+  <div id="scorecard-modal-container"></div>
+
+
+
+  
+<!-- =========================================================================
+       Section: The 4 Core Value Pillars (The Apex Pedagogical Advantage)
+       ========================================================================= -->
+  <section class="gd-pillars-container animate-section" id="pedagogy-section">
+    <div class="text-center" style="max-width: 850px; margin: 0 auto;">
+      <span class="badge" style="background: rgba(56, 189, 248, 0.15); color: #38BDF8; border: 1px solid rgba(56, 189, 248, 0.4); font-weight: 800; font-size: 0.78rem; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 50px; box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);">
+        ⭐ THE APEX PEDAGOGICAL ADVANTAGE
+      </span>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; color: #FFFFFF; margin: 0.85rem 0 0.5rem; text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);">
+        Engineered for Consistent IIT-JEE &amp; NEET All-India Ranks
+      </h2>
+      <p style="font-size: 0.95rem; color: #CBD5E1; line-height: 1.6; margin: 0; text-shadow: 0 1px 4px rgba(0,0,0,0.6);">
+        A disciplined, high-yield coaching ecosystem. Proven Kota classroom methodology, permanent IITian faculty bench, daily biometric tracking, and computerized fee transparency.
+      </p>
+    </div>
+
+    <div class="gd-pillars-grid">
+      <!-- Pillar 1: Senior Kota Faculty Bench -->
+      <div class="gd-pillar-card animate-left">
+        <div class="gd-pillar-icon-wrap">👨‍🏫</div>
+        <h4>Senior Kota<br>Faculty Bench</h4>
+        <p>Exclusively taught by permanent ex-Kota faculty (HOD Physics, HOD Chem, IIT Roorkee &amp; IIT Kanpur alums) with 15+ years of entrance coaching pedigree.</p>
+        <ul class="gd-pillar-features">
+          <li><span class="check-emerald">✓</span> Ex-Kota IIT Roorkee &amp; Kanpur HODs</li>
+          <li><span class="check-emerald">✓</span> 15+ Yrs National Coaching Pedagogy</li>
+          <li><span class="check-emerald">✓</span> 1:18 Faculty Mentorship Ratio</li>
+        </ul>
+        <span class="gd-pillar-badge">⭐ 15+ Yrs Kota Pedagogy</span>
+      </div>
+
+      <!-- Pillar 2: Daily Biometric Attendance -->
+      <div class="gd-pillar-card animate-bottom">
+        <div class="gd-pillar-icon-wrap">⏱️</div>
+        <h4>Daily Biometric<br>Attendance</h4>
+        <p>Recorded via RFID cards and AI facial turnstiles within 30 seconds. Immediate automated absentee alerts are dispatched to parents' WhatsApp.</p>
+        <ul class="gd-pillar-features">
+          <li><span class="check-emerald">✓</span> &lt; 30s RFID &amp; AI Facial Turnstiles</li>
+          <li><span class="check-emerald">✓</span> Instant WhatsApp Notification to Parents</li>
+          <li><span class="check-emerald">✓</span> Zero-Tamper Biometric Audit Ledger</li>
+        </ul>
+        <span class="gd-pillar-badge">⚡ &lt; 30s Realtime Alerts</span>
+      </div>
+
+      <!-- Pillar 3: Computerized Fee Transparency -->
+      <div class="gd-pillar-card animate-bottom">
+        <div class="gd-pillar-icon-wrap">📑</div>
+        <h4>100% Fee<br>Transparency</h4>
+        <p>Digitally numbered, tamper-evident GST tax receipts for every installment. Clear fee schedules, Section 80C tax compliance, and zero hidden charges.</p>
+        <ul class="gd-pillar-features">
+          <li><span class="check-emerald">✓</span> 100% Tax-Deductible Sec 80C Compliant</li>
+          <li><span class="check-emerald">✓</span> Verifiable GSTIN Invoices with QR Code</li>
+          <li><span class="check-emerald">✓</span> 1-Click Online Fee Ledger &amp; Statements</li>
+        </ul>
+        <span class="gd-pillar-badge">🛡️ Section 80C Tax Compliant</span>
+      </div>
+
+      <!-- Pillar 4: Daily Doubt Clinics -->
+      <div class="gd-pillar-card animate-right">
+        <div class="gd-pillar-icon-wrap">🤝</div>
+        <h4>Daily Doubt<br>Resolution Clinics</h4>
+        <p>Dedicated 2-hour daily doubt counters where individual students solve tough PYQs one-on-one with subject experts directly after classroom lectures.</p>
+        <ul class="gd-pillar-features">
+          <li><span class="check-emerald">✓</span> Daily 05:30 PM – 07:30 PM Doubt Bay</li>
+          <li><span class="check-emerald">✓</span> 80 Soundproof Individual Carrels</li>
+          <li><span class="check-emerald">✓</span> Direct 1-on-1 Subject HOD Consultations</li>
+        </ul>
+        <span class="gd-pillar-badge">🎯 Daily 1-on-1 Mentorship</span>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- =========================================================================
+       Section: Target Academic Batches Calibrated for Entrance Supremacy
+       ========================================================================= -->
+  <section class="gd-wings-container animate-section" id="academic-wings-section">
+    <div class="text-center" style="max-width: 850px; margin: 0 auto;">
+      <span class="badge" style="background: rgba(203, 184, 143, 0.2); color: #cbb88f; border: 1px solid #cbb88f; font-weight: 800; font-size: 0.78rem; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 50px;">
+        🏛️ TARGET ENTRANCE BATCHES • SESSION 2026–27
+      </span>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; color: #FFFFFF; margin: 0.85rem 0 0.5rem;">
+        Target Academic Batches Calibrated for Top Ranks
+      </h2>
+      <p style="font-size: 0.95rem; color: #CBD5E1; line-height: 1.6; margin: 0;">
+        From foundational Class 8–10 Olympiad development to high-stakes IIT-JEE Advanced and NEET-UG 700+ score mastery.
+      </p>
+    </div>
+
+    <div class="gd-wings-grid">
+      <!-- Batch 1: Pre-Foundation -->
+      <div class="gd-wing-card wing-theme-blue animate-left">
+        <div class="gd-wing-thumb">
+          <span class="gd-wing-pill-tag">30 SEATS • ADMISSIONS OPEN</span>
+          <div class="gd-wing-icon-emblem">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+        </div>
+        <div class="gd-wing-body">
+          <h4>PRE-FOUNDATION</h4>
+          <span class="gd-wing-grades">Classes 8, 9 &amp; 10 • Olympiads &amp; NTSE</span>
+          <p>Early analytical reasoning, PRMO, NSEJS, NTSE foundations, and accelerated school board syllabus mastery.</p>
+          <ul class="gd-wing-features-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              12 Kota Olympiad Workbooks &amp; Daily DPP
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              4 Days / Wk • 1:1 Bi-Weekly Doubt Clinics
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Monthly Parent Performance Audits
+            </li>
+          </ul>
+          <div class="gd-wing-fee-strip">
+            <div class="gd-wing-fee-num">₹5,000 <small>/ month</small></div>
+            <div class="gd-wing-fee-tag">Scholarship up to 75%<br>via ASAT Entrance</div>
+          </div>
+          <button type="button" class="btn-wing-cta" onclick="window.GDSchoolShowcase.openEnquiryModal('Pre-Foundation Batch (Classes 8-10)')">
+            Enrol in Foundation →
+          </button>
+        </div>
+      </div>
+
+      <!-- Batch 2: IIT-JEE 2-Year Target -->
+      <div class="gd-wing-card wing-theme-emerald animate-bottom">
+        <div class="gd-wing-thumb">
+          <span class="gd-wing-pill-tag">⭐ MOST POPULAR • 35 SEATS</span>
+          <div class="gd-wing-icon-emblem">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+        </div>
+        <div class="gd-wing-body">
+          <h4>IIT-JEE 2-YEAR TARGET</h4>
+          <span class="gd-wing-grades">Class 11 Aspirants • JEE 2028</span>
+          <p>Deep conceptual mastery across Physics, Chem &amp; Maths with Kota benchmark DPPs and Advanced question drills.</p>
+          <ul class="gd-wing-features-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              48 Minor + 12 Major CBT Mock Tests
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              6 Days / Wk • Daily Kota Problem Sheets
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              AI All-India Rank &amp; Weak-Spot Predictor
+            </li>
+          </ul>
+          <div class="gd-wing-fee-strip">
+            <div class="gd-wing-fee-num">₹8,000 <small>/ month</small></div>
+            <div class="gd-wing-fee-tag">Top-50 Merit Rebate<br>Hostel Subsidy Available</div>
+          </div>
+          <button type="button" class="btn-wing-cta" onclick="window.GDSchoolShowcase.openEnquiryModal('IIT-JEE 2-Year Target (Class 11)')">
+            Enrol in JEE 2-Yr →
+          </button>
+        </div>
+      </div>
+
+      <!-- Batch 3: IIT-JEE 1-Year Rank Booster -->
+      <div class="gd-wing-card wing-theme-violet animate-bottom">
+        <div class="gd-wing-thumb">
+          <span class="gd-wing-pill-tag">🎯 AIR TOP 50 SQUAD • 35 SEATS</span>
+          <div class="gd-wing-icon-emblem">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="6"></circle>
+              <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="gd-wing-body">
+          <h4>JEE RANK BOOSTER</h4>
+          <span class="gd-wing-grades">Class 12 &amp; Droppers • JEE 2027</span>
+          <p>Intensive high-yield syllabus revision, time-management tactics, Advanced PYQ simulations, and error triage.</p>
+          <ul class="gd-wing-features-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              35-Year Solved PYQ Chapterwise Archive
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              National Minor Test Series (MTS CBT)
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Personal IITian Mentor Assignment
+            </li>
+          </ul>
+          <div class="gd-wing-fee-strip">
+            <div class="gd-wing-fee-num">₹7,000 <small>/ month</small></div>
+            <div class="gd-wing-fee-tag">Repeater Rankers Grant<br>Zero Reg. Processing Fee</div>
+          </div>
+          <button type="button" class="btn-wing-cta" onclick="window.GDSchoolShowcase.openEnquiryModal('IIT-JEE Rank Booster (Class 12 & Droppers)')">
+            Enrol in Rank Booster →
+          </button>
+        </div>
+      </div>
+
+      <!-- Batch 4: NEET-UG Med-Champions -->
+      <div class="gd-wing-card wing-theme-ruby animate-right">
+        <div class="gd-wing-thumb">
+          <span class="gd-wing-pill-tag">🩺 700+ TARGET • 35 SEATS</span>
+          <div class="gd-wing-icon-emblem">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path>
+              <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"></path>
+              <circle cx="20" cy="10" r="2"></circle>
+            </svg>
+          </div>
+        </div>
+        <div class="gd-wing-body">
+          <h4>NEET MED-CHAMPIONS</h4>
+          <span class="gd-wing-grades">Class 11, 12 &amp; Repeaters • NEET-UG</span>
+          <p>Complete NCERT line-by-line bio dissecting, high-speed physics numerical shortcuts, and 720-mark national mock drills.</p>
+          <ul class="gd-wing-features-list">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              360/360 NCERT Biology Line Drills
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              720-Mark Full Syllabus OMR Simulation
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Kota Medical Faculty Doubt Desk
+            </li>
+          </ul>
+          <div class="gd-wing-fee-strip">
+            <div class="gd-wing-fee-num">₹7,500 <small>/ month</small></div>
+            <div class="gd-wing-fee-tag">AIIMS Doctor Mentorship<br>Free NCERT Booster Kit</div>
+          </div>
+          <button type="button" class="btn-wing-cta" onclick="window.GDSchoolShowcase.openEnquiryModal('NEET Med-Champions Batch')">
+            Enrol in NEET Batch →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- =========================================================================
+       Section: Campus Academic Infrastructure & Laboratories (Interactive Tabs)
+       ========================================================================= -->
+  <section class="gd-facility-sec animate-section" id="facilities-tab-section">
+    <div class="text-center" style="max-width: 850px; margin: 0 auto;">
+      <span class="badge" style="background: rgba(1, 50, 132, 0.08); color: #013284; border: 1px solid #cbb88f; font-weight: 800; font-size: 0.78rem; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 50px;">
+        🔬 WORLD-CLASS ACADEMIC INFRASTRUCTURE
+      </span>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; color: #013284; margin: 0.85rem 0 0.5rem;">
+        Modern Lecture Amphitheatres &amp; Analytical Labs
+      </h2>
+      <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin: 0;">
+        Experience air-conditioned smart digital lecture halls, modern NABL-calibrated experiment labs, and dedicated silent study carrels.
+      </p>
+    </div>
+
+    <div class="gd-facility-wrap">
+      <!-- Left: Tab Navigation -->
+      <div class="gd-facility-nav animate-left">
+        <button type="button" class="gd-facility-nav-btn active" data-tab="classroom">
+          <span class="btn-icon-box">🖥️</span>
+          <span>Smart Lecture Studios</span>
+        </button>
+        <button type="button" class="gd-facility-nav-btn" data-tab="science-lab">
+          <span class="btn-icon-box">🔬</span>
+          <span>Curie Physics &amp; Chemistry Labs</span>
+        </button>
+        <button type="button" class="gd-facility-nav-btn" data-tab="language-lab">
+          <span class="btn-icon-box">🤝</span>
+          <span>Daily Doubt Clinics &amp; Carrels</span>
+        </button>
+        <button type="button" class="gd-facility-nav-btn" data-tab="library">
+          <span class="btn-icon-box">📚</span>
+          <span>Central Reference Library</span>
+        </button>
+      </div>
+
+      <!-- Right: Tab Content Panes -->
+      <div class="gd-facility-content animate-right">
+        <!-- Pane 1: Smart Lecture Studios -->
+        <div class="gd-facility-pane active" id="facility-pane-classroom">
+          <div class="gd-facility-pane-grid">
+            <div>
+              <h3>Smart Interactive Lecture Amphitheatres</h3>
+              <p>
+                Engineered for maximum student engagement and concept clarity. Permanent Kota faculty utilize contemporary interactive touchscreens, animated 3D physics projections, and live problem-solving displays.
+              </p>
+              <ul style="font-size: 0.85rem; color: #334155; line-height: 1.7; padding-left: 1.25rem; margin-bottom: 1.5rem;">
+                <li>75-inch Ultra HD Interactive Smart Digital Boards</li>
+                <li>Ergonomic posture-friendly seating with climate-controlled AC</li>
+                <li>Low 1:18 teacher-student mentorship ratio for personalized care</li>
+              </ul>
+              <button type="button" class="btn-gd-gold" onclick="window.GDSchoolShowcase.openEnquiryModal('Smart Lecture Studios Tour')" style="padding: 0.6rem 1.4rem; font-size: 0.82rem;">
+                Schedule Classroom Tour →
+              </button>
+            </div>
+            <div class="gd-fac-preview-box">
+              <span style="font-size: 4rem; display: block; margin-bottom: 0.5rem;">🖥️</span>
+              <strong style="font-family: 'Outfit'; font-size: 1.15rem; color: #cbb88f;">Smart Interactive Studios</strong>
+              <p style="font-size: 0.78rem; color: #E2E8F0; margin-top: 0.4rem;">Equipped with high-speed optical fiber, digital stylus annotations, and instant cloud lesson sync.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 2: Science Lab -->
+        <div class="gd-facility-pane" id="facility-pane-science-lab">
+          <div class="gd-facility-pane-grid">
+            <div>
+              <h3>Curie Physics &amp; Faraday Chemistry Labs</h3>
+              <p>
+                Hands-on conceptual experimentation to master JEE Advanced and NEET practicals. Equipped with laser spectrometers, optical benches, qualitative salt analysis stations, and organic synthesis hoods.
+              </p>
+              <ul style="font-size: 0.85rem; color: #334155; line-height: 1.7; padding-left: 1.25rem; margin-bottom: 1.5rem;">
+                <li>Independent Curie Physics &amp; Faraday Chemistry experiment stations</li>
+                <li>NABL calibrated precision instruments &amp; zero-accident fire safety</li>
+                <li>Individual apparatus allocation for each student during practicals</li>
+              </ul>
+              <button type="button" class="btn-gd-gold" onclick="window.GDSchoolShowcase.openEnquiryModal('Science Labs Inquiry')" style="padding: 0.6rem 1.4rem; font-size: 0.82rem;">
+                Request Science Lab Demo →
+              </button>
+            </div>
+            <div class="gd-fac-preview-box" style="background: linear-gradient(135deg, #059669, #047857);">
+              <span style="font-size: 4rem; display: block; margin-bottom: 0.5rem;">⚗️</span>
+              <strong style="font-family: 'Outfit'; font-size: 1.15rem; color: #FFF;">Hands-on Discovery</strong>
+              <p style="font-size: 0.78rem; color: #E2E8F0; margin-top: 0.4rem;">Students perform experiments individually under direct supervision of senior faculty researchers.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 3: Doubt Clinics -->
+        <div class="gd-facility-pane" id="facility-pane-language-lab">
+          <div class="gd-facility-pane-grid">
+            <div>
+              <h3>Daily Doubt Resolution Clinics &amp; Carrels</h3>
+              <p>
+                A dedicated 2-hour daily doubt resolution bay where students clear difficult PYQs and DPP doubts 1-on-1 with permanent faculty directly after lectures.
+              </p>
+              <ul style="font-size: 0.85rem; color: #334155; line-height: 1.7; padding-left: 1.25rem; margin-bottom: 1.5rem;">
+                <li>Individual soundproof doubt carrels for distraction-free consultations</li>
+                <li>HOD Physics &amp; HOD Chemistry available daily until 07:30 PM</li>
+                <li>Digital doubt tracking log synced with parent portal</li>
+              </ul>
+              <button type="button" class="btn-gd-gold" onclick="window.GDSchoolShowcase.openEnquiryModal('Doubt Clinics Information')" style="padding: 0.6rem 1.4rem; font-size: 0.82rem;">
+                View Doubt Clinic Schedule →
+              </button>
+            </div>
+            <div class="gd-fac-preview-box" style="background: linear-gradient(135deg, #7C3AED, #5B21B6);">
+              <span style="font-size: 4rem; display: block; margin-bottom: 0.5rem;">🤝</span>
+              <strong style="font-family: 'Outfit'; font-size: 1.15rem; color: #FFF;">1-on-1 Mentorship</strong>
+              <p style="font-size: 0.78rem; color: #E2E8F0; margin-top: 0.4rem;">No student leaves campus with an unresolved doubt. Daily commitment to mastery.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pane 4: Library -->
+        <div class="gd-facility-pane" id="facility-pane-library">
+          <div class="gd-facility-pane-grid">
+            <div>
+              <h3>Central Entrance Reference Library</h3>
+              <p>
+                Over 14,000 advanced entrance reference volumes (Irodov, Krotov, Solomons, JD Lee, Hall &amp; Knight) alongside 80 soundproof individual doubt clearing carrels.
+              </p>
+              <ul style="font-size: 0.85rem; color: #334155; line-height: 1.7; padding-left: 1.25rem; margin-bottom: 1.5rem;">
+                <li>14,000+ reference texts including complete 35-year JEE &amp; NEET PYQ archives</li>
+                <li>Digital kiosk catalog system with barcode issue-return in 5 seconds</li>
+                <li>Dedicated silent research zone open 07:00 AM – 10:00 PM daily</li>
+              </ul>
+              <button type="button" class="btn-gd-gold" onclick="window.GDSchoolShowcase.openEnquiryModal('Library Access')" style="padding: 0.6rem 1.4rem; font-size: 0.82rem;">
+                Explore Catalog →
+              </button>
+            </div>
+            <div class="gd-fac-preview-box" style="background: linear-gradient(135deg, #D97706, #B45309);">
+              <span style="font-size: 4rem; display: block; margin-bottom: 0.5rem;">📖</span>
+              <strong style="font-family: 'Outfit'; font-size: 1.15rem; color: #FFF;">Knowledge Haven</strong>
+              <p style="font-size: 0.78rem; color: #E2E8F0; margin-top: 0.4rem;">Air-conditioned reading rooms with filtered natural sunlight and serene academic quietude.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- =========================================================================
+       Section: Official Campus Notice Board & Director's Desk
+       Authentic Human Institution Dispatches & Director Dr. Rajeev Agrawal
+       ========================================================================= -->
+  <section class="inst-main-container" id="campus-overview" style="padding-top: 2.5rem; padding-bottom: 2rem;">
+    <div style="display: grid; grid-template-columns: 1.35fr 1fr; gap: 2rem; align-items: stretch;">
+      
+      <!-- Left: Official Campus Notice Board & Circulars -->
+      <div class="glass-card scroll-reveal-left" style="padding: 1.75rem; border: 1px solid var(--border-medium); border-radius: var(--radius-md); display: flex; flex-direction: column;">
+        <div class="d-flex justify-between items-center mb-3 pb-2" style="border-bottom: 2px solid var(--primary-subtle);">
+          <div class="d-flex items-center gap-2">
+            <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(30, 58, 138, 0.1); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1rem;">
+              📋
+            </div>
+            <div>
+              <h3 style="font-size: 1.15rem; font-weight: 800; margin: 0; color: var(--text-primary);">Campus Circulars & Official Dispatches</h3>
+              <span style="font-size: 0.72rem; color: var(--text-tertiary); text-transform: uppercase; font-weight: 700; letter-spacing: 0.04em;">Authorized Notices • Kota & NCR Campuses</span>
+            </div>
+          </div>
+          <span class="badge badge-accent" style="font-size: 0.7rem; font-weight: 700;">ACADEMIC SESSION 2026–27</span>
+        </div>
+
+        <!-- Filter tabs for circulars -->
+        <div class="d-flex gap-2 mb-3" style="font-size: 0.78rem;">
+          <span style="background: var(--primary); color: #FFF; padding: 0.25rem 0.65rem; border-radius: var(--radius-xs); font-weight: 700;">All Circulars (4)</span>
+          <span style="background: var(--bg-surface-elevated); color: var(--text-secondary); padding: 0.25rem 0.65rem; border-radius: var(--radius-xs); font-weight: 600;">Examinations</span>
+          <span style="background: var(--bg-surface-elevated); color: var(--text-secondary); padding: 0.25rem 0.65rem; border-radius: var(--radius-xs); font-weight: 600;">Discipline & RFID</span>
+        </div>
+
+        <!-- Circulars List (Powered by React Bits AnimatedList) -->
+        <div 
+          class="animated-list animated-list--framed"
+          data-animation="pop"
+          data-theme="dark"
+          data-width="100%"
+          data-max-height="420"
+          data-radius="14"
+          data-gap="8"
+          data-show-gradients="true"
+          data-fade-size="48"
+          data-select-on-hover="true"
+          data-enable-arrow-navigation="true"
+          id="campus-circulars-list"
+          style="flex: 1;"
+        >
+          <div class="animated-list__viewport" role="listbox" tabindex="0">
+            <div class="animated-list__track">
+
+              <div class="animated-list__item" role="option" onclick="ApexPdfGenerator.download('circular_rfid_88')" title="Click to download official institutional circular PDF">
+                <span class="animated-list__lead">⚡</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">Mandatory Biometric RFID Turnstile Entry &amp; Grace Period</span>
+                  <span class="animated-list__description">Class 11 &amp; 12 must punch RFID cards before 08:15 AM • Automated WhatsApp alerts</span>
+                </span>
+                <span class="animated-list__meta" style="display:flex; align-items:center; gap:6px;">
+                  <span style="font-size:0.75rem; background:rgba(59,130,246,0.2); color:#60A5FA; padding:2px 6px; border-radius:4px; font-weight:700;">PDF</span>
+                  24 Oct
+                </span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <div class="animated-list__item" role="option" onclick="window.location.href='portal.html'">
+                <span class="animated-list__lead">🩺</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">All-India Minor Test Series (MTS-03) Percentiles &amp; Video Solutions</span>
+                  <span class="animated-list__description">Detailed error analysis &amp; question-wise distribution reports live in portal</span>
+                </span>
+                <span class="animated-list__meta">20 Oct</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <div class="animated-list__item" role="option" onclick="window.location.href='portal.html'">
+                <span class="animated-list__lead">💳</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">Quarter 3 Tuition Fee Installment &amp; Section 80C Tax Receipts</span>
+                  <span class="animated-list__description">Instant GST-numbered computerized receipts &amp; annual fee certificates</span>
+                </span>
+                <span class="animated-list__meta">12 Oct</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <div class="animated-list__item" role="option" onclick="window.location.href='results.html'">
+                <span class="animated-list__lead">🏆</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">National Entrance Wall of Fame 2026 Official Audit</span>
+                  <span class="animated-list__description">NTA-verified scorecards published for AIR 41, AIR 78 &amp; 420+ selections</span>
+                </span>
+                <span class="animated-list__meta">08 Oct</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <div class="animated-list__item" role="option" onclick="window.location.href='courses.html'">
+                <span class="animated-list__lead">🔬</span>
+                <span class="animated-list__text">
+                  <span class="animated-list__title">Advanced Problem Solving Seminar: Organic Mechanisms</span>
+                  <span class="animated-list__description">Led by Senior Ex-Kota Faculty Bench at Main Campus Auditorium</span>
+                </span>
+                <span class="animated-list__meta">02 Oct</span>
+                <span class="animated-list__rim" aria-hidden="true"></span>
+              </div>
+
+              <!-- Animated spring indicator -->
+              <span class="animated-list__indicator" aria-hidden="true">
+                <span class="animated-list__ring"></span>
+              </span>
+
+            </div>
+          </div>
+          <span class="animated-list__frame-rim" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <!-- Right: From the Director's Desk -->
+      <div class="glass-card scroll-reveal-right" style="padding: 2rem; border: 1px solid var(--border-medium); border-radius: var(--radius-md); display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-surface-elevated) 100%);">
+        <div>
+          <div class="d-flex items-center gap-3 mb-3">
+            <div class="user-avatar-initials" style="width: 58px; height: 58px; font-size: 1.35rem; border-radius: 14px; background: linear-gradient(135deg, #1E3A8A, #2563EB); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 800; box-shadow: 0 6px 18px rgba(30, 58, 138, 0.25);">
+              RA
+            </div>
+            <div>
+              <span class="badge badge-outline" style="font-size: 0.7rem; font-weight: 700; color: #1E3A8A; border-color: #BFDBFE;">FROM THE DIRECTOR'S DESK</span>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--text-primary); margin: 0.2rem 0 0;">Dr. Rajeev Agrawal</h3>
+              <div style="font-size: 0.75rem; color: var(--text-tertiary);">B.Tech (IIT Roorkee), Ph.D. (IIT Kanpur) • Director</div>
+            </div>
+          </div>
+
+          <blockquote style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; font-style: italic; margin-bottom: 1.25rem; border-left: 3px solid #1E3A8A; padding-left: 1rem;">
+            "Coaching is not an impersonal algorithm or a conveyor-belt business. It is a sacred human bond of trust between teacher, student, and parent. At Apex Academy, our faculty remains in the lecture halls daily until the very last student doubt is addressed. We maintain an uncompromising 1:18 faculty ratio, verified turnstile attendance, and 100% digital fee accounts so every family receives the highest level of integrity and care."
+          </blockquote>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-xs); padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 0.78rem;">
+            <div class="d-flex justify-between items-center mb-1">
+              <span style="color: var(--text-tertiary);">Direct Secretariat Helpline:</span>
+              <strong style="color: var(--text-primary);">+91 98100 12345 (Ext. 101)</strong>
+            </div>
+            <div class="d-flex justify-between items-center">
+              <span style="color: var(--text-tertiary);">Official Grievance Desk:</span>
+              <a href="mailto:director@apexacademy.ac.in" style="color: var(--primary-light); font-weight: 700;">director@apexacademy.ac.in</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-between items-center pt-3" style="border-top: 1px solid var(--border-subtle);">
+          <div style="font-size: 0.72rem; color: var(--text-tertiary);">
+            <strong>Official Seal of Apex Educational Society</strong><br>
+            Reg. No. KOT-2008-ED-419
+          </div>
+          <div style="text-align: right;">
+            <span style="font-family: 'Outfit'; font-weight: 800; font-size: 1.15rem; color: #1E3A8A; letter-spacing: 0.05em; display: block;">Rajeev Agrawal</span>
+            <small style="font-size: 0.68rem; color: var(--text-tertiary); text-transform: uppercase;">Director & Chief Academician</small>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+<!-- =========================================================================
+       Apex Academy Section: "Parents Voice" Video Testimonials Showcase
+       ========================================================================= -->
+  <section class="gd-parents-voice-sec animate-section" id="parents-voice-section">
+    <div class="text-center" style="max-width: 850px; margin: 0 auto;">
+      <span class="badge" style="background: rgba(1, 50, 132, 0.08); color: #013284; border: 1px solid #cbb88f; font-weight: 800; font-size: 0.78rem; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 50px;">
+        ⭐ AUTHENTIC GUARDIAN EXPERIENCES • REAL AUDIO &amp; VIDEO TESTIMONIALS
+      </span>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 900; color: #013284; margin: 0.85rem 0 0.5rem;">
+        Parents Voice
+      </h2>
+      <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin: 0;">
+        Hear directly from parents who entrusted their children's academic foundation, board success, and national entrance journeys to Apex Academy. Click to listen to verified parent voice recordings and watch their story.
+      </p>
+    </div>
+
+    <div class="gd-voice-grid">
+      <!-- Voice 1: Dr. Rajeshwar Sharma -->
+      <div class="gd-voice-card animate-left" id="voice-card-rajeshwar">
+        <div class="gd-video-preview-wrap" style="background-image: url('images/parent_rajeshwar.jpg');" onclick="ParentVoicePlayer.play('rajeshwar', true)">
+          <div class="gd-video-overlay-gradient"></div>
+          <div class="gd-play-btn-circle" id="voice-playicon-rajeshwar">▶</div>
+          <span style="font-size: 0.78rem; font-weight: 800; margin-top: 0.75rem; letter-spacing: 0.05em; position: relative; z-index: 2;">WATCH GUARDIAN STORY</span>
+        </div>
+        <div class="gd-voice-card-body" style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1; justify-content: space-between;">
+          <div>
+            <h4 style="font-size: 1.15rem; font-weight: 900; color: #013284; margin: 0 0 0.25rem;">Dr. Rajeshwar Sharma</h4>
+            <span style="font-size: 0.74rem; color: #64748B; font-weight: 700; margin-bottom: 0.5rem; display: block;">Father of Aarav Sharma (AIR 14, JEE Adv)</span>
+            <p style="font-size: 0.85rem; color: #334155; line-height: 1.5; margin-bottom: 0.5rem;">"The daily biometric punch notifications and computerized fee receipts provide unmatched transparency. Aarav excelled with pure confidence."</p>
+            <div style="color: #F59E0B; font-size: 0.88rem;">★★★★★ <span style="font-size: 0.7rem; color: #059669; font-weight: 800;">• Verified Parent</span></div>
+          </div>
+          <div class="gd-voice-audio-bar">
+            <button type="button" class="gd-voice-audio-pill" id="voice-btn-rajeshwar" onclick="ParentVoicePlayer.togglePlayPause('rajeshwar')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <span>Listen to Voice</span>
+            </button>
+            <div class="gd-card-eq" id="voice-eq-rajeshwar">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voice 2: Meenakshi Verma -->
+      <div class="gd-voice-card animate-bottom" id="voice-card-meenakshi">
+        <div class="gd-video-preview-wrap" style="background-image: url('images/parent_meenakshi.jpg');" onclick="ParentVoicePlayer.play('meenakshi', true)">
+          <div class="gd-video-overlay-gradient"></div>
+          <div class="gd-play-btn-circle" id="voice-playicon-meenakshi">▶</div>
+          <span style="font-size: 0.78rem; font-weight: 800; margin-top: 0.75rem; letter-spacing: 0.05em; position: relative; z-index: 2;">WATCH GUARDIAN STORY</span>
+        </div>
+        <div class="gd-voice-card-body" style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1; justify-content: space-between;">
+          <div>
+            <h4 style="font-size: 1.15rem; font-weight: 900; color: #013284; margin: 0 0 0.25rem;">Meenakshi Verma</h4>
+            <span style="font-size: 0.74rem; color: #64748B; font-weight: 700; margin-bottom: 0.5rem; display: block;">Mother of Priya Verma (AIR 28, NEET-UG)</span>
+            <p style="font-size: 0.85rem; color: #334155; line-height: 1.5; margin-bottom: 0.5rem;">"Kota's top faculty bench here in NCR. Priya received 1-on-1 doubt clearing every evening and achieved 705/720 in NEET."</p>
+            <div style="color: #F59E0B; font-size: 0.88rem;">★★★★★ <span style="font-size: 0.7rem; color: #059669; font-weight: 800;">• Verified Parent</span></div>
+          </div>
+          <div class="gd-voice-audio-bar">
+            <button type="button" class="gd-voice-audio-pill" id="voice-btn-meenakshi" onclick="ParentVoicePlayer.togglePlayPause('meenakshi')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <span>Listen to Voice</span>
+            </button>
+            <div class="gd-card-eq" id="voice-eq-meenakshi">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voice 3: Suresh Patel -->
+      <div class="gd-voice-card animate-bottom" id="voice-card-suresh">
+        <div class="gd-video-preview-wrap" style="background-image: url('images/parent_suresh.jpg');" onclick="ParentVoicePlayer.play('suresh', true)">
+          <div class="gd-video-overlay-gradient"></div>
+          <div class="gd-play-btn-circle" id="voice-playicon-suresh">▶</div>
+          <span style="font-size: 0.78rem; font-weight: 800; margin-top: 0.75rem; letter-spacing: 0.05em; position: relative; z-index: 2;">WATCH GUARDIAN STORY</span>
+        </div>
+        <div class="gd-voice-card-body" style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1; justify-content: space-between;">
+          <div>
+            <h4 style="font-size: 1.15rem; font-weight: 900; color: #013284; margin: 0 0 0.25rem;">Suresh Patel</h4>
+            <span style="font-size: 0.74rem; color: #64748B; font-weight: 700; margin-bottom: 0.5rem; display: block;">Father of Rohan Patel (AIR 42, JEE Adv)</span>
+            <p style="font-size: 0.85rem; color: #334155; line-height: 1.5; margin-bottom: 0.5rem;">"Honest tuition fees, Section 80C tax invoices, and smart printable ID cards. The academy is run with the utmost corporate discipline."</p>
+            <div style="color: #F59E0B; font-size: 0.88rem;">★★★★★ <span style="font-size: 0.7rem; color: #059669; font-weight: 800;">• Verified Parent</span></div>
+          </div>
+          <div class="gd-voice-audio-bar">
+            <button type="button" class="gd-voice-audio-pill" id="voice-btn-suresh" onclick="ParentVoicePlayer.togglePlayPause('suresh')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <span>Listen to Voice</span>
+            </button>
+            <div class="gd-card-eq" id="voice-eq-suresh">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voice 4: Dr. Anupama Kulkarni -->
+      <div class="gd-voice-card animate-right" id="voice-card-anupama">
+        <div class="gd-video-preview-wrap" style="background-image: url('images/sneha_kulkarni.jpg');" onclick="ParentVoicePlayer.play('anupama', true)">
+          <div class="gd-video-overlay-gradient"></div>
+          <div class="gd-play-btn-circle" id="voice-playicon-anupama">▶</div>
+          <span style="font-size: 0.78rem; font-weight: 800; margin-top: 0.75rem; letter-spacing: 0.05em; position: relative; z-index: 2;">WATCH GUARDIAN STORY</span>
+        </div>
+        <div class="gd-voice-card-body" style="padding: 1.25rem; display: flex; flex-direction: column; flex: 1; justify-content: space-between;">
+          <div>
+            <h4 style="font-size: 1.15rem; font-weight: 900; color: #013284; margin: 0 0 0.25rem;">Dr. Anupama Kulkarni</h4>
+            <span style="font-size: 0.74rem; color: #64748B; font-weight: 700; margin-bottom: 0.5rem; display: block;">Mother of Sneha (MAMC New Delhi MBBS)</span>
+            <p style="font-size: 0.85rem; color: #334155; line-height: 1.5; margin-bottom: 0.5rem;">"Holistic growth alongside academic rigor. Sneha participated in science exhibits, Olympiads, and secured an All-India Top 100 rank."</p>
+            <div style="color: #F59E0B; font-size: 0.88rem;">★★★★★ <span style="font-size: 0.7rem; color: #059669; font-weight: 800;">• Verified Parent</span></div>
+          </div>
+          <div class="gd-voice-audio-bar">
+            <button type="button" class="gd-voice-audio-pill" id="voice-btn-anupama" onclick="ParentVoicePlayer.togglePlayPause('anupama')">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+              <span>Listen to Voice</span>
+            </button>
+            <div class="gd-card-eq" id="voice-eq-anupama">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Container for Parents Voice Studio Modal -->
+  <div id="parent-voice-modal-container"></div>
+
+
+
+  
+<!-- =========================================================================
+       Section: Three Dedicated Institutional Portals (Role Gateways)
+       ========================================================================= -->
+  <section class="inst-main-container" id="portals-ecosystem" style="padding-top: 4.5rem; padding-bottom: 3.5rem;">
+    <div class="text-center" style="max-width: 850px; margin: 0 auto;">
+      <span class="badge" style="background: rgba(1, 50, 132, 0.1); color: #013284; border: 1px solid #cbb88f; font-weight: 800; font-size: 0.78rem; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 50px;">
+        💼 INTEGRATED CAMPUS ECOSYSTEM
+      </span>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; color: #013284; margin: 0.85rem 0 0.5rem;">
+        Three Dedicated Terminals for Faculty, Parents &amp; Leadership
+      </h2>
+      <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin: 0;">
+        Built for institutional excellence. Authorized teachers record punches and test scores, guardians access real-time read-only academic dossiers, and leadership retains complete operational transparency.
+      </p>
+    </div>
+
+    <!-- 3 Core Role Portals Gateway Cards (Balanced 3-Column Grid) -->
+    <div class="portals-three-grid">
+      
+      <!-- Card 1: Teacher Terminal -->
+      <div class="portal-gateway-card card-teacher animate-left">
+        <div>
+          <div class="d-flex justify-between items-center mb-3">
+            <span style="font-size: 2rem;">✍️</span>
+            <span class="badge badge-accent" style="font-size: 0.7rem; font-weight: 700; padding: 0.25rem 0.65rem;">DATA ENTRY ACTIVE</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: #0F172A; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">
+            Faculty &amp; Teacher Terminal
+          </h3>
+          <p style="font-size: 0.85rem; color: #475569; line-height: 1.6; margin-bottom: 1.5rem;">
+            Exclusively for authorized faculty: 30-second rapid batch attendance roll calls, lecture schedule management, daily DPP homework uploads, and examination mark logging.
+          </p>
+        </div>
+        <a href="teacher-portal.html" class="btn btn-primary btn-sm btn-block" style="display: flex; justify-content: center; align-items: center; gap: 0.4rem; font-weight: 700;">
+          Launch Faculty Terminal →
+        </a>
+      </div>
+
+      <!-- Card 2: Guardian Academic Records (Read-Only) -->
+      <div class="portal-gateway-card card-parent animate-bottom">
+        <div>
+          <div class="d-flex justify-between items-center mb-3">
+            <span style="font-size: 2rem;">🔒</span>
+            <span class="badge badge-success" style="font-size: 0.7rem; font-weight: 700; padding: 0.25rem 0.65rem;">STRICT READ-ONLY</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: #0F172A; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">
+            Guardian &amp; Student Dossier
+          </h3>
+          <p style="font-size: 0.85rem; color: #475569; line-height: 1.6; margin-bottom: 1.5rem;">
+            Real-time read-only transparency for guardians: biometric RFID entry timestamps, computerized fee balance ledgers, instant GST tax receipts, and verified report cards.
+          </p>
+        </div>
+        <a href="parent-portal.html" class="btn btn-outline btn-sm btn-block" style="display: flex; justify-content: center; align-items: center; gap: 0.4rem; color: #059669; border-color: rgba(5, 150, 105, 0.4); font-weight: 700;">
+          Launch Guardian Portal →
+        </a>
+      </div>
+
+      <!-- Card 3: Director & Admin Suite -->
+      <div class="portal-gateway-card card-admin animate-right">
+        <div>
+          <div class="d-flex justify-between items-center mb-3">
+            <span style="font-size: 2rem;">👔</span>
+            <span class="badge badge-outline" style="font-size: 0.7rem; font-weight: 700; padding: 0.25rem 0.65rem; color: #013284; border-color: #013284;">DIRECTOR SUITE</span>
+          </div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; color: #0F172A; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">
+            Director &amp; Admin Console
+          </h3>
+          <p style="font-size: 0.85rem; color: #475569; line-height: 1.6; margin-bottom: 1.5rem;">
+            Full administrative command center: institutional fee collection counter, automated WhatsApp fee recovery agent, faculty attendance rosters, and smart printable QR student badges.
+          </p>
+        </div>
+        <a href="admin.html" class="btn btn-outline btn-sm btn-block" style="display: flex; justify-content: center; align-items: center; gap: 0.4rem; color: #013284; border-color: rgba(1, 50, 132, 0.4); font-weight: 700;">
+          Open Director Suite 🔒
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Key Institutional Metrics Strip (4 Balanced Stats) -->
+    <div class="client-stats-strip" style="margin-top: 2.5rem;">
+      <div class="stat-pill scroll-reveal-scale">
+        <span class="stat-num counter-stat" data-count="30" data-suffix="s" style="color: #2563EB;">30s</span>
+        <span class="stat-lbl">Rapid Batch Roll Call Speed</span>
+      </div>
+      <div class="stat-pill scroll-reveal-scale">
+        <span class="stat-num counter-stat" data-count="99" data-suffix=".6%" style="color: #059669;">99.6%</span>
+        <span class="stat-lbl">AI Face Biometric Accuracy</span>
+      </div>
+      <div class="stat-pill scroll-reveal-scale">
+        <span class="stat-num counter-stat" data-count="92" data-suffix="%" style="color: #D97706;">92%</span>
+        <span class="stat-lbl">Fee Collection On-Time Rate</span>
+      </div>
+      <div class="stat-pill scroll-reveal-scale">
+        <span class="stat-num counter-stat" data-count="100" data-suffix="%">100%</span>
+        <span class="stat-lbl">Tamper-Proof Guardian Transcripts</span>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- =========================================================================
+       Section: Live Interactive AI Face Recognition Attendance Simulator
+       Instant Wow Factor for School & College Decision Makers
+       ========================================================================= -->
+  <section class="inst-main-container" id="live-ai-scanner-section" style="padding-top: 4.5rem; padding-bottom: 3.5rem;">
+    <div class="section-intro-block text-center" style="max-width: 900px; margin: 0 auto 2.5rem;">
+      <span class="section-badge-pill" style="background: rgba(37, 99, 235, 0.1); color: #013284; border: 1.5px solid #38BDF8; font-weight: 800; letter-spacing: 0.05em; padding: 0.45rem 1.25rem; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.78rem;">
+        ⚡ AI NEURAL VISION • KOTA TURNSTILE SCANNER
+      </span>
+      <h2 class="section-heading-lg" style="font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 4vw, 2.85rem); font-weight: 900; color: #013284; letter-spacing: -0.02em; margin: 1rem 0 0.65rem;">
+        AI Facial Recognition Attendance Scanner
+      </h2>
+      <p class="section-subtitle" style="font-size: 1.05rem; color: #475569; line-height: 1.6; margin: 0 auto;">
+        Real-time optical face recognition with 468 neural landmark nodes, automated 0.8-second parent WhatsApp dispatch, and a complete everyday biometric register tracking every single day's attendance detail.
+      </p>
+    </div>
+
+    <div id="ai-attendance-simulator-root" style="max-width: 1140px; margin: 0 auto;"></div>
+  </section>
+
+  
+<!-- Live Embedded Student & Parent Digital Service Desk -->
+  <section class="inst-main-container" id="student-desk" style="padding-top: 5rem; padding-bottom: 5rem;">
+    <div class="section-intro-block text-center" style="max-width: 900px; margin: 0 auto 2.5rem;">
+      <span class="section-badge-pill" style="background: rgba(1, 50, 132, 0.08); color: #013284; border: 1.5px solid #cbb88f; font-weight: 800; letter-spacing: 0.05em; padding: 0.45rem 1.25rem; border-radius: 9999px; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.78rem;">
+        🏛️ APEX INSTITUTIONAL OS • LIVE CAMPUS TELEMETRY &amp; AUDIT
+      </span>
+      <h2 class="section-heading-lg" style="font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 4vw, 2.85rem); font-weight: 900; color: #013284; letter-spacing: -0.02em; margin: 1rem 0 0.65rem;">
+        Live Campus Services &amp; Fee Verification
+      </h2>
+      <p class="section-subtitle" style="font-size: 1.05rem; color: #475569; line-height: 1.6; margin: 0 auto;">
+        Real-time biometric turnstile synchronization across Kota &amp; NCR gates, cryptographic student fee audits, official Section 80C tax exemption invoicing, and instant guardian companion services.
+      </p>
+    </div>
+
+    <!-- Live Campus Telemetry Status Ribbon -->
+    <div class="campus-live-telemetry-ribbon">
+      <div class="telemetry-pill">
+        <span class="live-dot-pulse"></span>
+        <strong>CAMPUS CLOCK:</strong>
+        <span id="apex-live-campus-clock">12:00:00 AM IST</span> • Kota Synced
+      </div>
+      <div class="telemetry-pill">
+        <span style="color: #38BDF8;">🛰️</span>
+        <strong>TURNSTILES:</strong>
+        <span>4/4 Optical Gates Online • 9ms Latency</span>
+      </div>
+      <div class="telemetry-pill">
+        <span>🛡️</span>
+        <strong>AUDIT LEDGER:</strong>
+        <span>ISO 9001:2015 • SHA-256 Validated</span>
+      </div>
+      <div class="telemetry-pill">
+        <span style="color: #34D399;">👥</span>
+        <strong>TODAY'S ATTENDANCE:</strong>
+        <span>4,892 / 5,120 Present (95.5%)</span>
+      </div>
+      <div class="telemetry-pill">
+        <span>📑</span>
+        <strong>FEE COMPLIANCE:</strong>
+        <span>Govt. 80C Tax Exemption Ready</span>
+      </div>
+    </div>
+
+    <!-- Interactive Live Widget Container -->
+    <div id="widget-container" style="max-width: 1140px; margin: 0 auto;"></div>
+    <div id="receipt-modal-container"></div>
+  </section>
+
+  
+
+  <!-- =========================================================================
+       Section: Executive Institutional ROI & Bad-Debt Recovery Calculator
+       Financial & Operational Justification for Institute Principals & Trustees
+       ========================================================================= -->
+  <section class="inst-main-container" id="roi-calculator-section" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+    <div class="text-center" style="max-width: 850px; margin: 0 auto 2rem;">
+      <span class="badge" style="background: rgba(5, 150, 105, 0.1); color: #059669; border: 1px solid rgba(5, 150, 105, 0.3); font-weight: 800; font-size: 0.78rem; text-transform: uppercase; padding: 0.35rem 1rem; border-radius: 50px;">
+        💼 FOR INSTITUTE DIRECTORS, PRINCIPALS &amp; TRUSTEES
+      </span>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 900; color: #013284; margin: 0.85rem 0 0.5rem;">
+        Institutional ROI &amp; Revenue Recovery Engine
+      </h2>
+      <p style="font-size: 0.95rem; color: #475569; line-height: 1.6; margin: 0;">
+        Experience how Kavirox Institutional OS eliminates unrecovered fee leakage, reclaims faculty lecture hours, and replaces paper-based administration with audited digital compliance.
+      </p>
+    </div>
+    <div id="roi-calculator-root"></div>
+  </section>
+
+<!-- Institutional Comprehensive Footer -->
+  <footer class="inst-footer-rich">
+    <div class="footer-four-col-grid">
+      <div>
+        <div class="inst-brand-block mb-3" style="text-decoration: none;">
+          <div class="inst-emblem-box" style="width: 38px; height: 38px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="inst-brand-text">
+            <span class="inst-brand-title" style="color: #FFFFFF; font-size: 1.15rem;">APEX ACADEMY</span>
+            <span class="inst-brand-sub" style="color: #94A3B8;">Premier Institute for JEE & NEET</span>
+          </div>
+        </div>
+        <p style="line-height: 1.7; margin-bottom: 1rem; color: #94A3B8;">
+          ISO 9001:2015 certified premier entrance training academy. Recognized for authentic Kota pedagogical methods, personalized faculty mentorship, and transparent student tracking.
+        </p>
+        <div style="font-size: 0.8rem; color: #64748B;">Registered Under Central Educational Trust Act • Reg No. KOT-2008-ED-419</div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Academic Programs</h4>
+        <ul class="footer-links-list">
+          <li><a href="courses.html">IIT-JEE 2-Year Target (Class 11)</a></li>
+          <li><a href="courses.html">IIT-JEE 1-Year Rank Booster (Class 12)</a></li>
+          <li><a href="courses.html">NEET Med-Champions Batch</a></li>
+          <li><a href="courses.html">Dropper & Repeater Intensive Batch</a></li>
+          <li><a href="courses.html">Class 9 & 10 Olympiad Foundation</a></li>
+          <li><a href="courses.html">Apex Talent Hunt Exam (ATHE)</a></li>
+          <li><a href="courses.html#rank-predictor" style="color: #6EE7B7; font-weight: 700;">🎯 All-India Rank Predictor</a></li>
+          <li><a href="courses.html#interactive-fee-calculator" style="color: #38BDF8; font-weight: 700;">⚡ Fee Estimator &amp; ATHE Quiz</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Quick Portals</h4>
+        <ul class="footer-links-list">
+          <li><a href="portal.html">Parent Attendance & Fee Portal</a></li>
+          <li><a href="portal.html">Download GST Numbered Receipts</a></li>
+          <li><a href="portal.html">Student Digital ID Card Generator</a></li>
+          <li><a href="results.html">Wall of Fame 2026 Scorecards</a></li>
+          <li><a href="admissions.html">Online Admission Form 2026-27</a></li>
+          <li><a href="about.html">Senior Kota Faculty Directory</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Campus Locations &amp; Map</h4>
+        <p style="line-height: 1.6; margin-bottom: 0.85rem; color: #94A3B8; font-size: 0.82rem;">
+          <strong>NCR Main Campus:</strong><br>
+          Sector Alpha-1, Knowledge Corridor, Greater Noida, UP - 201310.<br>
+          Phone: +91 98100 12345 / 7065399111
+        </p>
+        <!-- Apex Academy Greater Noida Knowledge Corridor Interactive Map -->
+        <div style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 4px 14px rgba(0,0,0,0.3);">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14028.665315354964!2d77.5113945!3d28.4746328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cea64593442ef%3A0xb15bcf07b8b40cb0!2sAlpha%201%2C%20Greater%20Noida%2C%20Uttar%20Pradesh%20201310!5e0!3m2!1sen!2sin!4v1715773643708!5m2!1sen!2sin" width="100%" height="135" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Apex Academy Campus Map Directions"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-strip">
+      <div>
+        © 2026 Apex IIT-JEE &amp; Medical Academy. Reg. No. KOT-2008-ED-419 • ISO 9001:2015 Certified. All rights reserved. Technology partner: Kavirox Suite.
+      </div>
+      <div class="d-flex items-center gap-3">
+        <a href="contact.html" style="color: #94A3B8; text-decoration: none;">Privacy Policy</a>
+        <span>•</span>
+        <a href="contact.html" style="color: #94A3B8; text-decoration: none;">Mandatory Public Disclosure</a>
+        <span>•</span>
+        <a href="contact.html" style="color: #94A3B8; text-decoration: none;">Terms of Admission</a>
+        <span>•</span>
+        <a href="admin.html" class="discreet-staff-login-link" title="Director / Staff Console">Staff Login</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-container"></div>
+
+  <!-- Apex Academy Quick Admission Enquiry Modal -->
+  <div class="gd-modal-backdrop" id="gd-enquiry-modal" role="dialog" aria-modal="true" aria-labelledby="enquiry-modal-title">
+    <div class="gd-modal-box">
+      <div class="gd-modal-header">
+        <div>
+          <h3 id="enquiry-modal-title">Quick Admission Enquiry</h3>
+          <p>Academic Session 2026–27 • Fill the details below and our Admissions Officer will call you.</p>
+        </div>
+        <button type="button" class="gd-modal-close-btn" onclick="window.GDSchoolShowcase.closeEnquiryModal()" aria-label="Close Modal">✕</button>
+      </div>
+
+      <div class="gd-modal-body">
+        <form id="gd-enquiry-form" onsubmit="window.GDSchoolShowcase.submitEnquiry(event)">
+          <div class="gd-form-grid-2">
+            <div class="gd-form-group">
+              <label for="enq-parent-name">Parent / Guardian Name *</label>
+              <input type="text" id="enq-parent-name" class="gd-form-control" placeholder="e.g. Sanjay Verma" required>
+            </div>
+            <div class="gd-form-group">
+              <label for="enq-student-name">Student Full Name *</label>
+              <input type="text" id="enq-student-name" class="gd-form-control" placeholder="e.g. Ananya Verma" required>
+            </div>
+          </div>
+
+          <div class="gd-form-grid-2">
+            <div class="gd-form-group">
+              <label for="enq-parent-phone">Contact Mobile Number *</label>
+              <input type="tel" id="enq-parent-phone" class="gd-form-control" placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required>
+            </div>
+            <div class="gd-form-group">
+              <label for="enq-parent-email">Email Address</label>
+              <input type="email" id="enq-parent-email" class="gd-form-control" placeholder="e.g. parent@example.com">
+            </div>
+          </div>
+
+          <div class="gd-form-grid-2">
+            <div class="gd-form-group">
+              <label for="enq-student-class">Target Program / Batch Applying For *</label>
+              <select id="enq-student-class" class="gd-form-control" required>
+                <option value="">-- Select Target Entrance Program --</option>
+                <option value="IIT-JEE 2-Year Target (Class 11)">IIT-JEE 2-Year Target (Class 11 &amp; 12) • ₹8,000/mo</option>
+                <option value="NEET Med-Champions Batch">NEET-UG Med-Champions Batch • ₹7,500/mo</option>
+                <option value="IIT-JEE Rank Booster (Class 12 & Droppers)">IIT-JEE 1-Year Rank Booster / Droppers • ₹7,000/mo</option>
+                <option value="Pre-Foundation Olympiad (Classes 8-10)">Class 8, 9 &amp; 10 Olympiad Pre-Foundation • ₹5,000/mo</option>
+                <option value="Apex Talent Hunt Exam (ATHE)">Apex Talent Hunt Scholarship Exam (ATHE 2026)</option>
+              </select>
+            </div>
+            <div class="gd-form-group">
+              <label for="enq-target-campus">Preferred Campus</label>
+              <select id="enq-target-campus" class="gd-form-control">
+                <option value="NCR Campus (Greater Noida Sector Alpha-1)">NCR Main Campus (Greater Noida Sector Alpha-1)</option>
+                <option value="Kota Main Campus (Knowledge Park III)">Kota Main Campus (Knowledge Park III)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="gd-form-group">
+            <label for="enq-parent-msg">Your Query / Special Instructions</label>
+            <textarea id="enq-parent-msg" class="gd-form-control" rows="2" placeholder="e.g. Inquiring regarding fee installment schedule, scholarship waiver test (ATHE), or study hostel facilities..."></textarea>
+          </div>
+
+          <div style="display: flex; justify-content: flex-end; gap: 0.85rem; margin-top: 1.5rem; align-items: center;">
+            <button type="button" class="btn btn-outline btn-sm" onclick="window.GDSchoolShowcase.closeEnquiryModal()">
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary" style="background: #013284; border-color: #013284; font-weight: 800; padding: 0.75rem 2rem;">
+              Submit Admission Enquiry →
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/modules/certificates.js"></script>
+  <script src="js/modules/scorecards.js?v=2.0"></script>
+  <script src="js/modules/parents_voice.js?v=2.0"></script>
+  <script src="js/modules/widget.js?v=3.0"></script>
+  <script src="js/modules/chatbot.js"></script>
+  <script src="js/modules/ai_attendance_simulator.js?v=3.2"></script>
+  <script src="js/modules/roi_calculator.js"></script>
+  <script src="js/modules/gd_school_showcase.js"></script>
+  <script src="js/sound_fx.js"></script>
+  <script src="js/scroll_animations.js?v=2.0"></script>
+  <script src="js/vendor/jspdf.umd.min.js"></script>
+  <script src="js/modules/dpp_pdf_generator.js"></script>
+  <script src="js/modules/star-border.js"></script>
+  <script src="js/modules/animated-list.js"></script>
+  <script src="js/modules/mobile_dock.js"></script>
+  <script>
+    // Render interactive widget inside page
+    window.kaviroxApp = {
+      render() {
+        const c = document.getElementById('widget-container');
+        if (c && window.KaviroxWidget) c.innerHTML = window.KaviroxWidget.render(true);
+        if (window.CampusAiAttendanceSimulator) {
+          window.CampusAiAttendanceSimulator.update();
+        }
+      },
+      switchView(v) {
+        if (v === 'parent') window.location.href = 'parent-portal.html';
+        else if (v === 'fees') window.location.href = 'portal.html?role=parent';
+        else if (v === 'idcards') window.location.href = 'admin.html';
+        else if (v === 'teacher') window.location.href = 'teacher-portal.html';
+        else if (v === 'owner') window.location.href = 'admin.html';
+        else window.location.href = 'index.html';
+      },
+      showToast(m, t) {
+        const c = document.getElementById('toast-container');
+        if (!c) return;
+        const div = document.createElement('div');
+        div.className = `toast-item toast-${t} animate-slide-in`;
+        div.innerHTML = `<span class="toast-msg">${m}</span>`;
+        c.appendChild(div);
+        setTimeout(() => div.remove(), 3200);
+      }
+    };
+    
+    // Device View Mode Switcher Engine (Allows seamless Laptop vs Mobile demo in one HTML)
+    function setDeviceViewMode(mode) {
+      const html = document.documentElement;
+      document.querySelectorAll('.device-view-switcher .view-btn').forEach(b => b.classList.remove('active'));
+      const activeBtn = document.getElementById(`btn-view-${mode}`);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      if (mode === 'mobile') {
+        html.setAttribute('data-device-view', 'mobile');
+        sessionStorage.setItem('apex_device_view', 'mobile');
+        if (window.soundFx && typeof window.soundFx.playTap === 'function') window.soundFx.playTap();
+      } else if (mode === 'desktop') {
+        html.removeAttribute('data-device-view');
+        sessionStorage.setItem('apex_device_view', 'desktop');
+        if (window.soundFx && typeof window.soundFx.playTap === 'function') window.soundFx.playTap();
+      } else {
+        html.removeAttribute('data-device-view');
+        sessionStorage.removeItem('apex_device_view');
+        if (window.soundFx && typeof window.soundFx.playTap === 'function') window.soundFx.playTap();
+      }
+
+      // Re-trigger layout-sensitive Web Components
+      setTimeout(() => {
+        if (window.AnimatedList && typeof window.AnimatedList.init === 'function') window.AnimatedList.init();
+        if (window.StarBorder && typeof window.StarBorder.init === 'function') window.StarBorder.init();
+      }, 60);
+    }
+    window.setDeviceViewMode = setDeviceViewMode;
+
+    // Check saved view mode on load
+    const savedView = sessionStorage.getItem('apex_device_view');
+    if (savedView === 'mobile') {
+      setDeviceViewMode('mobile');
+    } else if (savedView === 'desktop') {
+      setDeviceViewMode('desktop');
+    }
+
+    // Mobile Drawer Toggle Engine
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('inst-mobile-drawer');
+      if (!drawer) return;
+      drawer.classList.toggle('active');
+      if (drawer.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+    window.toggleMobileDrawer = toggleMobileDrawer;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      window.kaviroxApp.render();
+
+      // Live Campus Clock Synchronizer (Kota IST)
+      function updateCampusClock() {
+        const el = document.getElementById('apex-live-campus-clock');
+        if (el) {
+          const now = new Date();
+          el.textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }) + ' IST';
+        }
+      }
+      updateCampusClock();
+      setInterval(updateCampusClock, 1000);
+    });
+
+    // Presenter Shortcut Ctrl+Shift+A
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'A' || e.key === 'a')) {
+        e.preventDefault();
+        window.location.href = 'admin.html';
+      }
+    });
+  </script>
+</body>
+</html>

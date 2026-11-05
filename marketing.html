@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavirox - Tuition & Coaching Institute Operating System</title>
+  <meta name="description" content="Replace paper registers, fee notebooks and manual WhatsApp messages in 15 minutes. One platform for coaching institutes, tuition classes & schools.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .marketing-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 15, 25, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 0.85rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .m-nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .calculator-box {
+      background: var(--bg-surface-1);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 2rem;
+      max-width: 650px;
+      margin: 2rem auto 0;
+      text-align: center;
+    }
+    .calc-slider {
+      width: 100%;
+      height: 8px;
+      margin: 1.5rem 0;
+      accent-color: var(--primary);
+    }
+    .calc-result-box {
+      background: rgba(99, 102, 241, 0.1);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .testimonial-card {
+      background: var(--bg-surface-1);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+    }
+    .client-avatar-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .faq-accordion {
+      max-width: 780px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .faq-item {
+      background: var(--bg-surface-1);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      text-align: left;
+    }
+    .faq-item h4 {
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+      color: #818CF8;
+    }
+  </style>
+</head>
+<body>
+  <nav class="marketing-nav">
+    <div class="brand-pill" onclick="window.location.href='index.html'">
+      <span class="brand-spark">⚡</span>
+      <strong>KAVIROX</strong>
+      <span class="brand-ver">v2.4</span>
+    </div>
+    <div class="m-nav-links">
+      <a href="#features">Features</a>
+      <a href="#calculator">Pricing Calculator</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQ</a>
+      <a href="index.html" class="btn btn-primary btn-sm">Launch Live Software →</a>
+    </div>
+  </nav>
+
+  <div class="marketing-page-wrapper">
+    <!-- Hero Section -->
+    <section id="features" class="marketing-hero">
+      <div class="hero-tag">
+        <span>🎓 Purpose-Built for Indian Coaching Institutes & Tuitions</span>
+      </div>
+      <h1 class="hero-title">
+        Run Daily Attendance & Fee Collection <br/>
+        <span class="gradient-text">Without Paper, Mistakes, or Hassle.</span>
+      </h1>
+      <p class="hero-description">
+        Kavirox replaces paper registers, manual fee notebooks, Excel sheets, and awkward phone calls to parents. 
+        Teachers mark batch attendance in 30 seconds. Accountants print numbered receipts in 20 seconds. 
+        Parents stay delighted with an instant mobile portal.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="index.html" class="btn btn-primary btn-lg star-border" data-color="#38bdf8" data-trail-color="#818cf8" data-sparkle="true" data-glow="0.8" data-radius="14">
+          Launch Live Interactive Demo →
+        </a>
+        <a href="parent-portal.html" class="btn btn-outline btn-lg">
+          Try Parent Mobile Portal
+        </a>
+        <a href="teacher-portal.html" class="btn btn-outline btn-lg">
+          Try Teacher Attendance
+        </a>
+      </div>
+
+      <div class="metrics-ribbon glass-card mt-5">
+        <div class="metric-item">
+          <span class="metric-val text-emerald">&lt; 30s</span>
+          <span class="metric-lbl">To mark 30 students attendance</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-val text-primary">&lt; 20s</span>
+          <span class="metric-lbl">To issue a numbered fee receipt</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-val text-purple">&lt; 15 mins</span>
+          <span class="metric-lbl">To fully onboard your centre</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-val text-success">100%</span>
+          <span class="metric-lbl">Data privacy & tenant isolation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Calculator Section -->
+    <section id="calculator" class="marketing-section glass-card mt-5">
+      <div class="section-heading text-center">
+        <h2>Interactive Pricing Calculator</h2>
+        <p class="text-muted">Simple, transparent, month-to-month subscription. Pay only for the student capacity you need.</p>
+      </div>
+
+      <div class="calculator-box">
+        <h3>How many students are enrolled in your centre?</h3>
+        <div class="display-student-count mt-3">
+          <span id="slider-count" style="font-size: 2.4rem; font-weight: 800; color: #818CF8; font-family: 'Outfit';">140</span>
+          <span class="text-muted">Active Students</span>
+        </div>
+
+        <input type="range" id="student-slider" class="calc-slider" min="15" max="600" step="5" value="140" oninput="updateCalculator(this.value)">
+
+        <div class="calc-result-box">
+          <span class="text-muted">Recommended Plan:</span>
+          <h4 id="calc-plan-name" style="font-size: 1.3rem; margin: 0.2rem 0;">Growth Plan</h4>
+          <div style="font-size: 2rem; font-weight: 800; color: #34D399; font-family: 'Outfit';">
+            ₹<span id="calc-price">2,499</span><small style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;">/month</small>
+          </div>
+          <small class="text-muted d-block mt-1">Includes unlimited attendance registers, SMS/WhatsApp alerts, receipts, parent app, and ID cards.</small>
+          <a href="index.html" class="btn btn-primary btn-sm mt-3">Start 14-Day Free Pilot →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section id="testimonials" class="marketing-section mt-5">
+      <div class="section-heading text-center">
+        <h2>Trusted by Coaching Owners & Faculty</h2>
+        <p class="text-muted">Real feedback from institute owners who replaced paper with Kavirox</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="client-avatar-row">
+            <span style="font-size: 2rem;">👨‍🏫</span>
+            <div>
+              <strong>Dr. Rajesh Sharma</strong>
+              <small class="text-muted d-block">Director, Apex IIT Academy (Kota)</small>
+            </div>
+          </div>
+          <p class="text-muted">
+            "Before Kavirox, our staff spent 2 hours every evening reconciling paper fee receipts and dialing parents for pending dues. With Kavirox, our defaulters dropped by 70% in the first 45 days."
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="client-avatar-row">
+            <span style="font-size: 2rem;">👩‍🏫</span>
+            <div>
+              <strong>Sunita Agarwal</strong>
+              <small class="text-muted d-block">Founder, Prerna Tuition Classes (Jaipur)</small>
+            </div>
+          </div>
+          <p class="text-muted">
+            "Teachers genuinely love the 1-tap attendance. Taking attendance for my batch of 35 students takes literally 20 seconds on my phone. Parents love receiving instant receipts on WhatsApp."
+          </p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="client-avatar-row">
+            <span style="font-size: 2rem;">💼</span>
+            <div>
+              <strong>Sunil Verma</strong>
+              <small class="text-muted d-block">Accounts Head, Saraswati Group</small>
+            </div>
+          </div>
+          <p class="text-muted">
+            "Fee disputes have completely disappeared. When a parent claims they already paid, we pull up their numbered digital receipt in 3 seconds with timestamp and cashier signature."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="marketing-section mt-5 mb-5">
+      <div class="section-heading text-center">
+        <h2>Frequently Asked Questions</h2>
+        <p class="text-muted">Everything you need to know about setting up Kavirox</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <h4>How long does it take to set up our coaching centre?</h4>
+          <p class="text-muted">Less than 15 minutes. You download our Excel template, paste your student names and parent phone numbers, and upload it. The system automatically creates roll numbers, batches, and parent logins.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do parents need to remember a password?</h4>
+          <p class="text-muted">No! Parents log in exclusively using their registered mobile number and a 6-digit OTP received via SMS or WhatsApp. No passwords to forget or reset.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can other coaching centres see our student or financial data?</h4>
+          <p class="text-muted">Never. Every centre has a strict tenant partition in the database. Our automated tenant isolation test mathematically guarantees zero cross-centre data leakage.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What happens if we decide to stop using Kavirox?</h4>
+          <p class="text-muted">You always own your data. You can download all student profiles, fee ledgers, and attendance records as an Excel/CSV file with a single click anytime.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer style="text-align: center; padding: 2rem; border-top: 1px solid var(--border-subtle); color: var(--text-dim); font-size: 0.85rem;">
+    <p>© 2026 Kavirox Technologies. Built with precision for educational institutions by Armaan Chaudhary.</p>
+    <p class="mt-1"><a href="index.html">Open Full Application</a> • <a href="parent-portal.html">Parent App</a> • <a href="teacher-portal.html">Teacher App</a> • <a href="widget-embed.html">Website Widget</a></p>
+  </footer>
+
+  <script>
+    function updateCalculator(val) {
+      document.getElementById('slider-count').textContent = val;
+      const count = parseInt(val);
+      let plan = 'Starter Plan';
+      let price = '1,499';
+
+      if (count > 200) {
+        plan = 'Enterprise Plan (Custom Limits)';
+        price = '4,999';
+      } else if (count > 60) {
+        plan = 'Growth Plan (Up to 200 Students)';
+        price = '2,499';
+      } else {
+        plan = 'Starter Plan (Up to 60 Students)';
+        price = '1,499';
+      }
+
+      document.getElementById('calc-plan-name').textContent = plan;
+      document.getElementById('calc-price').textContent = price;
+    }
+  </script>
+  <script src="js/modules/star-border.js"></script>
+</body>
+</html>

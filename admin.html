@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Director & Staff Console | Apex Academy Administration</title>
+  <meta name="description" content="Secure administrative control room for coaching owners, directors, faculty, and accountants. Attendance roll call, fee collection, and student roster.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Root Dynamic Container for Complete Admin Suite -->
+  <div id="app-root"></div>
+
+  <div id="toast-container"></div>
+
+  <!-- Scripts Loaded in Strict Dependency Order -->
+  <script src="js/data.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/modules/timetable.js"></script>
+  <script src="js/modules/certificates.js"></script>
+  <script src="js/modules/ai_analytics.js"></script>
+  <script src="js/modules/auth.js"></script>
+  <script src="js/modules/admin.js"></script>
+  <script src="js/modules/attendance.js"></script>
+  <script src="js/modules/fees.js"></script>
+  <script src="js/modules/reports.js"></script>
+  <script src="js/modules/idcards.js"></script>
+  <script src="js/modules/teacher.js"></script>
+  <script src="js/modules/parent.js"></script>
+  <script src="js/modules/widget.js"></script>
+  <script src="js/modules/superadmin.js"></script>
+  <script src="js/modules/whatsapp_automation.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/sound_fx.js"></script>
+  <script src="js/scroll_animations.js"></script>
+  <script>
+
+    // Force admin console mode on admin.html
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.kaviroxApp) {
+        window.kaviroxApp.isAdminVisible = true;
+        window.kaviroxApp.currentView = 'owner';
+        window.kaviroxApp.render();
+      }
+    });
+  </script>
+</body>
+</html>

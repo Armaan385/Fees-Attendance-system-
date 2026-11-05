@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Bits - StarBorder Component Live Showcase</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="components/StarBorder.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem 1rem;
+      background: radial-gradient(circle at 50% 20%, #0d172e 0%, #060913 70%, #02040a 100%);
+      color: #F8FAFC;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .showcase-container {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(28px) saturate(190%);
+      -webkit-backdrop-filter: blur(28px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-top: 1.5px solid rgba(255, 255, 255, 0.4);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(56, 189, 248, 0.15);
+    }
+    .grid-examples {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .example-card {
+      background: rgba(30, 41, 59, 0.55);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+    .example-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #94A3B8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="showcase-container">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <span class="badge badge-primary" style="font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase;">
+        React Bits • Open Source UI Library
+      </span>
+      <h1 style="font-size: 2.2rem; font-weight: 900; margin: 0.65rem 0 0.4rem; font-family: 'Outfit', sans-serif;">
+        &lt;StarBorder /&gt; Interactive Component
+      </h1>
+      <p style="color: #94A3B8; font-size: 0.95rem; max-width: 620px; margin: 0 auto;">
+        Animated starlight racing along smooth rounded borders with dynamic acceleration, trailing glow, stardust particle physics, and click pulse reactions.
+      </p>
+    </div>
+
+    <div class="grid-examples">
+      <!-- 1. Default White Starlight -->
+      <div class="example-card">
+        <span class="example-title">Default Variant</span>
+        <button 
+          type="button"
+          class="star-border" 
+          data-color="#ffffff" 
+          data-trail-color="#ffffff" 
+          data-duration="4" 
+          data-direction="clockwise" 
+          data-stars="1" 
+          data-trail-length="0.3" 
+          data-thickness="1" 
+          data-radius="12" 
+          data-glow="0.6" 
+          data-hover="lap" 
+          data-sparkle="false"
+          data-click-pulse="true"
+          data-theme="dark"
+        >
+          Get started
+        </button>
+        <span style="font-size: 0.75rem; color: #64748B;">1 star • Hover to lap • Click to pulse</span>
+      </div>
+
+      <!-- 2. VisionOS Spatial Cyan with Sparkles -->
+      <div class="example-card">
+        <span class="example-title">Spatial Cyan + Stardust</span>
+        <button 
+          type="button"
+          class="star-border" 
+          data-color="#38bdf8" 
+          data-trail-color="#818cf8" 
+          data-duration="3.2" 
+          data-direction="clockwise" 
+          data-stars="2" 
+          data-trail-length="0.32" 
+          data-thickness="1.5" 
+          data-radius="20" 
+          data-glow="0.85" 
+          data-hover="brighten" 
+          data-sparkle="true"
+          data-click-pulse="true"
+          data-theme="dark"
+        >
+          ✨ Explore Campus OS →
+        </button>
+        <span style="font-size: 0.75rem; color: #38bdf8;">2 stars • Twinkling stardust shed • Brighten hover</span>
+      </div>
+
+      <!-- 3. Kota Gold Luxury Entrance -->
+      <div class="example-card">
+        <span class="example-title">Imperial Gold Edition</span>
+        <button 
+          type="button"
+          class="star-border" 
+          data-color="#F59E0B" 
+          data-trail-color="#D97706" 
+          data-duration="3.5" 
+          data-direction="clockwise" 
+          data-stars="2" 
+          data-trail-length="0.35" 
+          data-thickness="2" 
+          data-radius="999" 
+          data-glow="0.9" 
+          data-hover="lap" 
+          data-sparkle="true"
+          data-click-pulse="true"
+          data-theme="dark"
+        >
+          🏆 Apply for Admission 2026
+        </button>
+        <span style="font-size: 0.75rem; color: #F59E0B;">Full capsule pill radius (999) • Gold starlight</span>
+      </div>
+
+      <!-- 4. Emerald Verified Multiplier -->
+      <div class="example-card">
+        <span class="example-title">Emerald Aurora (Counterclockwise)</span>
+        <button 
+          type="button"
+          class="star-border" 
+          data-color="#10B981" 
+          data-trail-color="#34D399" 
+          data-duration="2.8" 
+          data-direction="counterclockwise" 
+          data-stars="3" 
+          data-trail-length="0.25" 
+          data-thickness="1.5" 
+          data-radius="14" 
+          data-glow="0.8" 
+          data-hover="lap" 
+          data-sparkle="true"
+          data-click-pulse="true"
+          data-theme="dark"
+        >
+          ⚡ Verified Multiplier
+        </button>
+        <span style="font-size: 0.75rem; color: #10B981;">3 stars • Counterclockwise rotation</span>
+      </div>
+    </div>
+
+    <!-- Integration Code Card -->
+    <div style="margin-top: 2rem; background: rgba(8, 12, 24, 0.85); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 14px; padding: 1.25rem 1.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+        <span style="font-size: 0.8rem; font-weight: 700; color: #94A3B8;">Component File Path</span>
+        <span class="badge badge-success" style="font-size: 0.7rem;">Integrated &amp; Ready</span>
+      </div>
+      <code style="font-family: monospace; font-size: 0.84rem; color: #38BDF8;">
+        import StarBorder from './components/StarBorder';
+      </code>
+      <div style="margin-top: 0.75rem; font-size: 0.78rem; color: #64748B;">
+        Both the React source (<code>components/StarBorder.jsx</code> + <code>components/StarBorder.css</code>) and the native browser engine (<code>js/modules/star-border.js</code>) are active.
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 1.5rem;">
+      <a href="index.html" class="btn btn-outline btn-sm" style="border-color: rgba(255, 255, 255, 0.2); color: #CBD5E1; text-decoration: none;">
+        ← Return to Main Campus Portal
+      </a>
+    </div>
+  </div>
+
+  <script src="js/modules/star-border.js"></script>
+</body>
+</html>

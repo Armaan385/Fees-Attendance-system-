@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us & Faculty | Apex IIT-JEE & Medical Academy</title>
+  <meta name="description" content="Meet our senior Kota faculty bench led by IIT Roorkee & AIIMS alumni. Authentic classroom pedagogy, individual doubt resolution, and proven track record.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=5.0">
+</head>
+<body>
+  <!-- Top Utility Strip -->
+  <aside class="inst-utility-bar no-print">
+    <div class="inst-utility-left">
+      <span class="utility-ticker-badge">ACADEMIC EXCELLENCE SINCE 2008</span>
+      <a href="tel:+919810012345" class="utility-link">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Helpline: +91 98100 12345</span>
+      </a>
+      <span class="d-none-sm">|</span>
+      <span class="d-none-sm">Campuses: Kota Knowledge Park • Greater Noida</span>
+    </div>
+    <div class="inst-utility-right">
+      <a href="parent-portal.html" class="utility-link">Guardian Portal</a>
+      <a href="teacher-portal.html" class="utility-link">Faculty Terminal</a>
+      <a href="admin.html" class="utility-link">Staff Login</a>
+      <button class="sound-fx-toggle-btn sound-active" onclick="toggleSoundFx()" title="Tactile Sound FX (Click to Mute/Unmute)">
+        🔊 Sound FX
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Navbar -->
+  <header class="inst-navbar-wrap">
+    <a href="index.html" class="inst-brand-block">
+      <div class="inst-emblem-box">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="inst-brand-text">
+        <span class="inst-brand-title">APEX ACADEMY</span>
+        <span class="inst-brand-sub">Premier Institute for IIT-JEE & NEET • Est. 2008</span>
+      </div>
+    </a>
+
+    <nav class="inst-nav-menu">
+      <a href="index.html" class="inst-nav-link">Home</a>
+      <a href="about.html" class="inst-nav-link active">About & Faculty</a>
+      <a href="courses.html" class="inst-nav-link">Courses & Fees</a>
+      <a href="results.html" class="inst-nav-link">Results 2026</a>
+      <a href="admissions.html" class="inst-nav-link">Admissions</a>
+      <a href="portal.html" class="inst-nav-link">Student Hub</a>
+      <a href="contact.html" class="inst-nav-link">Contact</a>
+    </nav>
+
+    <div class="inst-nav-actions">
+      <a href="admissions.html" class="btn btn-primary btn-sm">Apply Online 2026 →</a>
+      <button type="button" class="inst-mobile-toggle" onclick="toggleMobileDrawer()" aria-label="Toggle Mobile Navigation">☰</button>
+    </div>
+  </header>
+  <!-- Mobile Navigation Drawer -->
+  <div class="inst-mobile-drawer" id="inst-mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation Menu">
+    <div class="inst-mobile-drawer-header">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <div class="inst-emblem-box" style="width: 38px; height: 38px; background: linear-gradient(135deg, #013284, #0e2974); border: 1.5px solid #cbb88f; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+          <span style="font-size: 1.2rem;">🏛️</span>
+        </div>
+        <div>
+          <span style="font-family: 'Outfit', sans-serif; font-weight: 800; color: #FFFFFF; font-size: 1.05rem; display: block; line-height: 1.2;">APEX ACADEMY</span>
+          <span style="font-size: 0.68rem; color: #94A3B8;">Premier IIT-JEE &amp; NEET Institute</span>
+        </div>
+      </div>
+      <button type="button" class="inst-mobile-drawer-close" onclick="toggleMobileDrawer()" aria-label="Close Mobile Navigation">
+        ✕
+      </button>
+    </div>
+
+    <nav class="inst-mobile-links">
+      <a href="index.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>🏠 Home</span>
+        <span>→</span>
+      </a>
+      <a href="about.html" class="inst-mobile-link active" onclick="toggleMobileDrawer()">
+        <span>👨‍🏫 About &amp; Kota Faculty</span>
+        <span>→</span>
+      </a>
+      <a href="courses.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>📚 Courses, Batches &amp; Fees</span>
+        <span>→</span>
+      </a>
+      <a href="results.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>🏆 Results 2026 Wall of Fame</span>
+        <span>→</span>
+      </a>
+      <a href="admissions.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>📝 Admissions 2026–27 Open</span>
+        <span>→</span>
+      </a>
+      <a href="portal.html" class="inst-mobile-link" onclick="toggleMobileDrawer()">
+        <span>🎓 Student &amp; Parent Hub</span>
+        <span>→</span>
+      </a>
+      <a href="contact.html" class="inst-mobile-link " onclick="toggleMobileDrawer()">
+        <span>📍 Contact &amp; Campus Map</span>
+        <span>→</span>
+      </a>
+    </nav>
+
+    <div class="inst-mobile-actions">
+      <a href="admissions.html" class="btn btn-primary btn-block" style="background: #CBB88F; color: #013284; border-color: #CBB88F; font-weight: 900; padding: 0.85rem; border-radius: 12px; font-size: 0.95rem; text-align: center; text-decoration: none;">
+        📝 Apply for Admissions 2026-27 →
+      </a>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem;">
+        <a href="parent-portal.html" class="btn btn-outline btn-sm" style="color: #93C5FD; border-color: rgba(147, 197, 253, 0.4); text-align: center; border-radius: 10px; font-weight: 700;">
+          👤 Guardian Portal
+        </a>
+        <a href="teacher-portal.html" class="btn btn-outline btn-sm" style="color: #E2E8F0; border-color: rgba(255, 255, 255, 0.2); text-align: center; border-radius: 10px; font-weight: 700;">
+          ✍️ Faculty Terminal
+        </a>
+      </div>
+      <a href="tel:+919810012345" class="btn btn-outline btn-sm" style="color: #34D399; border-color: rgba(52, 211, 153, 0.4); display: flex; align-items: center; justify-content: center; gap: 0.4rem; border-radius: 10px; font-weight: 700;">
+        📞 Call Campus: +91 98100 12345
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Page Banner -->
+  <section class="page-hero-banner">
+    <div class="page-hero-eyebrow">ABOUT APEX ACADEMY</div>
+    <h1 class="page-hero-title">Mentored by Legends of Kota Coaching</h1>
+    <p class="page-hero-desc">
+      Founded in 2008 by senior IITian educators to deliver genuine, high-touch academic training where every student is tracked personally, every day.
+    </p>
+    <div class="about-hero-pills">
+      <span class="about-hero-pill">🏛️ Est. 2008 • 18 Yrs Kota Pedagogy</span>
+      <span class="about-hero-pill">🏆 1,840+ IITians &amp; Doctors Produced</span>
+      <span class="about-hero-pill">📜 ISO 9001:2015 Certified System</span>
+      <span class="about-hero-pill">📍 Kota Knowledge Park &amp; NCR Alpha-1</span>
+    </div>
+  </section>
+
+  <!-- Director's Message Block -->
+  <section class="inst-main-container">
+    <div class="director-luxury-card">
+      <div class="director-luxury-grid">
+        <div class="director-portrait-wrap">
+          <div class="director-emblem-ring">
+            <span class="director-initials-text">RS</span>
+            <div style="font-size: 0.62rem; color: #cbb88f; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; margin-top: 2px;">IIT ROORKEE</div>
+          </div>
+          <h4 style="font-size: 1.25rem; font-weight: 900; margin: 0 0 0.2rem; color: #0F172A; font-family: 'Outfit', sans-serif;">Dr. Rajesh Sharma</h4>
+          <span style="font-size: 0.8rem; color: #0284C7; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em;">Founder &amp; Academic Director</span>
+          <div style="font-size: 0.74rem; color: #64748B; margin-top: 0.35rem; font-weight: 600;">B.Tech (IIT Roorkee) • Ph.D. Applied Physics</div>
+          <div>
+            <span class="director-seal-tag">🛡️ Director's Desk • Est. 2008</span>
+          </div>
+        </div>
+
+        <div>
+          <span class="badge badge-accent mb-2">FOUNDER'S ADDRESS</span>
+          <h2 style="font-size: 2rem; font-weight: 900; font-family: 'Outfit', sans-serif; color: #0F172A; margin-bottom: 1rem; line-height: 1.2;">
+            "We Measure Our Success by Ranks Earned, Not Billboards Rented"
+          </h2>
+          <p class="text-secondary" style="line-height: 1.7; margin-bottom: 1rem; font-size: 0.95rem;">
+            When we established Apex Academy in Kota 18 years ago, the competitive coaching landscape was becoming an impersonal factory. Students were treated as commercial roll numbers in 200-seat halls, and parents had zero visibility into whether their children were actually attending lectures or mastering foundational physics.
+          </p>
+          <p class="text-secondary" style="line-height: 1.7; margin-bottom: 1rem; font-size: 0.95rem;">
+            We pioneered the <strong>Zero-Dropout Protocol</strong>: capped batch sizes of 35 students, mandatory biometric roll-call with automated WhatsApp notifications to parents within 30 seconds of class starting, and tamper-evident transparent fees. Every topper on our wall studied in our physical classrooms under our direct daily supervision.
+          </p>
+
+          <!-- 4 Core Pillars of Zero-Dropout Protocol -->
+          <div class="director-protocol-grid">
+            <div class="director-protocol-item">
+              <span class="protocol-check">✓</span>
+              <div class="protocol-text">
+                <strong>Strict 35-Seat Batch Cap</strong>
+                Guaranteed front-row focus; no 200-student crowded mega auditoriums.
+              </div>
+            </div>
+            <div class="director-protocol-item">
+              <span class="protocol-check">✓</span>
+              <div class="protocol-text">
+                <strong>Sub-30s Biometric Telemetry</strong>
+                Automated parent WhatsApp alerts within 30 seconds of student arrival.
+              </div>
+            </div>
+            <div class="director-protocol-item">
+              <span class="protocol-check">✓</span>
+              <div class="protocol-text">
+                <strong>Daily 3-Hour Supervised DPP</strong>
+                Hands-on practice desks with senior Kota HODs physically present.
+              </div>
+            </div>
+            <div class="director-protocol-item">
+              <span class="protocol-check">✓</span>
+              <div class="protocol-text">
+                <strong>Computerized Fee Integrity</strong>
+                100% itemized GST tax invoices (SAC 9992) with zero hidden surcharges.
+              </div>
+            </div>
+          </div>
+
+          <div class="director-stats-strip">
+            <div class="director-stat-card">
+              <div class="director-stat-num">24+ Yrs</div>
+              <div class="director-stat-lbl">Kota Teaching Leadership</div>
+            </div>
+            <div class="director-stat-card">
+              <div class="director-stat-num" style="color: #10B981;">1,840+</div>
+              <div class="director-stat-lbl">IITians &amp; AIIMS Doctors</div>
+            </div>
+            <div class="director-stat-card">
+              <div class="director-stat-num" style="color: #F59E0B;">99.4%</div>
+              <div class="director-stat-lbl">Daily Biometric Attendance</div>
+            </div>
+            <div class="director-stat-card">
+              <div class="director-stat-num" style="color: #6366F1;">AIR 14, 28</div>
+              <div class="director-stat-lbl">Top Single-Digit Ranks</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kota Senior Faculty Bench -->
+  <section style="background: var(--bg-surface-elevated); padding: 5rem 1.5rem; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="inst-main-container" style="padding: 0;">
+      <div class="section-intro-block">
+        <span class="section-badge-pill">OUR ACADEMIC COUNCIL</span>
+        <h2 class="section-heading-lg">Senior Department Heads &amp; Faculty Council</h2>
+        <p class="section-subtitle">Exclusively senior Kota educators who have produced single and double-digit All-India Ranks.</p>
+      </div>
+
+      <div class="faculty-grid-wrap-luxury">
+        <!-- Faculty 1: Physics -->
+        <div class="faculty-card-luxury faculty-physics">
+          <div class="faculty-emblem-wrap">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h4 class="faculty-name-h4">Dr. Rajesh Sharma</h4>
+          <span class="faculty-role-dept">Head of Department • Physics</span>
+          <span class="faculty-badge-credentials">B.Tech IIT Roorkee • Ph.D. • 24 Yrs Exp • Ex-HOD Kota</span>
+          
+          <div class="faculty-stats-mini-row">
+            <div>
+              <div class="faculty-mini-val">AIR 14</div>
+              <div class="faculty-mini-lbl">Top Rank</div>
+            </div>
+            <div>
+              <div class="faculty-mini-val">18k+</div>
+              <div class="faculty-mini-lbl">Hrs Taught</div>
+            </div>
+            <div>
+              <div class="faculty-mini-val">Ex-Kota</div>
+              <div class="faculty-mini-lbl">Senior HOD</div>
+            </div>
+          </div>
+
+          <p class="faculty-pedagogy-desc">
+            Specialist in Rotational Dynamics, Electrodynamics &amp; Modern Physics. Renowned for converting complex multi-concept JEE Advanced problems into visual intuitive solutions.
+          </p>
+
+          <div class="faculty-chips-wrap">
+            <span class="faculty-chip-tag">Rotational Mechanics</span>
+            <span class="faculty-chip-tag">Electrodynamics</span>
+            <span class="faculty-chip-tag">Wave Optics</span>
+            <span class="faculty-chip-tag">Modern Physics</span>
+          </div>
+        </div>
+
+        <!-- Faculty 2: Chemistry -->
+        <div class="faculty-card-luxury faculty-chem">
+          <div class="faculty-emblem-wrap">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31L4.69 18A2 2 0 0 0 6.41 21h11.18a2 2 0 0 0 1.72-3L14 9.31V2"/><line x1="8.5" x2="15.5" y1="2" y2="2"/><line x1="14" x2="14" y1="9.31" y2="9.31"/></svg>
+          </div>
+          <h4 class="faculty-name-h4">Er. Amit Bansal</h4>
+          <span class="faculty-role-dept">Head of Department • Chemistry</span>
+          <span class="faculty-badge-credentials">B.Tech IIT Delhi • 19 Yrs Exp • Organic Chemistry Author</span>
+          
+          <div class="faculty-stats-mini-row">
+            <div>
+              <div class="faculty-mini-val">AIR 19</div>
+              <div class="faculty-mini-lbl">Top Rank</div>
+            </div>
+            <div>
+              <div class="faculty-mini-val">14.5k+</div>
+              <div class="faculty-mini-lbl">Hrs Taught</div>
+            </div>
+            <div>
+              <div class="faculty-mini-val">3 Books</div>
+              <div class="faculty-mini-lbl">Author</div>
+            </div>
+          </div>
+
+          <p class="faculty-pedagogy-desc">
+            Author of 3 nationally acclaimed JEE preparation guides. Famed for reaction-mechanism flowcharts and coordination chemistry elimination mnemonics.
+          </p>
+
+          <div class="faculty-chips-wrap">
+            <span class="faculty-chip-tag">Reaction Mechanisms</span>
+            <span class="faculty-chip-tag">Coordination Chem</span>
+            <span class="faculty-chip-tag">Thermodynamics</span>
+            <span class="faculty-chip-tag">Electrochem</span>
+          </div>
+        </div>
+
+        <!-- Faculty 3: Biology -->
+        <div class="faculty-card-luxury faculty-bio">
+          <div class="faculty-emblem-wrap">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+          </div>
+          <h4 class="faculty-name-h4">Dr. Sunita Kulkarni</h4>
+          <span class="faculty-role-dept">Head of Department • Biology &amp; NEET</span>
+          <span class="faculty-badge-credentials">MBBS (AIIMS New Delhi) • 16 Yrs Exp • Senior NEET Mentor</span>
+          
+          <div class="faculty-stats-mini-row">
+            <div>
+              <div class="faculty-mini-val">AIR 9</div>
+              <div class="faculty-mini-lbl">Top Rank</div>
+            </div>
+            <div>
+              <div class="faculty-mini-val">68+</div>
+              <div class="faculty-mini-lbl">650+ Marks</div>
+            </div>
+            <div>
+              <div class="faculty-mini-val">12</div>
+              <div class="faculty-mini-lbl">360/360s</div>
+            </div>
+          </div>
+
+          <p class="faculty-pedagogy-desc">
+            Master of NCERT line-by-line decoding and diagrams. Mentored 68+ students scoring 650+ in NEET 2026, with 12 students achieving a perfect 360/360 in Biology.
+          </p>
+
+          <div class="faculty-chips-wrap">
+            <span class="faculty-chip-tag">Human Physiology</span>
+            <span class="faculty-chip-tag">Genetics &amp; DNA</span>
+            <span class="faculty-chip-tag">Plant Physiology</span>
+            <span class="faculty-chip-tag">Cell Biology</span>
+          </div>
+        </div>
+
+        <!-- Faculty 4: Mathematics -->
+        <div class="faculty-card-luxury faculty-math">
+          <div class="faculty-emblem-wrap">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><line x1="10" x2="16" y1="8" y2="8"/><line x1="10" x2="16" y1="12" y2="12"/><line x1="10" x2="14" y1="16" y2="16"/></svg>
+          </div>
+          <h4 class="faculty-name-h4">Prof. Manoj Deshmukh</h4>
+          <span class="faculty-role-dept">Head of Department • Mathematics</span>
+          <span class="faculty-badge-credentials">M.Sc. (IIT Kanpur) • 18 Yrs Exp • Advanced Calculus Lead</span>
+          
+          <div class="faculty-stats-mini-row">
+            <div>
+              <div class="faculty-mini-val">AIR 21</div>
+              <div class="faculty-mini-lbl">Top Rank</div>
+            </div>
+            <div>
+              <div class="faculty-mini-val">15k+</div>
+              <div class="faculty-mini-lbl">Hrs Taught</div>
+            </div>
+            <div>
+              <div class="faculty-mini-val">Kota Lead</div>
+              <div class="faculty-mini-lbl">Problem Setter</div>
+            </div>
+          </div>
+
+          <p class="faculty-pedagogy-desc">
+            Legendary problem-solving techniques for JEE Advanced coordinate systems and integral equations. Converts 15-step calculus problems into 60-second graphical solutions.
+          </p>
+
+          <div class="faculty-chips-wrap">
+            <span class="faculty-chip-tag">Integral Calculus</span>
+            <span class="faculty-chip-tag">Coordinate Geom</span>
+            <span class="faculty-chip-tag">Vectors &amp; 3D</span>
+            <span class="faculty-chip-tag">Complex Numbers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Infrastructure -->
+  <section class="inst-main-container">
+    <div class="section-intro-block">
+      <span class="section-badge-pill">WORLD-CLASS INFRASTRUCTURE</span>
+      <h2 class="section-heading-lg">Smart Classrooms &amp; Study Facilities</h2>
+      <p class="section-subtitle">Purpose-built environments designed to maximize learning efficiency, physical comfort, and focus.</p>
+    </div>
+
+    <div class="infra-grid-luxury">
+      <!-- Infra 1 -->
+      <div class="infra-card-luxury">
+        <div class="infra-icon-emblem" style="background: rgba(37, 99, 235, 0.12); color: #0284C7; border: 1.5px solid rgba(2, 132, 199, 0.3);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="12" x="3" y="4" rx="2"/><line x1="2" x2="22" y1="20" y2="20"/></svg>
+        </div>
+        <span class="infra-live-pill" style="background: rgba(2, 132, 199, 0.12); color: #0284C7; border: 1px solid rgba(2, 132, 199, 0.3);">
+          35-SEAT CAP • 4K DUAL CAM
+        </span>
+        <h3>Smart Hybrid Amphitheatres</h3>
+        <p>Acoustically dampened tiered classrooms with 4K touch displays, dual AI auto-tracking cameras, and ergonomic orthopaedic seating.</p>
+        <ul class="infra-specs-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            100% Lectures recorded in 1080p Full HD
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Live synced to Guardian &amp; Student Portal
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Zero visual blind spots from any seat
+          </li>
+        </ul>
+      </div>
+
+      <!-- Infra 2 -->
+      <div class="infra-card-luxury">
+        <div class="infra-icon-emblem" style="background: rgba(16, 185, 129, 0.12); color: #059669; border: 1.5px solid rgba(5, 150, 105, 0.3);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+        </div>
+        <span class="infra-live-pill" style="background: rgba(16, 185, 129, 0.12); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">
+          200 SEATS • 7AM – 10PM
+        </span>
+        <h3>Air-Conditioned Silent Library</h3>
+        <p>Soundproof personal study carrels equipped with personal task lamps, charging stations, and high-speed fiber internet.</p>
+        <ul class="infra-specs-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            3,500+ Reference volumes (Irodov, HCV, etc.)
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Open 365 days a year including Sundays
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Personal locker cubicle for regular students
+          </li>
+        </ul>
+      </div>
+
+      <!-- Infra 3 -->
+      <div class="infra-card-luxury">
+        <div class="infra-icon-emblem" style="background: rgba(245, 158, 11, 0.12); color: #D97706; border: 1.5px solid rgba(217, 119, 6, 0.3);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <span class="infra-live-pill" style="background: rgba(245, 158, 11, 0.12); color: #D97706; border: 1px solid rgba(245, 158, 11, 0.3);">
+          AI BIOMETRICS • 64 CCTV
+        </span>
+        <h3>24x7 Secured High-Discipline Campus</h3>
+        <p>High-security campus perimeter with facial recognition turnstiles, 64-channel CCTV, and female safety concierge desk.</p>
+        <ul class="infra-specs-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Sub-30s WhatsApp punch alert to parents
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Zero exit permitted without guardian OTP
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            In-house medical infirmary with on-call MD
+          </li>
+        </ul>
+      </div>
+
+      <!-- Infra 4 -->
+      <div class="infra-card-luxury">
+        <div class="infra-icon-emblem" style="background: rgba(124, 58, 237, 0.12); color: #7C3AED; border: 1.5px solid rgba(124, 58, 237, 0.3);">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <span class="infra-live-pill" style="background: rgba(124, 58, 237, 0.12); color: #7C3AED; border: 1px solid rgba(124, 58, 237, 0.3);">
+          12 DESKS • KOTA HODs
+        </span>
+        <h3>1-on-1 Faculty Doubt Clearing Desks</h3>
+        <p>Dedicated consultation booths where students sit across from their actual Kota teachers to triage homework and test errors.</p>
+        <ul class="infra-specs-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Open 3:00 PM – 8:00 PM daily after lectures
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Zero waiting queue; digital desk slotting
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Weak-area error logs synced to Parent Hub
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="inst-footer-rich">
+    <div class="footer-four-col-grid">
+      <div>
+        <div class="inst-brand-block mb-3" style="text-decoration: none;">
+          <div class="inst-emblem-box" style="width: 38px; height: 38px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="inst-brand-text">
+            <span class="inst-brand-title" style="color: #FFFFFF; font-size: 1.15rem;">APEX ACADEMY</span>
+            <span class="inst-brand-sub" style="color: #94A3B8;">Premier Institute for JEE & NEET</span>
+          </div>
+        </div>
+        <p style="line-height: 1.7; margin-bottom: 1rem; color: #94A3B8;">
+          ISO 9001:2015 certified premier entrance training academy. Recognized for authentic Kota pedagogical methods and transparent student tracking.
+        </p>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Academic Programs</h4>
+        <ul class="footer-links-list">
+          <li><a href="courses.html">IIT-JEE 2-Year Target</a></li>
+          <li><a href="courses.html">NEET Med-Champions Batch</a></li>
+          <li><a href="courses.html">Dropper Intensive Batch</a></li>
+          <li><a href="courses.html">Foundation Class 9-10</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Quick Portals</h4>
+        <ul class="footer-links-list">
+          <li><a href="portal.html">Parent Attendance & Fee Portal</a></li>
+          <li><a href="results.html">Wall of Fame 2026 Scorecards</a></li>
+          <li><a href="admissions.html">Online Admission Form 2026-27</a></li>
+          <li><a href="contact.html">Campuses & Admissions Helpline</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Campuses</h4>
+        <p style="line-height: 1.6; margin-bottom: 0.85rem; color: #94A3B8;">
+          <strong>Kota Campus:</strong> Plot 42, Knowledge Park III, Kota.<br>
+          <strong>NCR Campus:</strong> Sector Alpha-1, Greater Noida.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom-strip">
+      <div>© 2026 Apex Academy. All rights reserved. Technology partner: Kavirox Suite.</div>
+      <div><a href="admin.html" class="discreet-staff-login-link">Staff Login</a></div>
+    </div>
+  </footer>
+
+  <script src="js/sound_fx.js"></script>
+  <script src="js/scroll_animations.js"></script>
+  <script src="js/modules/chatbot.js"></script>
+
+  <script>
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('inst-mobile-drawer');
+      if (!drawer) return;
+      drawer.classList.toggle('active');
+      if (drawer.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+    window.toggleMobileDrawer = toggleMobileDrawer;
+  </script>
+</body>
+</html>
